@@ -8,3 +8,4 @@ lcov.info
 !.env.example
 crytic-export/
 fizz_data/
+audit/**/covered.*.html
