@@ -1,0 +1,30 @@
+{
+  "chainId": 4663,
+  "network": "robinhood",
+  "contract": "src/ValariRouter.sol:ValariRouter",
+  "address": "0x7DD01E8Da0cE263368f06BE8c7114731cA0DB04d",
+  "deploymentBlock": 63151100,
+  "deploymentTransaction": "0xa8da7c1437e34157593ec8f3e65aa162279ae6ad354bb16a756098fdc6518ff5",
+  "attemptedAt": "2026-09-14T22:15:38.132976+00:00",
+  "explorer": "https://robinhoodchain.blockscout.com/address/0x7DD01E8Da0cE263368f06BE8c7114731cA0DB04d",
+  "verifierUrl": "https://robinhoodchain.blockscout.com/api/",
+  "status": "submission_blocked_by_explorer_cloudflare_challenge",
+  "guid": null,
+  "verified": false,
+  "reason": "Official Blockscout getabi, verifysourcecode, and v2 smart-contracts endpoints returned Cloudflare JavaScript challenge HTML instead of API JSON. The v2 GET returned HTTP 403. Foundry direct submission with its ABI precheck disabled exhausted seven attempts; no GUID was returned.",
+  "compilerVersion": "0.8.26+commit.8a97fa7a",
+  "evmVersion": "cancun",
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  },
+  "viaIR": true,
+  "sourceSha256": "7195877547776d89f84b4dab60396962074898fef1d8706cb5131b4f434be4f5",
+  "constructorArgsBytes": 16160,
+  "constructorArgsSha256": "701ab44726ce6c1290aa18f64a8dd0af7f5b9606331525efdc7a46d94f9d56aa",
+  "standardInputFile": "blockscout-standard-input.json",
+  "constructorArgsFile": "blockscout-constructor-args.txt",
+  "sourceFiles": 53,
+  "verificationInstructions": "https://docs.robinhood.com/chain/deploy-smart-contracts/",
+  "transactionsSent": 0
+}

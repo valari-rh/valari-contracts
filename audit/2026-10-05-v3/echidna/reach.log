@@ -1,0 +1,594 @@
+[2026-10-06 18:53:22.32] Compiling `.`... WARNING: Slither was explicitly disabled. Echidna uses Slither (https://github.com/crytic/slither) to perform source analysis, which makes fuzzing more effective. You should enable it.
+Done! (272.639417346s)
+Analyzing contract: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/echidna/harness/RouterEchidnaV3.sol:RouterEchidnaV3Reach
+Loaded 0 transaction sequences from audit/2026-10-05-v3/echidna/corpus-reach/reproducers
+Loaded 0 transaction sequences from audit/2026-10-05-v3/echidna/corpus-reach/coverage
+[2026-10-06 18:58:01.37] [Worker 3] Test echidna_reach_moved_price_rejected_and_accepted falsified!
+  Call sequence:
+RouterEchidnaV3Reach.actionAddPool(0) from: 0x0000000000000000000000000000000000030000 Time delay: 46 seconds Block delay: 1
+RouterEchidnaV3Reach.actionOpen(186,122,354631263,340282366920938463463374607431768211455,255) from: 0x0000000000000000000000000000000000030000 Time delay: 30 seconds Block delay: 1
+RouterEchidnaV3Reach.actionEject(118,false) from: 0x0000000000000000000000000000000000010000 Time delay: 46 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSwap(168,true,13029375101224429502978958031505829262) from: 0x0000000000000000000000000000000000020000 Time delay: 54 seconds Block delay: 7
+RouterEchidnaV3Reach.actionDust(255,15264791710669369629) from: 0x0000000000000000000000000000000000010000 Time delay: 28 seconds Block delay: 10
+RouterEchidnaV3Reach.actionUnauthorized(85,false) from: 0x0000000000000000000000000000000000020000 Time delay: 36 seconds Block delay: 4
+RouterEchidnaV3Reach.actionDonate(60,340282366920938463463374607431768211451,179937743638451066471999046028331787518) from: 0x0000000000000000000000000000000000010000 Time delay: 27 seconds Block delay: 8
+RouterEchidnaV3Reach.actionCatalogAbuse(238,255) from: 0x0000000000000000000000000000000000030000 Time delay: 10 seconds Block delay: 6
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(95,231,false,259408638025353200842323849878530465289,1524785993,1524785993,161) from: 0x0000000000000000000000000000000000030000 Time delay: 37 seconds Block delay: 4
+RouterEchidnaV3Reach.actionCollect(107,false) from: 0x0000000000000000000000000000000000030000 Time delay: 21 seconds Block delay: 3
+RouterEchidnaV3Reach.actionEject(255,false) from: 0x0000000000000000000000000000000000030000 Time delay: 24 seconds Block delay: 8
+RouterEchidnaV3Reach.actionOpenOutsideBounds(184,17,false) from: 0x0000000000000000000000000000000000030000 Time delay: 57 seconds Block delay: 2
+RouterEchidnaV3Reach.actionExit(244,false) from: 0x0000000000000000000000000000000000020000 Time delay: 57 seconds Block delay: 2
+RouterEchidnaV3Reach.actionWithdraw(255,255,24407697883186015693540375987925344877108027935423073227670234161969945473010) from: 0x0000000000000000000000000000000000030000 Time delay: 14 seconds Block delay: 1
+RouterEchidnaV3Reach.actionCatalogAbuse(127,252) from: 0x0000000000000000000000000000000000020000 Time delay: 42 seconds Block delay: 2
+RouterEchidnaV3Reach.actionDonate(255,1524785991,185426725666773043805937871668278027664) from: 0x0000000000000000000000000000000000010000 Time delay: 16 seconds Block delay: 7
+RouterEchidnaV3Reach.actionEject(108,true) from: 0x0000000000000000000000000000000000010000 Time delay: 58 seconds Block delay: 5
+RouterEchidnaV3Reach.actionSetEject(255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 29 seconds Block delay: 8
+RouterEchidnaV3Reach.actionDust(225,1524785993) from: 0x0000000000000000000000000000000000030000 Time delay: 46 seconds Block delay: 3
+RouterEchidnaV3Reach.actionSwap(255,true,4370001) from: 0x0000000000000000000000000000000000020000 Time delay: 52 seconds Block delay: 10
+RouterEchidnaV3Reach.actionEject(255,true) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionAddPool(255) from: 0x0000000000000000000000000000000000020000 Time delay: 5 seconds Block delay: 7
+RouterEchidnaV3Reach.actionUnauthorized(212,true) from: 0x0000000000000000000000000000000000010000 Time delay: 16 seconds Block delay: 6
+RouterEchidnaV3Reach.actionSwap(255,true,56310593619847232268062388315370379732) from: 0x0000000000000000000000000000000000020000 Time delay: 34 seconds Block delay: 2
+RouterEchidnaV3Reach.actionDonate(255,155196816714309000357977626660915,4370001) from: 0x0000000000000000000000000000000000030000
+RouterEchidnaV3Reach.actionCatalogAbuse(143,90) from: 0x0000000000000000000000000000000000020000 Time delay: 16 seconds Block delay: 9
+RouterEchidnaV3Reach.actionRotateRecipient(254) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionDust(249,10859034239279788662) from: 0x0000000000000000000000000000000000010000 Time delay: 11 seconds Block delay: 3
+RouterEchidnaV3Reach.actionRotateRecipient(255) from: 0x0000000000000000000000000000000000030000 Time delay: 5 seconds Block delay: 3
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,3,true,4370001,120384523892503838959305621252881455815,1524785993,95) from: 0x0000000000000000000000000000000000030000 Time delay: 1 seconds Block delay: 10
+
+[2026-10-06 18:58:01.39]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/reproducers-unshrunk/6542953702356427227.txt
+[2026-10-06 18:58:02.24] [status] tests: 1/14, fuzzing: 0/20000, values: [], cov: 45122, corpus: 0, shrinking: W3:0/1000(30), gas/s: 0
+[2026-10-06 18:58:03.07] [Worker 0] Test echidna_reach_commission_charged_and_withdrawn falsified!
+  Call sequence:
+RouterEchidnaV3Reach.actionOpenOutsideBounds(255,255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 20 seconds Block delay: 4
+RouterEchidnaV3Reach.actionWithdraw(238,255,200) from: 0x0000000000000000000000000000000000030000 Time delay: 41 seconds Block delay: 6
+RouterEchidnaV3Reach.actionWithdraw(110,121,42688398443528035255686400627458006166269836637412402775484326495548404405222) from: 0x0000000000000000000000000000000000010000 Time delay: 5 seconds Block delay: 10
+RouterEchidnaV3Reach.actionUnauthorized(61,false) from: 0x0000000000000000000000000000000000030000 Time delay: 56 seconds Block delay: 1
+RouterEchidnaV3Reach.actionEject(197,true) from: 0x0000000000000000000000000000000000020000 Time delay: 19 seconds Block delay: 8
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,22,true,1524785991,4369999,340282366920938463463374607431768211453,198) from: 0x0000000000000000000000000000000000010000 Time delay: 16 seconds Block delay: 3
+RouterEchidnaV3Reach.actionOpenOutsideBounds(9,162,true) from: 0x0000000000000000000000000000000000010000 Time delay: 24 seconds Block delay: 7
+RouterEchidnaV3Reach.actionWithdraw(255,245,4369999) from: 0x0000000000000000000000000000000000030000 Time delay: 29 seconds Block delay: 3
+RouterEchidnaV3Reach.actionAddPool(253) from: 0x0000000000000000000000000000000000020000 Time delay: 42 seconds Block delay: 3
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,255,false,152877153462352007233075983212152489940,1524785993,4370000,255) from: 0x0000000000000000000000000000000000030000 Time delay: 57 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSetDeposits(255,true) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionOpenOutsideBounds(255,255,true) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionEject(255,true) from: 0x0000000000000000000000000000000000020000 Time delay: 34 seconds Block delay: 5
+RouterEchidnaV3Reach.actionOpen(123,232,1524785993,4370001,182) from: 0x0000000000000000000000000000000000010000 Time delay: 54 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSetDeposits(14,true) from: 0x0000000000000000000000000000000000020000 Time delay: 36 seconds Block delay: 9
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(197,255,false,2200470791060803720642062855985500040,212190568088356330332769016958520954757,63639976288862230045676935539281593203,42) from: 0x0000000000000000000000000000000000010000 Time delay: 46 seconds Block delay: 7
+RouterEchidnaV3Reach.actionExit(22,true) from: 0x0000000000000000000000000000000000010000 Time delay: 48 seconds Block delay: 10
+RouterEchidnaV3Reach.actionDust(255,17621051166504736536) from: 0x0000000000000000000000000000000000020000 Time delay: 20 seconds Block delay: 5
+RouterEchidnaV3Reach.actionSetDeposits(255,true) from: 0x0000000000000000000000000000000000030000 Time delay: 40 seconds Block delay: 10
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(251,114,false,4370000,33222804670341985452949376935680144371,1524785992,13) from: 0x0000000000000000000000000000000000020000 Time delay: 12 seconds Block delay: 3
+RouterEchidnaV3Reach.actionWithdraw(190,255,257) from: 0x0000000000000000000000000000000000020000 Time delay: 14 seconds Block delay: 1
+RouterEchidnaV3Reach.actionUnauthorized(220,true) from: 0x0000000000000000000000000000000000030000 Time delay: 12 seconds Block delay: 8
+RouterEchidnaV3Reach.actionEject(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 24 seconds Block delay: 1
+RouterEchidnaV3Reach.actionWithdraw(255,244,4370000) from: 0x0000000000000000000000000000000000030000 Time delay: 30 seconds Block delay: 8
+RouterEchidnaV3Reach.actionWithdraw(251,185,37438127381633463840034122996077094053108030320481050002037034685234972818349) from: 0x0000000000000000000000000000000000030000 Time delay: 24 seconds Block delay: 7
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(253,255,false,61,1524785991,0,101) from: 0x0000000000000000000000000000000000020000 Time delay: 14 seconds Block delay: 4
+RouterEchidnaV3Reach.actionWithdraw(53,73,4370000) from: 0x0000000000000000000000000000000000020000 Time delay: 29 seconds Block delay: 10
+RouterEchidnaV3Reach.actionUnauthorized(241,true) from: 0x0000000000000000000000000000000000020000 Time delay: 27 seconds Block delay: 10
+RouterEchidnaV3Reach.actionSetEject(255,false) from: 0x0000000000000000000000000000000000030000 Time delay: 14 seconds Block delay: 8
+RouterEchidnaV3Reach.actionCollect(252,false) from: 0x0000000000000000000000000000000000030000
+RouterEchidnaV3Reach.actionDust(255,4369999) from: 0x0000000000000000000000000000000000010000 Time delay: 52 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSetDeposits(210,true) from: 0x0000000000000000000000000000000000010000 Time delay: 55 seconds Block delay: 2
+RouterEchidnaV3Reach.actionWithdraw(121,240,4370000) from: 0x0000000000000000000000000000000000030000 Time delay: 37 seconds Block delay: 1
+RouterEchidnaV3Reach.actionRotateRecipient(255) from: 0x0000000000000000000000000000000000020000 Time delay: 55 seconds Block delay: 3
+RouterEchidnaV3Reach.actionSwap(199,true,4370000) from: 0x0000000000000000000000000000000000020000 Time delay: 55 seconds Block delay: 2
+RouterEchidnaV3Reach.actionSwap(255,true,1524785993) from: 0x0000000000000000000000000000000000020000 Time delay: 31 seconds Block delay: 8
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(198,255,true,267657666941021483048467427098780756158,57314815195877261260598930120162664542,1524785992,255) from: 0x0000000000000000000000000000000000010000 Time delay: 58 seconds Block delay: 5
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,63,true,73875368070887350839405178584867082350,4370001,1524785993,255) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionSetDeposits(206,true) from: 0x0000000000000000000000000000000000010000 Time delay: 41 seconds Block delay: 4
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,255,false,4370001,102854073717256983770259524236600982925,149425551766692037453494228517709261867,165) from: 0x0000000000000000000000000000000000010000 Time delay: 29 seconds Block delay: 4
+RouterEchidnaV3Reach.actionSetDeposits(254,false) from: 0x0000000000000000000000000000000000030000 Time delay: 16 seconds Block delay: 3
+RouterEchidnaV3Reach.actionDust(251,931) from: 0x0000000000000000000000000000000000020000 Time delay: 56 seconds Block delay: 2
+RouterEchidnaV3Reach.actionSetEject(255,false) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionSetEject(229,false) from: 0x0000000000000000000000000000000000020000 Time delay: 60 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSetEject(255,true) from: 0x0000000000000000000000000000000000020000 Time delay: 28 seconds Block delay: 5
+RouterEchidnaV3Reach.actionRotateRecipient(209) from: 0x0000000000000000000000000000000000010000 Time delay: 55 seconds Block delay: 5
+RouterEchidnaV3Reach.actionUnauthorized(67,false) from: 0x0000000000000000000000000000000000030000 Time delay: 28 seconds Block delay: 4
+RouterEchidnaV3Reach.actionAddPool(47) from: 0x0000000000000000000000000000000000030000 Time delay: 29 seconds Block delay: 2
+RouterEchidnaV3Reach.actionSetEject(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 56 seconds Block delay: 8
+RouterEchidnaV3Reach.actionRotateRecipient(129) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionSetDeposits(41,false) from: 0x0000000000000000000000000000000000030000 Time delay: 24 seconds Block delay: 2
+RouterEchidnaV3Reach.actionUnauthorized(254,false) from: 0x0000000000000000000000000000000000030000 Time delay: 54 seconds Block delay: 9
+RouterEchidnaV3Reach.actionSetEject(255,true) from: 0x0000000000000000000000000000000000030000 Time delay: 5 seconds Block delay: 1
+RouterEchidnaV3Reach.actionCollect(167,true) from: 0x0000000000000000000000000000000000030000 Time delay: 27 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSwap(255,true,8872536258117048912673379644133880798) from: 0x0000000000000000000000000000000000020000 Time delay: 45 seconds Block delay: 7
+RouterEchidnaV3Reach.actionDust(255,14320875589869812331) from: 0x0000000000000000000000000000000000030000
+RouterEchidnaV3Reach.actionExit(255,true) from: 0x0000000000000000000000000000000000030000 Time delay: 19 seconds Block delay: 5
+
+[2026-10-06 18:58:03.08]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/reproducers-unshrunk/1772616142947560029.txt
+[2026-10-06 18:58:03.36] [Worker 0] New coverage: 45364 instr, 8 contracts, 1 seqs in corpus
+[2026-10-06 18:58:03.38]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/1403919168331107801.txt
+[2026-10-06 18:58:03.66] [Worker 3] New coverage: 45364 instr, 8 contracts, 2 seqs in corpus
+[2026-10-06 18:58:03.68]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/1758792544673505439.txt
+[2026-10-06 18:58:05.25] [status] tests: 2/14, fuzzing: 130/20000, values: [], cov: 45364, corpus: 2, shrinking: W3:2/1000(29) W0:1/1000(57), gas/s: 12842449
+[2026-10-06 18:58:05.70] [Worker 1] New coverage: 45364 instr, 8 contracts, 3 seqs in corpus
+[2026-10-06 18:58:05.71]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/764258642548506320.txt
+[2026-10-06 18:58:07.52] [Worker 2] New coverage: 45369 instr, 8 contracts, 4 seqs in corpus
+[2026-10-06 18:58:07.54]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/1675424173827421684.txt
+[2026-10-06 18:58:08.25] [status] tests: 2/14, fuzzing: 260/20000, values: [], cov: 45369, corpus: 4, shrinking: W3:4/1000(27) W0:2/1000(56), gas/s: 27761298
+[2026-10-06 18:58:09.72] [Worker 1] New coverage: 45375 instr, 8 contracts, 5 seqs in corpus
+[2026-10-06 18:58:09.73]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/3128672636162719004.txt
+[2026-10-06 18:58:11.26] [status] tests: 2/14, fuzzing: 325/20000, values: [], cov: 45375, corpus: 5, shrinking: W3:6/1000(26) W0:4/1000(55), gas/s: 6216965
+[2026-10-06 18:58:12.09] [Worker 2] New coverage: 45399 instr, 8 contracts, 6 seqs in corpus
+[2026-10-06 18:58:12.10]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/7459112748526844096.txt
+[2026-10-06 18:58:13.75] [Worker 1] New coverage: 45759 instr, 8 contracts, 7 seqs in corpus
+[2026-10-06 18:58:13.77]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/627630986082069708.txt
+[2026-10-06 18:58:14.26] [status] tests: 2/14, fuzzing: 455/20000, values: [], cov: 45764, corpus: 7, shrinking: W3:8/1000(26) W0:6/1000(53), gas/s: 14126446
+[2026-10-06 18:58:16.81] [Worker 2] New coverage: 45764 instr, 8 contracts, 8 seqs in corpus
+[2026-10-06 18:58:16.82]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/8396232002371850294.txt
+[2026-10-06 18:58:17.27] [status] tests: 2/14, fuzzing: 520/20000, values: [], cov: 45764, corpus: 8, shrinking: W3:10/1000(25) W0:8/1000(52), gas/s: 11125563
+[2026-10-06 18:58:17.65] [Worker 1] New coverage: 45764 instr, 8 contracts, 9 seqs in corpus
+[2026-10-06 18:58:17.66]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/8001576425714597068.txt
+[2026-10-06 18:58:20.27] [status] tests: 2/14, fuzzing: 585/20000, values: [], cov: 45764, corpus: 9, shrinking: W3:12/1000(24) W0:9/1000(52), gas/s: 6407281
+[2026-10-06 18:58:23.28] [status] tests: 2/14, fuzzing: 715/20000, values: [], cov: 45764, corpus: 9, shrinking: W3:14/1000(22) W0:11/1000(50), gas/s: 18092458
+[2026-10-06 18:58:26.28] [status] tests: 2/14, fuzzing: 715/20000, values: [], cov: 45764, corpus: 9, shrinking: W3:16/1000(21) W0:13/1000(48), gas/s: 0
+[2026-10-06 18:58:27.31] [Worker 2] New coverage: 45764 instr, 8 contracts, 10 seqs in corpus
+[2026-10-06 18:58:27.33]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/5776111028746208431.txt
+[2026-10-06 18:58:29.29] [status] tests: 2/14, fuzzing: 780/20000, values: [], cov: 45765, corpus: 10, shrinking: W3:18/1000(20) W0:15/1000(47), gas/s: 11024059
+[2026-10-06 18:58:29.67] [Worker 1] New coverage: 45765 instr, 8 contracts, 11 seqs in corpus
+[2026-10-06 18:58:29.70]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/2963835722390024847.txt
+[2026-10-06 18:58:32.29] [status] tests: 2/14, fuzzing: 845/20000, values: [], cov: 46726, corpus: 11, shrinking: W3:20/1000(18) W0:17/1000(46), gas/s: 11540087
+[2026-10-06 18:58:32.59] [Worker 2] New coverage: 46726 instr, 8 contracts, 12 seqs in corpus
+[2026-10-06 18:58:32.60]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/5979018033976057550.txt
+[2026-10-06 18:58:35.30] [status] tests: 2/14, fuzzing: 975/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:22/1000(16) W0:19/1000(45), gas/s: 15694609
+[2026-10-06 18:58:38.30] [status] tests: 2/14, fuzzing: 975/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:24/1000(15) W0:21/1000(45), gas/s: 0
+[2026-10-06 18:58:41.31] [status] tests: 2/14, fuzzing: 1105/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:26/1000(13) W0:23/1000(45), gas/s: 20900166
+[2026-10-06 18:58:44.32] [status] tests: 2/14, fuzzing: 1170/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:28/1000(13) W0:25/1000(45), gas/s: 6986986
+[2026-10-06 18:58:47.32] [status] tests: 2/14, fuzzing: 1225/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:31/1000(12) W0:27/1000(45), gas/s: 6276895
+[2026-10-06 18:58:50.33] [status] tests: 2/14, fuzzing: 1290/20000, values: [], cov: 46726, corpus: 12, shrinking: W3:33/1000(10) W0:29/1000(43), gas/s: 24196172
+[2026-10-06 18:58:51.05] [Worker 1] New coverage: 46726 instr, 8 contracts, 13 seqs in corpus
+[2026-10-06 18:58:51.06]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/658134187769883953.txt
+[2026-10-06 18:58:53.33] [status] tests: 2/14, fuzzing: 1355/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:35/1000(10) W0:31/1000(41), gas/s: 11023528
+[2026-10-06 18:58:56.34] [status] tests: 2/14, fuzzing: 1420/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:38/1000(8) W0:32/1000(41), gas/s: 9658959
+[2026-10-06 18:58:59.34] [status] tests: 2/14, fuzzing: 1522/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:41/1000(6) W0:34/1000(40), gas/s: 20253304
+[2026-10-06 18:59:02.35] [status] tests: 2/14, fuzzing: 1587/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:72/1000(2) W0:36/1000(38), gas/s: 6717792
+[2026-10-06 18:59:05.35] [status] tests: 2/14, fuzzing: 1652/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:107/1000(2) W0:38/1000(38), gas/s: 13212769
+[2026-10-06 18:59:08.36] [status] tests: 2/14, fuzzing: 1717/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:148/1000(2) W0:40/1000(37), gas/s: 10122560
+[2026-10-06 18:59:11.36] [status] tests: 2/14, fuzzing: 1782/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:187/1000(2) W0:42/1000(36), gas/s: 16512913
+[2026-10-06 18:59:14.37] [status] tests: 2/14, fuzzing: 1912/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:231/1000(2) W0:44/1000(35), gas/s: 19352871
+[2026-10-06 18:59:17.37] [status] tests: 2/14, fuzzing: 1975/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:268/1000(2) W0:46/1000(35), gas/s: 5141584
+[2026-10-06 18:59:20.42] [status] tests: 2/14, fuzzing: 2040/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:305/1000(2) W0:47/1000(34), gas/s: 10535159
+[2026-10-06 18:59:23.43] [status] tests: 2/14, fuzzing: 2170/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:341/1000(2) W0:49/1000(33), gas/s: 16185289
+[2026-10-06 18:59:26.43] [status] tests: 2/14, fuzzing: 2170/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:371/1000(2) W0:50/1000(32), gas/s: 0
+[2026-10-06 18:59:29.44] [status] tests: 2/14, fuzzing: 2235/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:397/1000(2) W0:51/1000(31), gas/s: 5337455
+[2026-10-06 18:59:32.45] [status] tests: 2/14, fuzzing: 2300/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:433/1000(2) W0:53/1000(29), gas/s: 11550109
+[2026-10-06 18:59:35.46] [status] tests: 2/14, fuzzing: 2300/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:466/1000(2) W0:54/1000(29), gas/s: 0
+[2026-10-06 18:59:38.46] [status] tests: 2/14, fuzzing: 2430/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:505/1000(2) W0:58/1000(29), gas/s: 21446335
+[2026-10-06 18:59:41.47] [status] tests: 2/14, fuzzing: 2560/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:541/1000(2) W0:63/1000(26), gas/s: 17751182
+[2026-10-06 18:59:44.47] [status] tests: 2/14, fuzzing: 2560/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:581/1000(2) W0:69/1000(23), gas/s: 0
+[2026-10-06 18:59:47.48] [status] tests: 2/14, fuzzing: 2690/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:624/1000(2) W0:75/1000(21), gas/s: 25587057
+[2026-10-06 18:59:50.48] [status] tests: 2/14, fuzzing: 2690/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:664/1000(2) W0:83/1000(17), gas/s: 0
+[2026-10-06 18:59:53.49] [status] tests: 2/14, fuzzing: 2820/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:707/1000(2) W0:89/1000(15), gas/s: 16155414
+[2026-10-06 18:59:56.49] [status] tests: 2/14, fuzzing: 2950/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:753/1000(2) W0:97/1000(11), gas/s: 14843021
+[2026-10-06 18:59:59.50] [status] tests: 2/14, fuzzing: 3015/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:792/1000(2) W0:103/1000(10), gas/s: 5419489
+[2026-10-06 19:00:02.50] [status] tests: 2/14, fuzzing: 3080/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:834/1000(2) W0:113/1000(8), gas/s: 11598652
+[2026-10-06 19:00:05.51] [status] tests: 2/14, fuzzing: 3200/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:872/1000(2) W0:123/1000(7), gas/s: 19142843
+[2026-10-06 19:00:08.51] [status] tests: 2/14, fuzzing: 3200/20000, values: [], cov: 46726, corpus: 13, shrinking: W3:913/1000(2) W0:135/1000(6), gas/s: 0
+[2026-10-06 19:00:09.07] [Worker 2] New coverage: 46729 instr, 8 contracts, 14 seqs in corpus
+[2026-10-06 19:00:09.08]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/4254595203342207891.txt
+[2026-10-06 19:00:11.52] [status] tests: 2/14, fuzzing: 3330/20000, values: [], cov: 46729, corpus: 14, shrinking: W3:951/1000(2) W0:146/1000(6), gas/s: 24181696
+[2026-10-06 19:00:14.52] [status] tests: 2/14, fuzzing: 3395/20000, values: [], cov: 46729, corpus: 14, shrinking: W3:994/1000(2) W0:157/1000(6), gas/s: 5599099
+[2026-10-06 19:00:17.53] [status] tests: 2/14, fuzzing: 3395/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:168/1000(6), gas/s: 0
+[2026-10-06 19:00:20.54] [status] tests: 2/14, fuzzing: 3590/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:179/1000(6), gas/s: 39613138
+[2026-10-06 19:00:23.54] [status] tests: 2/14, fuzzing: 3590/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:190/1000(6), gas/s: 0
+[2026-10-06 19:00:26.55] [status] tests: 2/14, fuzzing: 3720/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:201/1000(6), gas/s: 32265223
+[2026-10-06 19:00:29.55] [status] tests: 2/14, fuzzing: 3785/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:211/1000(6), gas/s: 13844361
+[2026-10-06 19:00:32.56] [status] tests: 2/14, fuzzing: 3915/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:220/1000(6), gas/s: 20668201
+[2026-10-06 19:00:35.56] [status] tests: 2/14, fuzzing: 4090/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:230/1000(6), gas/s: 33946671
+[2026-10-06 19:00:38.57] [status] tests: 2/14, fuzzing: 4090/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:241/1000(6), gas/s: 0
+[2026-10-06 19:00:41.57] [status] tests: 2/14, fuzzing: 4220/20000, values: [], cov: 46729, corpus: 14, shrinking: W0:251/1000(6), gas/s: 21220599
+[2026-10-06 19:00:41.82] [Worker 1] New coverage: 46729 instr, 8 contracts, 15 seqs in corpus
+[2026-10-06 19:00:41.84]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/coverage/4688243081629976681.txt
+[2026-10-06 19:00:44.58] [status] tests: 2/14, fuzzing: 4377/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:261/1000(6), gas/s: 30195755
+[2026-10-06 19:00:47.59] [status] tests: 2/14, fuzzing: 4572/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:271/1000(6), gas/s: 27680148
+[2026-10-06 19:00:50.59] [status] tests: 2/14, fuzzing: 4572/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:283/1000(6), gas/s: 0
+[2026-10-06 19:00:53.60] [status] tests: 2/14, fuzzing: 4766/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:293/1000(6), gas/s: 39668600
+[2026-10-06 19:00:56.60] [status] tests: 2/14, fuzzing: 4766/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:305/1000(6), gas/s: 0
+[2026-10-06 19:00:59.61] [status] tests: 2/14, fuzzing: 4961/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:316/1000(6), gas/s: 35520134
+[2026-10-06 19:01:02.61] [status] tests: 2/14, fuzzing: 4961/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:326/1000(6), gas/s: 0
+[2026-10-06 19:01:05.62] [status] tests: 2/14, fuzzing: 5156/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:337/1000(6), gas/s: 31020048
+[2026-10-06 19:01:08.62] [status] tests: 2/14, fuzzing: 5221/20000, values: [], cov: 46729, corpus: 15, shrinking: W0:349/1000(6), gas/s: 5320383
+[2026-10-06 19:01:09.75] [Worker 3] Test echidna_reach_refused_ejected_and_paid_elsewhere falsified!
+  Call sequence:
+RouterEchidnaV3Reach.actionDonate(113,125310089416519516653309791028481115878,4370000) from: 0x0000000000000000000000000000000000020000 Time delay: 16 seconds Block delay: 1
+RouterEchidnaV3Reach.actionAddPool(254) from: 0x0000000000000000000000000000000000010000 Time delay: 5 seconds Block delay: 3
+RouterEchidnaV3Reach.actionSetDeposits(255,true) from: 0x0000000000000000000000000000000000030000 Time delay: 16 seconds Block delay: 4
+RouterEchidnaV3Reach.actionCatalogAbuse(255,253) from: 0x0000000000000000000000000000000000020000 Time delay: 5 seconds Block delay: 1
+RouterEchidnaV3Reach.actionDonate(225,16,1524785992) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionCatalogAbuse(255,66) from: 0x0000000000000000000000000000000000020000 Time delay: 55 seconds Block delay: 7
+RouterEchidnaV3Reach.actionEject(45,false) from: 0x0000000000000000000000000000000000020000 Time delay: 19 seconds Block delay: 2
+RouterEchidnaV3Reach.actionCollect(138,false) from: 0x0000000000000000000000000000000000030000 Time delay: 7 seconds Block delay: 4
+RouterEchidnaV3Reach.actionCatalogAbuse(255,107) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionRotateRecipient(86) from: 0x0000000000000000000000000000000000010000 Time delay: 40 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSwap(23,false,1524785992) from: 0x0000000000000000000000000000000000020000 Time delay: 28 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSwap(126,true,197927874665352872139664903295100055369) from: 0x0000000000000000000000000000000000030000 Time delay: 8 seconds Block delay: 5
+RouterEchidnaV3Reach.actionSwap(34,false,4370001) from: 0x0000000000000000000000000000000000010000 Time delay: 23 seconds Block delay: 6
+RouterEchidnaV3Reach.actionDust(255,13582580076849811825) from: 0x0000000000000000000000000000000000010000 Time delay: 37 seconds Block delay: 7
+RouterEchidnaV3Reach.actionCollect(255,true) from: 0x0000000000000000000000000000000000020000 Time delay: 48 seconds Block delay: 2
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,41,false,1524785992,340282366920938463463374607431768211455,136800510480125714432344130233002004415,218) from: 0x0000000000000000000000000000000000010000 Time delay: 32 seconds Block delay: 5
+RouterEchidnaV3Reach.actionOpenOutsideBounds(7,255,true) from: 0x0000000000000000000000000000000000030000 Time delay: 36 seconds Block delay: 6
+RouterEchidnaV3Reach.actionWithdraw(255,22,356173440580543099839715313792023519664875111412531656731816000597844) from: 0x0000000000000000000000000000000000010000 Time delay: 15 seconds Block delay: 2
+RouterEchidnaV3Reach.actionOpen(103,178,4370001,64536601270079637790669191812958509423,87) from: 0x0000000000000000000000000000000000010000 Time delay: 11 seconds Block delay: 1
+RouterEchidnaV3Reach.actionAddPool(0) from: 0x0000000000000000000000000000000000020000 Time delay: 52 seconds Block delay: 2
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,255,true,1524785993,81906318058707843844087427337708723455,4370001,255) from: 0x0000000000000000000000000000000000020000 Time delay: 52 seconds Block delay: 6
+RouterEchidnaV3Reach.actionOpenOutsideBounds(255,255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 30 seconds Block delay: 5
+RouterEchidnaV3Reach.actionOpen(252,255,1524785991,340282366920938463463374607431768211451,167) from: 0x0000000000000000000000000000000000020000 Time delay: 11 seconds Block delay: 10
+RouterEchidnaV3Reach.actionUnauthorized(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 14 seconds Block delay: 10
+RouterEchidnaV3Reach.actionAddPool(98) from: 0x0000000000000000000000000000000000030000 Time delay: 41 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSetEject(255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 33 seconds Block delay: 5
+RouterEchidnaV3Reach.actionCatalogAbuse(255,255) from: 0x0000000000000000000000000000000000010000 Time delay: 26 seconds Block delay: 3
+RouterEchidnaV3Reach.actionCollect(79,false) from: 0x0000000000000000000000000000000000030000 Time delay: 38 seconds Block delay: 6
+RouterEchidnaV3Reach.actionSetDeposits(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 27 seconds Block delay: 7
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(242,0,true,34820708528957075432252997283062232399,204061432955338507970576065903794482966,28617229182,255) from: 0x0000000000000000000000000000000000010000 Time delay: 48 seconds Block delay: 8
+RouterEchidnaV3Reach.actionExit(255,false) from: 0x0000000000000000000000000000000000030000 Time delay: 60 seconds Block delay: 10
+RouterEchidnaV3Reach.actionCollect(255,true) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionSetEject(21,true) from: 0x0000000000000000000000000000000000010000 Time delay: 41 seconds Block delay: 3
+RouterEchidnaV3Reach.actionRotateRecipient(107) from: 0x0000000000000000000000000000000000020000 Time delay: 4 seconds Block delay: 6
+RouterEchidnaV3Reach.actionSwap(222,true,29355436477) from: 0x0000000000000000000000000000000000010000 Time delay: 8 seconds Block delay: 6
+RouterEchidnaV3Reach.actionOpen(101,255,6873952879182411074675,245878281978699802579697761386551851821,255) from: 0x0000000000000000000000000000000000030000 Time delay: 14 seconds Block delay: 2
+RouterEchidnaV3Reach.actionAddPool(255) from: 0x0000000000000000000000000000000000020000 Time delay: 16 seconds Block delay: 10
+RouterEchidnaV3Reach.actionDust(252,799913183) from: 0x0000000000000000000000000000000000020000 Time delay: 17 seconds Block delay: 9
+RouterEchidnaV3Reach.actionExit(118,true) from: 0x0000000000000000000000000000000000030000 Time delay: 56 seconds Block delay: 1
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,108,true,15927882934113170606399,5879172398205434515958,9787374908887624555600520605806972784,86) from: 0x0000000000000000000000000000000000030000 Time delay: 40 seconds Block delay: 5
+RouterEchidnaV3Reach.actionSetDeposits(255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 54 seconds Block delay: 4
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(108,4,true,238926007066053103595940820031640066280,1524785991,340282366920938463463374607431768211455,225) from: 0x0000000000000000000000000000000000030000 Time delay: 15 seconds Block delay: 1
+RouterEchidnaV3Reach.actionCatalogAbuse(199,46) from: 0x0000000000000000000000000000000000010000 Time delay: 31 seconds Block delay: 5
+RouterEchidnaV3Reach.actionRotateRecipient(60) from: 0x0000000000000000000000000000000000030000 Time delay: 11 seconds Block delay: 8
+RouterEchidnaV3Reach.actionSetDeposits(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 4 seconds Block delay: 4
+RouterEchidnaV3Reach.actionEject(62,true) from: 0x0000000000000000000000000000000000030000 Time delay: 39 seconds Block delay: 8
+RouterEchidnaV3Reach.actionOpen(115,255,1524785992,25829869135048299115,255) from: 0x0000000000000000000000000000000000020000 Time delay: 16 seconds Block delay: 8
+RouterEchidnaV3Reach.actionOpen(47,253,5436555319453911622106,338885393279185962601597129174362318596,23) from: 0x0000000000000000000000000000000000010000 Time delay: 10 seconds Block delay: 5
+RouterEchidnaV3Reach.actionUnauthorized(252,false) from: 0x0000000000000000000000000000000000020000 Time delay: 35 seconds Block delay: 1
+RouterEchidnaV3Reach.actionDust(9,1524785993) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionEject(74,false) from: 0x0000000000000000000000000000000000030000 Time delay: 46 seconds Block delay: 7
+RouterEchidnaV3Reach.actionCollect(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 46 seconds Block delay: 5
+RouterEchidnaV3Reach.actionCatalogAbuse(164,185) from: 0x0000000000000000000000000000000000010000 Time delay: 36 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSwap(23,false,1524785992) from: 0x0000000000000000000000000000000000020000 Time delay: 29 seconds Block delay: 10
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(243,255,true,0,69585872430290904045911218401149038961,153828330701632640504011406029643860158,165) from: 0x0000000000000000000000000000000000010000 Time delay: 36 seconds Block delay: 7
+RouterEchidnaV3Reach.actionAddPool(0) from: 0x0000000000000000000000000000000000030000 Time delay: 4 seconds Block delay: 8
+RouterEchidnaV3Reach.actionSetDeposits(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 42 seconds Block delay: 10
+RouterEchidnaV3Reach.actionWithdraw(241,255,99999999999999999999) from: 0x0000000000000000000000000000000000030000
+RouterEchidnaV3Reach.actionCatalogAbuse(50,254) from: 0x0000000000000000000000000000000000020000 Time delay: 52 seconds Block delay: 6
+RouterEchidnaV3Reach.actionEject(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 47 seconds Block delay: 1
+RouterEchidnaV3Reach.actionDust(118,13048416640360413811) from: 0x0000000000000000000000000000000000010000 Time delay: 27 seconds Block delay: 4
+RouterEchidnaV3Reach.actionWithdraw(255,114,239273233915612000) from: 0x0000000000000000000000000000000000010000 Time delay: 30 seconds Block delay: 6
+RouterEchidnaV3Reach.actionEject(118,false) from: 0x0000000000000000000000000000000000020000 Time delay: 40 seconds Block delay: 10
+
+[2026-10-06 19:01:09.78]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/reproducers-unshrunk/2195690868038442834.txt
+[2026-10-06 19:01:11.63] [status] tests: 3/14, fuzzing: 5351/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:0/1000(63) W0:359/1000(6), gas/s: 23957775
+[2026-10-06 19:01:14.64] [status] tests: 3/14, fuzzing: 5415/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:1/1000(63) W0:370/1000(6), gas/s: 16326905
+[2026-10-06 19:01:17.64] [status] tests: 3/14, fuzzing: 5480/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:2/1000(63) W0:381/1000(6), gas/s: 12055163
+[2026-10-06 19:01:20.65] [status] tests: 3/14, fuzzing: 5610/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:2/1000(63) W0:390/1000(6), gas/s: 14802412
+[2026-10-06 19:01:23.65] [status] tests: 3/14, fuzzing: 5675/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:3/1000(63) W0:400/1000(6), gas/s: 7981604
+[2026-10-06 19:01:26.65] [status] tests: 3/14, fuzzing: 5675/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:4/1000(62) W0:412/1000(6), gas/s: 0
+[2026-10-06 19:01:29.66] [status] tests: 3/14, fuzzing: 5805/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:5/1000(62) W0:423/1000(6), gas/s: 26141189
+[2026-10-06 19:01:32.67] [status] tests: 3/14, fuzzing: 5870/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:6/1000(61) W0:434/1000(6), gas/s: 9894197
+[2026-10-06 19:01:35.67] [status] tests: 3/14, fuzzing: 5935/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:7/1000(60) W0:444/1000(6), gas/s: 7650417
+[2026-10-06 19:01:38.67] [status] tests: 3/14, fuzzing: 6000/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:8/1000(59) W0:455/1000(6), gas/s: 13444792
+[2026-10-06 19:01:41.68] [status] tests: 3/14, fuzzing: 6065/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:9/1000(59) W0:466/1000(6), gas/s: 12336751
+[2026-10-06 19:01:44.68] [status] tests: 3/14, fuzzing: 6130/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:11/1000(58) W0:476/1000(6), gas/s: 7783289
+[2026-10-06 19:01:47.69] [status] tests: 3/14, fuzzing: 6195/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:12/1000(58) W0:487/1000(6), gas/s: 14174965
+[2026-10-06 19:01:50.70] [status] tests: 3/14, fuzzing: 6260/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:13/1000(57) W0:498/1000(6), gas/s: 11628526
+[2026-10-06 19:01:53.70] [status] tests: 3/14, fuzzing: 6325/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:15/1000(57) W0:510/1000(6), gas/s: 20713452
+[2026-10-06 19:01:56.71] [status] tests: 3/14, fuzzing: 6390/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:16/1000(56) W0:521/1000(6), gas/s: 11004642
+[2026-10-06 19:01:59.71] [status] tests: 3/14, fuzzing: 6455/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:17/1000(56) W0:530/1000(6), gas/s: 8920425
+[2026-10-06 19:02:02.72] [status] tests: 3/14, fuzzing: 6520/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:19/1000(56) W0:541/1000(6), gas/s: 13477669
+[2026-10-06 19:02:05.73] [status] tests: 3/14, fuzzing: 6622/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:20/1000(56) W0:551/1000(6), gas/s: 15000915
+[2026-10-06 19:02:08.73] [status] tests: 3/14, fuzzing: 6687/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:22/1000(55) W0:561/1000(6), gas/s: 8714155
+[2026-10-06 19:02:11.74] [status] tests: 3/14, fuzzing: 6761/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:23/1000(54) W0:574/1000(6), gas/s: 8420125
+[2026-10-06 19:02:14.74] [status] tests: 3/14, fuzzing: 6826/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:24/1000(53) W0:584/1000(6), gas/s: 14137891
+[2026-10-06 19:02:17.75] [status] tests: 3/14, fuzzing: 6957/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:25/1000(52) W0:596/1000(6), gas/s: 26166562
+[2026-10-06 19:02:20.75] [status] tests: 3/14, fuzzing: 6957/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:27/1000(51) W0:607/1000(6), gas/s: 0
+[2026-10-06 19:02:23.76] [status] tests: 3/14, fuzzing: 7087/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:28/1000(50) W0:616/1000(6), gas/s: 19257293
+[2026-10-06 19:02:26.76] [status] tests: 3/14, fuzzing: 7152/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:30/1000(50) W0:626/1000(6), gas/s: 10326500
+[2026-10-06 19:02:29.77] [status] tests: 3/14, fuzzing: 7217/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:31/1000(50) W0:637/1000(6), gas/s: 6287623
+[2026-10-06 19:02:32.78] [status] tests: 3/14, fuzzing: 7282/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:32/1000(49) W0:648/1000(6), gas/s: 13169613
+[2026-10-06 19:02:35.78] [status] tests: 3/14, fuzzing: 7347/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:34/1000(49) W0:659/1000(6), gas/s: 16477048
+[2026-10-06 19:02:38.79] [status] tests: 3/14, fuzzing: 7412/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:35/1000(49) W0:667/1000(6), gas/s: 10328295
+[2026-10-06 19:02:41.80] [status] tests: 3/14, fuzzing: 7477/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:37/1000(49) W0:676/1000(6), gas/s: 8921505
+[2026-10-06 19:02:44.80] [status] tests: 3/14, fuzzing: 7607/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:38/1000(48) W0:686/1000(6), gas/s: 22596032
+[2026-10-06 19:02:47.81] [status] tests: 3/14, fuzzing: 7653/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:39/1000(48) W0:696/1000(6), gas/s: 7854172
+[2026-10-06 19:02:50.81] [status] tests: 3/14, fuzzing: 7718/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:41/1000(48) W0:707/1000(6), gas/s: 9811583
+[2026-10-06 19:02:53.81] [status] tests: 3/14, fuzzing: 7742/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:42/1000(47) W0:718/1000(6), gas/s: 5059591
+[2026-10-06 19:02:56.82] [status] tests: 3/14, fuzzing: 7872/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:44/1000(46) W0:729/1000(6), gas/s: 23803127
+[2026-10-06 19:02:59.82] [status] tests: 3/14, fuzzing: 7937/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:45/1000(46) W0:741/1000(6), gas/s: 9056718
+[2026-10-06 19:03:02.83] [status] tests: 3/14, fuzzing: 8002/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:48/1000(44) W0:753/1000(6), gas/s: 5964608
+[2026-10-06 19:03:05.83] [status] tests: 3/14, fuzzing: 8067/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:50/1000(42) W0:767/1000(6), gas/s: 21150976
+[2026-10-06 19:03:08.84] [status] tests: 3/14, fuzzing: 8132/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:53/1000(41) W0:778/1000(6), gas/s: 18118308
+[2026-10-06 19:03:11.84] [status] tests: 3/14, fuzzing: 8197/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:55/1000(40) W0:789/1000(6), gas/s: 12844396
+[2026-10-06 19:03:14.85] [status] tests: 3/14, fuzzing: 8315/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:58/1000(39) W0:801/1000(6), gas/s: 20152713
+[2026-10-06 19:03:17.85] [status] tests: 3/14, fuzzing: 8380/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:61/1000(37) W0:813/1000(6), gas/s: 11310736
+[2026-10-06 19:03:20.86] [status] tests: 3/14, fuzzing: 8510/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:64/1000(35) W0:824/1000(6), gas/s: 24559086
+[2026-10-06 19:03:23.86] [status] tests: 3/14, fuzzing: 8575/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:67/1000(35) W0:836/1000(6), gas/s: 12915661
+[2026-10-06 19:03:26.87] [status] tests: 3/14, fuzzing: 8640/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:70/1000(34) W0:847/1000(6), gas/s: 15890046
+[2026-10-06 19:03:29.87] [status] tests: 3/14, fuzzing: 8705/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:73/1000(34) W0:857/1000(6), gas/s: 13995889
+[2026-10-06 19:03:32.88] [status] tests: 3/14, fuzzing: 8770/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:76/1000(33) W0:869/1000(6), gas/s: 13259625
+[2026-10-06 19:03:35.88] [status] tests: 3/14, fuzzing: 8832/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:80/1000(33) W0:880/1000(6), gas/s: 9409791
+[2026-10-06 19:03:38.88] [status] tests: 3/14, fuzzing: 8897/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:83/1000(32) W0:893/1000(6), gas/s: 21706550
+[2026-10-06 19:03:41.89] [status] tests: 3/14, fuzzing: 8962/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:86/1000(32) W0:905/1000(6), gas/s: 16204154
+[2026-10-06 19:03:44.89] [status] tests: 3/14, fuzzing: 9027/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:89/1000(32) W0:917/1000(6), gas/s: 6725940
+[2026-10-06 19:03:47.90] [status] tests: 3/14, fuzzing: 9157/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:92/1000(31) W0:927/1000(6), gas/s: 21997202
+[2026-10-06 19:03:50.90] [status] tests: 3/14, fuzzing: 9157/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:95/1000(30) W0:940/1000(6), gas/s: 0
+[2026-10-06 19:03:53.91] [status] tests: 3/14, fuzzing: 9316/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:99/1000(27) W0:951/1000(6), gas/s: 31971113
+[2026-10-06 19:03:56.91] [status] tests: 3/14, fuzzing: 9316/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:102/1000(26) W0:963/1000(6), gas/s: 0
+[2026-10-06 19:03:59.92] [status] tests: 3/14, fuzzing: 9446/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:106/1000(26) W0:977/1000(6), gas/s: 20619341
+[2026-10-06 19:04:02.92] [status] tests: 3/14, fuzzing: 9576/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:109/1000(25) W0:990/1000(6), gas/s: 12333680
+[2026-10-06 19:04:05.93] [status] tests: 3/14, fuzzing: 9675/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:113/1000(25), gas/s: 11245852
+[2026-10-06 19:04:08.93] [status] tests: 3/14, fuzzing: 9740/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:116/1000(24), gas/s: 9002543
+[2026-10-06 19:04:11.94] [status] tests: 3/14, fuzzing: 9870/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:120/1000(24), gas/s: 23694271
+[2026-10-06 19:04:14.94] [status] tests: 3/14, fuzzing: 10000/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:124/1000(24), gas/s: 27050804
+[2026-10-06 19:04:17.95] [status] tests: 3/14, fuzzing: 10046/20000, values: [], cov: 46729, corpus: 15, shrinking: W3:128/1000(24), gas/s: 5290071
+[2026-10-06 19:04:19.16] [Worker 2] Test echidna_reach_appended_pools_opened_and_exited falsified!
+  Call sequence:
+RouterEchidnaV3Reach.actionWithdraw(194,187,3793044074418907551680232142123648030762712175787333213681744730924093065271) from: 0x0000000000000000000000000000000000020000 Time delay: 53 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSwap(255,false,232246621850591102319757744582799405907) from: 0x0000000000000000000000000000000000020000 Time delay: 8 seconds Block delay: 1
+RouterEchidnaV3Reach.actionEject(29,true) from: 0x0000000000000000000000000000000000020000 Time delay: 58 seconds Block delay: 10
+RouterEchidnaV3Reach.actionAddPool(42) from: 0x0000000000000000000000000000000000010000 Time delay: 20 seconds Block delay: 9
+RouterEchidnaV3Reach.actionRotateRecipient(96) from: 0x0000000000000000000000000000000000010000 Time delay: 16 seconds Block delay: 4
+RouterEchidnaV3Reach.actionEject(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 46 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSetEject(247,false) from: 0x0000000000000000000000000000000000030000 Time delay: 12 seconds Block delay: 5
+RouterEchidnaV3Reach.actionWithdraw(114,172,1379081649492983185301911306822568312263970963149662481484202850829805218811) from: 0x0000000000000000000000000000000000020000 Time delay: 55 seconds Block delay: 7
+RouterEchidnaV3Reach.actionEject(66,true) from: 0x0000000000000000000000000000000000030000 Time delay: 36 seconds Block delay: 9
+RouterEchidnaV3Reach.actionExit(255,false) from: 0x0000000000000000000000000000000000030000 Time delay: 55 seconds Block delay: 1
+RouterEchidnaV3Reach.actionCollect(145,false) from: 0x0000000000000000000000000000000000030000 Time delay: 21 seconds Block delay: 2
+RouterEchidnaV3Reach.actionSwap(255,true,340282366920938463463374607431768211454) from: 0x0000000000000000000000000000000000030000 Time delay: 29 seconds Block delay: 10
+RouterEchidnaV3Reach.actionCatalogAbuse(255,11) from: 0x0000000000000000000000000000000000020000 Time delay: 5 seconds Block delay: 1
+RouterEchidnaV3Reach.actionWithdraw(205,255,110688431177305184433262818930558830819776992163227957822203140781831186609377) from: 0x0000000000000000000000000000000000030000 Time delay: 37 seconds Block delay: 10
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(150,203,true,1524785991,20441694371463847714725073502912533745,1524785992,193) from: 0x0000000000000000000000000000000000030000 Time delay: 56 seconds Block delay: 2
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(175,255,false,1524785991,286590189682260457737492624713754799648,165658122261903379591202888258545686524,255) from: 0x0000000000000000000000000000000000030000
+RouterEchidnaV3Reach.actionCollect(255,false) from: 0x0000000000000000000000000000000000010000 Time delay: 20 seconds Block delay: 1
+RouterEchidnaV3Reach.actionExit(89,true) from: 0x0000000000000000000000000000000000020000 Time delay: 10 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSetEject(45,false) from: 0x0000000000000000000000000000000000030000 Time delay: 41 seconds Block delay: 1
+RouterEchidnaV3Reach.actionAddPool(255) from: 0x0000000000000000000000000000000000010000 Time delay: 30 seconds Block delay: 1
+RouterEchidnaV3Reach.actionOpenOutsideBounds(195,29,false) from: 0x0000000000000000000000000000000000020000 Time delay: 59 seconds Block delay: 4
+RouterEchidnaV3Reach.actionExit(58,false) from: 0x0000000000000000000000000000000000030000 Time delay: 6 seconds Block delay: 1
+RouterEchidnaV3Reach.actionOpen(8,253,793,95350962473191027736615726333854159380,189) from: 0x0000000000000000000000000000000000010000 Time delay: 42 seconds Block delay: 7
+RouterEchidnaV3Reach.actionAddPool(33) from: 0x0000000000000000000000000000000000010000 Time delay: 60 seconds Block delay: 1
+RouterEchidnaV3Reach.actionWithdraw(139,255,88810507153537153342691529456406923748853341185509253759011688719360746700385) from: 0x0000000000000000000000000000000000020000 Time delay: 56 seconds Block delay: 6
+RouterEchidnaV3Reach.actionCatalogAbuse(52,211) from: 0x0000000000000000000000000000000000010000 Time delay: 5 seconds Block delay: 1
+RouterEchidnaV3Reach.actionWithdraw(133,212,2935138) from: 0x0000000000000000000000000000000000010000 Time delay: 8 seconds Block delay: 8
+RouterEchidnaV3Reach.actionWithdraw(255,255,63374607431769211454) from: 0x0000000000000000000000000000000000020000 Time delay: 37 seconds Block delay: 3
+RouterEchidnaV3Reach.actionDonate(40,74727047423386708196705779838923237982,3838201517973963286540) from: 0x0000000000000000000000000000000000020000 Time delay: 25 seconds Block delay: 1
+RouterEchidnaV3Reach.actionUnauthorized(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 10 seconds Block delay: 10
+RouterEchidnaV3Reach.actionOpenOutsideBounds(129,240,true) from: 0x0000000000000000000000000000000000020000 Time delay: 22 seconds Block delay: 10
+RouterEchidnaV3Reach.actionOpen(152,152,4408944394723006416622,338949324252521675330397061424086128294,220) from: 0x0000000000000000000000000000000000020000 Time delay: 3 seconds Block delay: 5
+RouterEchidnaV3Reach.actionWithdraw(119,255,6045336575264720681530851298044617388450004868624386738060804745514890683166) from: 0x0000000000000000000000000000000000030000 Time delay: 38 seconds Block delay: 4
+RouterEchidnaV3Reach.actionWithdraw(48,38,54420446829440697569486688379057941967351373998679206696232943331185372139574) from: 0x0000000000000000000000000000000000030000 Time delay: 59 seconds Block delay: 4
+RouterEchidnaV3Reach.actionDonate(253,29355436477,46633755989675186580434715650636159162) from: 0x0000000000000000000000000000000000020000 Time delay: 17 seconds Block delay: 6
+RouterEchidnaV3Reach.actionWithdraw(89,134,20873724796048115387200462258242399633100315622548445518162149028347933353155) from: 0x0000000000000000000000000000000000030000 Time delay: 18 seconds Block delay: 7
+RouterEchidnaV3Reach.actionExit(255,true) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionExit(255,true) from: 0x0000000000000000000000000000000000010000 Time delay: 47 seconds Block delay: 4
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(255,194,true,340282366920938463463374607431768211452,340282366920938463463374607431768211454,23586549758285366269652,178) from: 0x0000000000000000000000000000000000010000 Time delay: 36 seconds Block delay: 6
+RouterEchidnaV3Reach.actionOpenAfterPriceMove(52,0,true,5918473297366532540690,7600575094940704790648,315678084723431611705467696111636716771,255) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionOpen(255,80,340282366920938463463374607431768211455,1021,254) from: 0x0000000000000000000000000000000000010000 Time delay: 16 seconds Block delay: 8
+RouterEchidnaV3Reach.actionCatalogAbuse(52,69) from: 0x0000000000000000000000000000000000030000 Time delay: 38 seconds Block delay: 1
+RouterEchidnaV3Reach.actionDust(21,4951037164198047606) from: 0x0000000000000000000000000000000000020000 Time delay: 56 seconds Block delay: 9
+RouterEchidnaV3Reach.actionCatalogAbuse(157,134) from: 0x0000000000000000000000000000000000030000 Time delay: 46 seconds Block delay: 10
+RouterEchidnaV3Reach.actionCatalogAbuse(151,255) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionAddPool(255) from: 0x0000000000000000000000000000000000010000 Time delay: 41 seconds Block delay: 10
+RouterEchidnaV3Reach.actionCollect(167,false) from: 0x0000000000000000000000000000000000020000 Time delay: 35 seconds Block delay: 3
+RouterEchidnaV3Reach.actionOpen(143,44,61804612759057,18085084,204) from: 0x0000000000000000000000000000000000020000 Time delay: 45 seconds Block delay: 9
+RouterEchidnaV3Reach.actionDonate(238,19976823494098155076358742077716391838,30826432888874961844315) from: 0x0000000000000000000000000000000000020000 Time delay: 18 seconds Block delay: 5
+RouterEchidnaV3Reach.actionCollect(145,false) from: 0x0000000000000000000000000000000000030000 Time delay: 54 seconds Block delay: 7
+RouterEchidnaV3Reach.actionSetEject(205,true) from: 0x0000000000000000000000000000000000030000 Time delay: 4 seconds Block delay: 9
+RouterEchidnaV3Reach.actionOpenOutsideBounds(129,255,false) from: 0x0000000000000000000000000000000000020000 Time delay: 48 seconds Block delay: 8
+RouterEchidnaV3Reach.actionSetDeposits(153,true) from: 0x0000000000000000000000000000000000020000 Time delay: 45 seconds Block delay: 1
+RouterEchidnaV3Reach.actionSwap(240,false,23094783169345489894257) from: 0x0000000000000000000000000000000000010000 Time delay: 28 seconds Block delay: 7
+RouterEchidnaV3Reach.actionRotateRecipient(96) from: 0x0000000000000000000000000000000000020000 Time delay: 46 seconds Block delay: 9
+RouterEchidnaV3Reach.actionOpenOutsideBounds(121,255,false) from: 0x0000000000000000000000000000000000020000
+RouterEchidnaV3Reach.actionExit(218,false) from: 0x0000000000000000000000000000000000020000 Time delay: 33 seconds Block delay: 9
+RouterEchidnaV3Reach.actionUnauthorized(148,false) from: 0x0000000000000000000000000000000000010000
+RouterEchidnaV3Reach.actionSetEject(190,false) from: 0x0000000000000000000000000000000000010000 Time delay: 40 seconds Block delay: 4
+RouterEchidnaV3Reach.actionExit(138,true) from: 0x0000000000000000000000000000000000020000 Time delay: 42 seconds Block delay: 8
+RouterEchidnaV3Reach.actionDonate(80,23586549758061645180468,161407035022138752777676075158552748630) from: 0x0000000000000000000000000000000000020000 Time delay: 17 seconds Block delay: 5
+RouterEchidnaV3Reach.actionExit(255,false) from: 0x0000000000000000000000000000000000030000 Time delay: 41 seconds Block delay: 6
+
+[2026-10-06 19:04:19.17]  Saved reproducer to audit/2026-10-05-v3/echidna/corpus-reach/reproducers-unshrunk/2066689350738327621.txt
+[2026-10-06 19:04:20.95] [status] tests: 4/14, fuzzing: 10241/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:1/1000(62) W3:132/1000(23), gas/s: 41469582
+[2026-10-06 19:04:23.96] [status] tests: 4/14, fuzzing: 10241/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:2/1000(61) W3:136/1000(23), gas/s: 0
+[2026-10-06 19:04:26.96] [status] tests: 4/14, fuzzing: 10371/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:4/1000(61) W3:140/1000(22), gas/s: 26404290
+[2026-10-06 19:04:29.97] [status] tests: 4/14, fuzzing: 10436/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:6/1000(60) W3:145/1000(22), gas/s: 13301145
+[2026-10-06 19:04:32.97] [status] tests: 4/14, fuzzing: 10501/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:8/1000(59) W3:150/1000(21), gas/s: 13607287
+[2026-10-06 19:04:35.98] [status] tests: 4/14, fuzzing: 10501/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:9/1000(59) W3:154/1000(21), gas/s: 0
+[2026-10-06 19:04:38.98] [status] tests: 4/14, fuzzing: 10626/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:11/1000(57) W3:158/1000(21), gas/s: 28405420
+[2026-10-06 19:04:41.99] [status] tests: 4/14, fuzzing: 10756/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:13/1000(57) W3:162/1000(20), gas/s: 20196843
+[2026-10-06 19:04:44.99] [status] tests: 4/14, fuzzing: 10756/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:14/1000(57) W3:167/1000(19), gas/s: 0
+[2026-10-06 19:04:48.00] [status] tests: 4/14, fuzzing: 10886/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:16/1000(57) W3:172/1000(19), gas/s: 25375184
+[2026-10-06 19:04:51.00] [status] tests: 4/14, fuzzing: 10951/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:19/1000(57) W3:177/1000(16), gas/s: 10870562
+[2026-10-06 19:04:52.94] [Worker 1] Test limit reached. Stopping.
+[2026-10-06 19:04:54.00] [status] tests: 4/14, fuzzing: 11016/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:21/1000(56) W3:183/1000(16), gas/s: 21422396
+[2026-10-06 19:04:57.01] [status] tests: 4/14, fuzzing: 11081/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:23/1000(55) W3:188/1000(16), gas/s: 15243456
+[2026-10-06 19:05:00.01] [status] tests: 4/14, fuzzing: 11146/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:25/1000(54) W3:195/1000(15), gas/s: 12386244
+[2026-10-06 19:05:03.02] [status] tests: 4/14, fuzzing: 11146/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:27/1000(54) W3:203/1000(15), gas/s: 0
+[2026-10-06 19:05:06.02] [status] tests: 4/14, fuzzing: 11211/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:29/1000(53) W3:212/1000(14), gas/s: 11830957
+[2026-10-06 19:05:09.03] [status] tests: 4/14, fuzzing: 11276/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:32/1000(50) W3:219/1000(13), gas/s: 7382769
+[2026-10-06 19:05:12.03] [status] tests: 4/14, fuzzing: 11341/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:34/1000(49) W3:227/1000(13), gas/s: 17284216
+[2026-10-06 19:05:15.04] [status] tests: 4/14, fuzzing: 11341/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:36/1000(48) W3:235/1000(12), gas/s: 0
+[2026-10-06 19:05:18.04] [status] tests: 4/14, fuzzing: 11406/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:38/1000(46) W3:244/1000(11), gas/s: 16797871
+[2026-10-06 19:05:21.05] [status] tests: 4/14, fuzzing: 11471/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:40/1000(44) W3:253/1000(11), gas/s: 10269103
+[2026-10-06 19:05:24.05] [status] tests: 4/14, fuzzing: 11471/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:43/1000(42) W3:263/1000(11), gas/s: 0
+[2026-10-06 19:05:27.06] [status] tests: 4/14, fuzzing: 11536/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:45/1000(42) W3:272/1000(11), gas/s: 15713924
+[2026-10-06 19:05:30.06] [status] tests: 4/14, fuzzing: 11601/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:48/1000(41) W3:282/1000(11), gas/s: 14085348
+[2026-10-06 19:05:33.07] [status] tests: 4/14, fuzzing: 11601/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:51/1000(40) W3:292/1000(11), gas/s: 0
+[2026-10-06 19:05:36.07] [status] tests: 4/14, fuzzing: 11666/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:54/1000(37) W3:302/1000(11), gas/s: 13140052
+[2026-10-06 19:05:39.07] [status] tests: 4/14, fuzzing: 11731/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:57/1000(36) W3:314/1000(11), gas/s: 10283425
+[2026-10-06 19:05:42.08] [status] tests: 4/14, fuzzing: 11861/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:60/1000(35) W3:326/1000(11), gas/s: 21596488
+[2026-10-06 19:05:45.08] [status] tests: 4/14, fuzzing: 11861/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:65/1000(31) W3:339/1000(11), gas/s: 0
+[2026-10-06 19:05:48.09] [status] tests: 4/14, fuzzing: 11926/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:75/1000(27) W3:353/1000(11), gas/s: 18189461
+[2026-10-06 19:05:51.09] [status] tests: 4/14, fuzzing: 11991/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:83/1000(24) W3:367/1000(11), gas/s: 16272944
+[2026-10-06 19:05:54.09] [status] tests: 4/14, fuzzing: 12056/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:95/1000(18) W3:383/1000(11), gas/s: 12537984
+[2026-10-06 19:05:57.10] [status] tests: 4/14, fuzzing: 12121/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:106/1000(13) W3:401/1000(10), gas/s: 12957338
+[2026-10-06 19:06:00.10] [status] tests: 4/14, fuzzing: 12186/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:119/1000(9) W3:416/1000(10), gas/s: 8775568
+[2026-10-06 19:06:03.11] [status] tests: 4/14, fuzzing: 12251/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:131/1000(7) W3:434/1000(10), gas/s: 12542546
+[2026-10-06 19:06:06.11] [status] tests: 4/14, fuzzing: 12316/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:146/1000(7) W3:449/1000(9), gas/s: 10515474
+[2026-10-06 19:06:09.11] [status] tests: 4/14, fuzzing: 12351/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:160/1000(7) W3:462/1000(9), gas/s: 11866273
+[2026-10-06 19:06:12.12] [status] tests: 4/14, fuzzing: 12351/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:172/1000(7) W3:477/1000(9), gas/s: 0
+[2026-10-06 19:06:15.12] [status] tests: 4/14, fuzzing: 12416/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:187/1000(7) W3:498/1000(9), gas/s: 19762120
+[2026-10-06 19:06:18.12] [status] tests: 4/14, fuzzing: 12546/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:202/1000(7) W3:516/1000(9), gas/s: 18884141
+[2026-10-06 19:06:21.13] [status] tests: 4/14, fuzzing: 12611/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:217/1000(7) W3:532/1000(9), gas/s: 9686870
+[2026-10-06 19:06:24.13] [status] tests: 4/14, fuzzing: 12676/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:234/1000(7) W3:550/1000(9), gas/s: 5645287
+[2026-10-06 19:06:27.14] [status] tests: 4/14, fuzzing: 12741/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:251/1000(7) W3:566/1000(9), gas/s: 13710191
+[2026-10-06 19:06:30.14] [status] tests: 4/14, fuzzing: 12788/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:267/1000(7) W3:584/1000(9), gas/s: 5322553
+[2026-10-06 19:06:33.14] [status] tests: 4/14, fuzzing: 12853/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:283/1000(7) W3:600/1000(9), gas/s: 12157678
+[2026-10-06 19:06:36.15] [status] tests: 4/14, fuzzing: 12931/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:301/1000(7) W3:617/1000(9), gas/s: 17808457
+[2026-10-06 19:06:39.15] [status] tests: 4/14, fuzzing: 12996/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:315/1000(7) W3:637/1000(9), gas/s: 14445877
+[2026-10-06 19:06:42.16] [status] tests: 4/14, fuzzing: 12996/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:330/1000(7) W3:653/1000(9), gas/s: 0
+[2026-10-06 19:06:45.16] [status] tests: 4/14, fuzzing: 13061/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:345/1000(7) W3:667/1000(9), gas/s: 21391134
+[2026-10-06 19:06:48.17] [status] tests: 4/14, fuzzing: 13126/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:362/1000(7) W3:684/1000(9), gas/s: 16167877
+[2026-10-06 19:06:51.17] [status] tests: 4/14, fuzzing: 13126/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:376/1000(7) W3:699/1000(9), gas/s: 0
+[2026-10-06 19:06:54.17] [status] tests: 4/14, fuzzing: 13189/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:390/1000(7) W3:714/1000(9), gas/s: 14711960
+[2026-10-06 19:06:57.18] [status] tests: 4/14, fuzzing: 13254/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:404/1000(7) W3:728/1000(9), gas/s: 11794822
+[2026-10-06 19:07:00.18] [status] tests: 4/14, fuzzing: 13319/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:420/1000(7) W3:744/1000(9), gas/s: 13043052
+[2026-10-06 19:07:03.19] [status] tests: 4/14, fuzzing: 13384/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:436/1000(7) W3:759/1000(9), gas/s: 16086174
+[2026-10-06 19:07:06.19] [status] tests: 4/14, fuzzing: 13384/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:453/1000(7) W3:774/1000(9), gas/s: 0
+[2026-10-06 19:07:09.19] [status] tests: 4/14, fuzzing: 13449/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:473/1000(7) W3:791/1000(9), gas/s: 9377254
+[2026-10-06 19:07:12.20] [status] tests: 4/14, fuzzing: 13514/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:489/1000(7) W3:808/1000(9), gas/s: 14993608
+[2026-10-06 19:07:15.20] [status] tests: 4/14, fuzzing: 13579/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:503/1000(7) W3:822/1000(9), gas/s: 8847002
+[2026-10-06 19:07:18.20] [status] tests: 4/14, fuzzing: 13644/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:518/1000(7) W3:836/1000(9), gas/s: 9124270
+[2026-10-06 19:07:21.21] [status] tests: 4/14, fuzzing: 13709/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:531/1000(7) W3:851/1000(9), gas/s: 15638842
+[2026-10-06 19:07:24.21] [status] tests: 4/14, fuzzing: 13774/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:547/1000(7) W3:868/1000(9), gas/s: 10128600
+[2026-10-06 19:07:27.22] [status] tests: 4/14, fuzzing: 13839/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:568/1000(7) W3:883/1000(9), gas/s: 8826906
+[2026-10-06 19:07:30.22] [status] tests: 4/14, fuzzing: 13904/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:586/1000(7) W3:897/1000(9), gas/s: 12104222
+[2026-10-06 19:07:33.23] [status] tests: 4/14, fuzzing: 13904/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:601/1000(7) W3:912/1000(9), gas/s: 0
+[2026-10-06 19:07:36.23] [status] tests: 4/14, fuzzing: 13969/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:616/1000(7) W3:928/1000(9), gas/s: 11061088
+[2026-10-06 19:07:39.24] [status] tests: 4/14, fuzzing: 14057/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:634/1000(7) W3:945/1000(9), gas/s: 11346833
+[2026-10-06 19:07:42.24] [status] tests: 4/14, fuzzing: 14122/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:652/1000(7) W3:959/1000(9), gas/s: 6373137
+[2026-10-06 19:07:45.24] [status] tests: 4/14, fuzzing: 14187/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:666/1000(7) W3:973/1000(9), gas/s: 18772609
+[2026-10-06 19:07:48.25] [status] tests: 4/14, fuzzing: 14187/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:680/1000(7) W3:987/1000(9), gas/s: 0
+[2026-10-06 19:07:51.25] [status] tests: 4/14, fuzzing: 14248/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:694/1000(7), gas/s: 13248498
+[2026-10-06 19:07:54.26] [status] tests: 4/14, fuzzing: 14378/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:713/1000(7), gas/s: 24239099
+[2026-10-06 19:07:57.26] [status] tests: 4/14, fuzzing: 14378/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:727/1000(7), gas/s: 0
+[2026-10-06 19:08:00.27] [status] tests: 4/14, fuzzing: 14508/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:742/1000(7), gas/s: 28715958
+[2026-10-06 19:08:03.27] [status] tests: 4/14, fuzzing: 14656/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:754/1000(7), gas/s: 22057589
+[2026-10-06 19:08:06.27] [status] tests: 4/14, fuzzing: 14721/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:769/1000(7), gas/s: 6077867
+[2026-10-06 19:08:09.28] [status] tests: 4/14, fuzzing: 14786/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:784/1000(7), gas/s: 22084047
+[2026-10-06 19:08:12.28] [status] tests: 4/14, fuzzing: 14904/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:797/1000(7), gas/s: 40185172
+[2026-10-06 19:08:15.29] [status] tests: 4/14, fuzzing: 15089/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:814/1000(7), gas/s: 22287368
+[2026-10-06 19:08:18.29] [status] tests: 4/14, fuzzing: 15219/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:832/1000(7), gas/s: 21786208
+[2026-10-06 19:08:21.30] [status] tests: 4/14, fuzzing: 15349/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:848/1000(7), gas/s: 19709243
+[2026-10-06 19:08:24.30] [status] tests: 4/14, fuzzing: 15414/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:863/1000(7), gas/s: 15949425
+[2026-10-06 19:08:27.31] [status] tests: 4/14, fuzzing: 15544/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:877/1000(7), gas/s: 28023254
+[2026-10-06 19:08:30.31] [status] tests: 4/14, fuzzing: 15609/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:893/1000(7), gas/s: 14867177
+[2026-10-06 19:08:33.32] [status] tests: 4/14, fuzzing: 15736/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:907/1000(7), gas/s: 11909692
+[2026-10-06 19:08:36.32] [status] tests: 4/14, fuzzing: 15863/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:920/1000(7), gas/s: 22380558
+[2026-10-06 19:08:39.33] [status] tests: 4/14, fuzzing: 15965/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:934/1000(7), gas/s: 19925586
+[2026-10-06 19:08:42.33] [status] tests: 4/14, fuzzing: 16095/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:951/1000(7), gas/s: 22100967
+[2026-10-06 19:08:45.33] [status] tests: 4/14, fuzzing: 16225/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:964/1000(7), gas/s: 29057596
+[2026-10-06 19:08:48.34] [status] tests: 4/14, fuzzing: 16290/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:977/1000(7), gas/s: 15536918
+[2026-10-06 19:08:51.34] [status] tests: 4/14, fuzzing: 16420/20000, values: [], cov: 46729, corpus: 15, shrinking: W2:992/1000(7), gas/s: 28574184
+[2026-10-06 19:08:54.35] [status] tests: 4/14, fuzzing: 16485/20000, values: [], cov: 46729, corpus: 15, gas/s: 9382538
+[2026-10-06 19:08:57.35] [status] tests: 4/14, fuzzing: 16672/20000, values: [], cov: 46729, corpus: 15, gas/s: 38191495
+[2026-10-06 19:08:59.39] [Worker 0] Test limit reached. Stopping.
+[2026-10-06 19:09:00.35] [status] tests: 4/14, fuzzing: 16867/20000, values: [], cov: 46729, corpus: 15, gas/s: 33897581
+[2026-10-06 19:09:03.36] [status] tests: 4/14, fuzzing: 16997/20000, values: [], cov: 46729, corpus: 15, gas/s: 26466537
+[2026-10-06 19:09:06.36] [status] tests: 4/14, fuzzing: 17192/20000, values: [], cov: 46729, corpus: 15, gas/s: 30454680
+[2026-10-06 19:09:09.37] [status] tests: 4/14, fuzzing: 17322/20000, values: [], cov: 46729, corpus: 15, gas/s: 16151011
+[2026-10-06 19:09:12.14] [Worker 2] Test limit reached. Stopping.
+[2026-10-06 19:09:12.37] [status] tests: 4/14, fuzzing: 17387/20000, values: [], cov: 46729, corpus: 15, gas/s: 17158210
+[2026-10-06 19:09:15.37] [status] tests: 4/14, fuzzing: 17548/20000, values: [], cov: 46729, corpus: 15, gas/s: 23299386
+[2026-10-06 19:09:18.38] [status] tests: 4/14, fuzzing: 17613/20000, values: [], cov: 46729, corpus: 15, gas/s: 14787343
+[2026-10-06 19:09:21.38] [status] tests: 4/14, fuzzing: 17678/20000, values: [], cov: 46729, corpus: 15, gas/s: 12161924
+[2026-10-06 19:09:24.39] [status] tests: 4/14, fuzzing: 17743/20000, values: [], cov: 46729, corpus: 15, gas/s: 13287861
+[2026-10-06 19:09:27.39] [status] tests: 4/14, fuzzing: 17873/20000, values: [], cov: 46729, corpus: 15, gas/s: 13320753
+[2026-10-06 19:09:30.39] [status] tests: 4/14, fuzzing: 17938/20000, values: [], cov: 46729, corpus: 15, gas/s: 6447883
+[2026-10-06 19:09:33.40] [status] tests: 4/14, fuzzing: 18003/20000, values: [], cov: 46729, corpus: 15, gas/s: 10047543
+[2026-10-06 19:09:36.40] [status] tests: 4/14, fuzzing: 18133/20000, values: [], cov: 46729, corpus: 15, gas/s: 27233459
+[2026-10-06 19:09:39.40] [status] tests: 4/14, fuzzing: 18198/20000, values: [], cov: 46729, corpus: 15, gas/s: 10784016
+[2026-10-06 19:09:42.41] [status] tests: 4/14, fuzzing: 18263/20000, values: [], cov: 46729, corpus: 15, gas/s: 9857755
+[2026-10-06 19:09:45.41] [status] tests: 4/14, fuzzing: 18328/20000, values: [], cov: 46729, corpus: 15, gas/s: 10469481
+[2026-10-06 19:09:48.41] [status] tests: 4/14, fuzzing: 18458/20000, values: [], cov: 46729, corpus: 15, gas/s: 20360017
+[2026-10-06 19:09:51.42] [status] tests: 4/14, fuzzing: 18516/20000, values: [], cov: 46729, corpus: 15, gas/s: 9017756
+[2026-10-06 19:09:54.42] [status] tests: 4/14, fuzzing: 18581/20000, values: [], cov: 46729, corpus: 15, gas/s: 9119106
+[2026-10-06 19:09:57.43] [status] tests: 4/14, fuzzing: 18646/20000, values: [], cov: 46729, corpus: 15, gas/s: 11630797
+[2026-10-06 19:10:00.43] [status] tests: 4/14, fuzzing: 18711/20000, values: [], cov: 46729, corpus: 15, gas/s: 9250234
+[2026-10-06 19:10:03.43] [status] tests: 4/14, fuzzing: 18776/20000, values: [], cov: 46729, corpus: 15, gas/s: 8109226
+[2026-10-06 19:10:06.44] [status] tests: 4/14, fuzzing: 18906/20000, values: [], cov: 46729, corpus: 15, gas/s: 17878853
+[2026-10-06 19:10:09.44] [status] tests: 4/14, fuzzing: 18971/20000, values: [], cov: 46729, corpus: 15, gas/s: 15939157
+[2026-10-06 19:10:12.45] [status] tests: 4/14, fuzzing: 19036/20000, values: [], cov: 46729, corpus: 15, gas/s: 13235561
+[2026-10-06 19:10:15.45] [status] tests: 4/14, fuzzing: 19166/20000, values: [], cov: 46729, corpus: 15, gas/s: 21214731
+[2026-10-06 19:10:18.45] [status] tests: 4/14, fuzzing: 19231/20000, values: [], cov: 46729, corpus: 15, gas/s: 7029566
+[2026-10-06 19:10:21.46] [status] tests: 4/14, fuzzing: 19296/20000, values: [], cov: 46729, corpus: 15, gas/s: 16152911
+[2026-10-06 19:10:24.46] [status] tests: 4/14, fuzzing: 19426/20000, values: [], cov: 46729, corpus: 15, gas/s: 20401640
+[2026-10-06 19:10:27.47] [status] tests: 4/14, fuzzing: 19491/20000, values: [], cov: 46729, corpus: 15, gas/s: 16476127
+[2026-10-06 19:10:30.47] [status] tests: 4/14, fuzzing: 19621/20000, values: [], cov: 46729, corpus: 15, gas/s: 17108414
+[2026-10-06 19:10:33.47] [status] tests: 4/14, fuzzing: 19686/20000, values: [], cov: 46729, corpus: 15, gas/s: 11289626
+[2026-10-06 19:10:36.48] [status] tests: 4/14, fuzzing: 19751/20000, values: [], cov: 46729, corpus: 15, gas/s: 14870945
+[2026-10-06 19:10:39.48] [status] tests: 4/14, fuzzing: 19816/20000, values: [], cov: 46729, corpus: 15, gas/s: 7095285
+[2026-10-06 19:10:42.49] [status] tests: 4/14, fuzzing: 19946/20000, values: [], cov: 46729, corpus: 15, gas/s: 19339441
+[2026-10-06 19:10:45.49] [status] tests: 4/14, fuzzing: 20011/20000, values: [], cov: 46729, corpus: 15, gas/s: 8046272
+[2026-10-06 19:10:48.50] [status] tests: 4/14, fuzzing: 20076/20000, values: [], cov: 46729, corpus: 15, gas/s: 14149358
+[2026-10-06 19:10:49.34] [Worker 3] Test limit reached. Stopping.
+[2026-10-06 19:10:49.34] [status] tests: 4/14, fuzzing: 20141/20000, values: [], cov: 46729, corpus: 15, gas/s: 39296443
+echidna_allowances_are_cleared: passing
+echidna_custody_and_cumulative_commission: passing
+echidna_pool_switches_hold: passing
+echidna_deposit_budget_refund_and_quote: passing
+echidna_reach_moved_price_rejected_and_accepted: failed!💥  
+  Reason: ReturnFalse
+  Call sequence:
+    RouterEchidnaV3Reach.actionOpenAfterPriceMove(0,0,false,29281487552828339825,0,0,0)
+    RouterEchidnaV3Reach.actionOpenAfterPriceMove(0,0,false,0,6,0,0)
+
+Traces: 
+
+echidna_reach_appended_pools_opened_and_exited: failed!💥  
+  Reason: ReturnFalse
+  Call sequence:
+    RouterEchidnaV3Reach.actionAddPool(0)
+    RouterEchidnaV3Reach.actionOpen(0,1,0,67375057573028256839284509373,0)
+    RouterEchidnaV3Reach.actionAddPool(1)
+    RouterEchidnaV3Reach.actionOpen(0,2,14183414796835960,76510168203482785566566668850520,0)
+    RouterEchidnaV3Reach.actionExit(0,false)
+    RouterEchidnaV3Reach.actionExit(2,false)
+    RouterEchidnaV3Reach.actionExit(3,false)
+
+Traces: 
+
+echidna_token_supply_is_conserved: passing
+echidna_payouts_match_actual_balance_changes: passing
+echidna_owner_and_outsiders_cannot_take_positions: passing
+echidna_reach_refused_ejected_and_paid_elsewhere: failed!💥  
+  Reason: ReturnFalse
+  Call sequence:
+    RouterEchidnaV3Reach.actionSetDeposits(255,true)
+    RouterEchidnaV3Reach.actionCollect(6,true)
+    RouterEchidnaV3Reach.actionOpen(0,57,133269,644024615643662069834925103981291,0)
+    RouterEchidnaV3Reach.actionSetDeposits(0,false)
+    RouterEchidnaV3Reach.actionSetEject(18,true)
+    RouterEchidnaV3Reach.actionOpen(0,0,41422017428266254,1298442179526651829725255251454158,0)
+    RouterEchidnaV3Reach.actionExit(1,true)
+    RouterEchidnaV3Reach.actionEject(2,false)
+    RouterEchidnaV3Reach.actionEject(0,false)
+
+Traces: 
+
+echidna_catalog_is_append_only_and_consistent: passing
+echidna_reach_commission_charged_and_withdrawn: failed!💥  
+  Reason: ReturnFalse
+  Call sequence:
+    RouterEchidnaV3Reach.actionOpen(0,0,0,0,0)
+    RouterEchidnaV3Reach.actionOpenAfterPriceMove(0,0,false,48775640112049816133350,228833270976435085295180,218765105406957998647287722,0)
+    RouterEchidnaV3Reach.actionExit(1,false)
+    RouterEchidnaV3Reach.actionWithdraw(0,0,0)
+    RouterEchidnaV3Reach.actionCollect(2,false)
+    RouterEchidnaV3Reach.actionExit(0,false)
+
+Traces: 
+
+echidna_commission_is_backed_and_dust_preserved: passing
+echidna_price_bounds_hold: passing
+
+Unique instructions: 46729
+Unique codehashes: 8
+Corpus size: 15
+Seed: 20261005
+Total calls: 20141
+
+[2026-10-06 19:10:49.35] Saving test reproducers... Done! (0.002391005s)
+[2026-10-06 19:10:49.35] Saving corpus... Done! (0.001025337s)
+[2026-10-06 19:10:49.35] Saving foundry reproducers... Done! (0.001075771s)
+[2026-10-06 19:10:49.35] Saving coverage... Done! (11.91189349s)
+Echidna exit code: 1

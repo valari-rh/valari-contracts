@@ -1,0 +1,12 @@
+Python 3.10.19
+manticore 0.3.7
+pyevmasm 0.2.3
+z3-solver 5.1.0.0
+protobuf 3.20.3
+crytic-compile 0.2.2
+pysha3 1.0.2
+setuptools 80.10.2
+PUSH0 0x5f INVALID
+MCOPY 0x5e INVALID
+TLOAD 0x5c INVALID
+TSTORE 0x5d INVALID

@@ -1,0 +1,10 @@
+cache/
+out/
+broadcast/
+coverage/
+lcov.info
+.env
+.env.*
+!.env.example
+crytic-export/
+fizz_data/

@@ -1,0 +1,709 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
+Contract Ownable
++----------------------+-------------------------+--------------------------+
+| Function             | State variables written | Conditions on msg.sender |
++----------------------+-------------------------+--------------------------+
+| _msgSender           | []                      | []                       |
+| _msgData             | []                      | []                       |
+| _contextSuffixLength | []                      | []                       |
+| constructor          | ['_owner']              | []                       |
+| owner                | []                      | []                       |
+| _checkOwner          | []                      | []                       |
+| renounceOwnership    | ['_owner']              | []                       |
+| transferOwnership    | ['_owner']              | []                       |
+| _transferOwnership   | ['_owner']              | []                       |
++----------------------+-------------------------+--------------------------+
+
+Contract Ownable2Step
++----------------------+-----------------------------+--------------------------+
+| Function             | State variables written     | Conditions on msg.sender |
++----------------------+-----------------------------+--------------------------+
+| constructor          | ['_owner', '_pendingOwner'] | []                       |
+| owner                | []                          | []                       |
+| _checkOwner          | []                          | []                       |
+| renounceOwnership    | ['_owner', '_pendingOwner'] | []                       |
+| transferOwnership    | ['_owner', '_pendingOwner'] | []                       |
+| _transferOwnership   | ['_owner']                  | []                       |
+| _msgSender           | []                          | []                       |
+| _msgData             | []                          | []                       |
+| _contextSuffixLength | []                          | []                       |
+| pendingOwner         | []                          | []                       |
+| transferOwnership    | ['_pendingOwner']           | []                       |
+| _transferOwnership   | ['_owner', '_pendingOwner'] | []                       |
+| acceptOwnership      | ['_owner', '_pendingOwner'] | []                       |
++----------------------+-----------------------------+--------------------------+
+
+Contract IERC20
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| totalSupply  | []                      | []                       |
+| balanceOf    | []                      | []                       |
+| transfer     | []                      | []                       |
+| allowance    | []                      | []                       |
+| approve      | []                      | []                       |
+| transferFrom | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract IERC20Permit
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| permit           | []                      | []                       |
+| nonces           | []                      | []                       |
+| DOMAIN_SEPARATOR | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract SafeERC20
++-------------------------+-------------------------+--------------------------+
+| Function                | State variables written | Conditions on msg.sender |
++-------------------------+-------------------------+--------------------------+
+| safeTransfer            | []                      | []                       |
+| safeTransferFrom        | []                      | []                       |
+| safeIncreaseAllowance   | []                      | []                       |
+| safeDecreaseAllowance   | []                      | []                       |
+| forceApprove            | []                      | []                       |
+| _callOptionalReturn     | []                      | []                       |
+| _callOptionalReturnBool | []                      | []                       |
++-------------------------+-------------------------+--------------------------+
+
+Contract IERC721
++-------------------+-------------------------+--------------------------+
+| Function          | State variables written | Conditions on msg.sender |
++-------------------+-------------------------+--------------------------+
+| supportsInterface | []                      | []                       |
+| balanceOf         | []                      | []                       |
+| ownerOf           | []                      | []                       |
+| safeTransferFrom  | []                      | []                       |
+| safeTransferFrom  | []                      | []                       |
+| transferFrom      | []                      | []                       |
+| approve           | []                      | []                       |
+| setApprovalForAll | []                      | []                       |
+| getApproved       | []                      | []                       |
+| isApprovedForAll  | []                      | []                       |
++-------------------+-------------------------+--------------------------+
+
+Contract Address
++----------------------------+-------------------------+--------------------------+
+| Function                   | State variables written | Conditions on msg.sender |
++----------------------------+-------------------------+--------------------------+
+| sendValue                  | []                      | []                       |
+| functionCall               | []                      | []                       |
+| functionCallWithValue      | []                      | []                       |
+| functionStaticCall         | []                      | []                       |
+| functionDelegateCall       | []                      | []                       |
+| verifyCallResultFromTarget | []                      | []                       |
+| verifyCallResult           | []                      | []                       |
+| _revert                    | []                      | []                       |
++----------------------------+-------------------------+--------------------------+
+
+Contract Context
++----------------------+-------------------------+--------------------------+
+| Function             | State variables written | Conditions on msg.sender |
++----------------------+-------------------------+--------------------------+
+| _msgSender           | []                      | []                       |
+| _msgData             | []                      | []                       |
+| _contextSuffixLength | []                      | []                       |
++----------------------+-------------------------+--------------------------+
+
+Contract ReentrancyGuard
++-------------------------------------+----------------------------+--------------------------+
+| Function                            | State variables written    | Conditions on msg.sender |
++-------------------------------------+----------------------------+--------------------------+
+| constructor                         | ['_status']                | []                       |
+| _nonReentrantBefore                 | ['_status']                | []                       |
+| _nonReentrantAfter                  | ['_status']                | []                       |
+| _reentrancyGuardEntered             | []                         | []                       |
+| slitherConstructorConstantVariables | ['ENTERED', 'NOT_ENTERED'] | []                       |
++-------------------------------------+----------------------------+--------------------------+
+
+Contract IERC165
++-------------------+-------------------------+--------------------------+
+| Function          | State variables written | Conditions on msg.sender |
++-------------------+-------------------------+--------------------------+
+| supportsInterface | []                      | []                       |
++-------------------+-------------------------+--------------------------+
+
+Contract SafeCast
++-----------+-------------------------+--------------------------+
+| Function  | State variables written | Conditions on msg.sender |
++-----------+-------------------------+--------------------------+
+| toUint248 | []                      | []                       |
+| toUint240 | []                      | []                       |
+| toUint232 | []                      | []                       |
+| toUint224 | []                      | []                       |
+| toUint216 | []                      | []                       |
+| toUint208 | []                      | []                       |
+| toUint200 | []                      | []                       |
+| toUint192 | []                      | []                       |
+| toUint184 | []                      | []                       |
+| toUint176 | []                      | []                       |
+| toUint168 | []                      | []                       |
+| toUint160 | []                      | []                       |
+| toUint152 | []                      | []                       |
+| toUint144 | []                      | []                       |
+| toUint136 | []                      | []                       |
+| toUint128 | []                      | []                       |
+| toUint120 | []                      | []                       |
+| toUint112 | []                      | []                       |
+| toUint104 | []                      | []                       |
+| toUint96  | []                      | []                       |
+| toUint88  | []                      | []                       |
+| toUint80  | []                      | []                       |
+| toUint72  | []                      | []                       |
+| toUint64  | []                      | []                       |
+| toUint56  | []                      | []                       |
+| toUint48  | []                      | []                       |
+| toUint40  | []                      | []                       |
+| toUint32  | []                      | []                       |
+| toUint24  | []                      | []                       |
+| toUint16  | []                      | []                       |
+| toUint8   | []                      | []                       |
+| toUint256 | []                      | []                       |
+| toInt248  | []                      | []                       |
+| toInt240  | []                      | []                       |
+| toInt232  | []                      | []                       |
+| toInt224  | []                      | []                       |
+| toInt216  | []                      | []                       |
+| toInt208  | []                      | []                       |
+| toInt200  | []                      | []                       |
+| toInt192  | []                      | []                       |
+| toInt184  | []                      | []                       |
+| toInt176  | []                      | []                       |
+| toInt168  | []                      | []                       |
+| toInt160  | []                      | []                       |
+| toInt152  | []                      | []                       |
+| toInt144  | []                      | []                       |
+| toInt136  | []                      | []                       |
+| toInt128  | []                      | []                       |
+| toInt120  | []                      | []                       |
+| toInt112  | []                      | []                       |
+| toInt104  | []                      | []                       |
+| toInt96   | []                      | []                       |
+| toInt88   | []                      | []                       |
+| toInt80   | []                      | []                       |
+| toInt72   | []                      | []                       |
+| toInt64   | []                      | []                       |
+| toInt56   | []                      | []                       |
+| toInt48   | []                      | []                       |
+| toInt40   | []                      | []                       |
+| toInt32   | []                      | []                       |
+| toInt24   | []                      | []                       |
+| toInt16   | []                      | []                       |
+| toInt8    | []                      | []                       |
+| toInt256  | []                      | []                       |
++-----------+-------------------------+--------------------------+
+
+Contract IAllowanceTransfer
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| DOMAIN_SEPARATOR | []                      | []                       |
+| allowance        | []                      | []                       |
+| approve          | []                      | []                       |
+| permit           | []                      | []                       |
+| permit           | []                      | []                       |
+| transferFrom     | []                      | []                       |
+| transferFrom     | []                      | []                       |
+| lockdown         | []                      | []                       |
+| invalidateNonces | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract IEIP712
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| DOMAIN_SEPARATOR | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract IExtsload
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
+| extsload | []                      | []                       |
+| extsload | []                      | []                       |
+| extsload | []                      | []                       |
++----------+-------------------------+--------------------------+
+
+Contract IExttload
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
+| exttload | []                      | []                       |
+| exttload | []                      | []                       |
++----------+-------------------------+--------------------------+
+
+Contract IHooks
++-----------------------+-------------------------+--------------------------+
+| Function              | State variables written | Conditions on msg.sender |
++-----------------------+-------------------------+--------------------------+
+| beforeInitialize      | []                      | []                       |
+| afterInitialize       | []                      | []                       |
+| beforeAddLiquidity    | []                      | []                       |
+| afterAddLiquidity     | []                      | []                       |
+| beforeRemoveLiquidity | []                      | []                       |
+| afterRemoveLiquidity  | []                      | []                       |
+| beforeSwap            | []                      | []                       |
+| afterSwap             | []                      | []                       |
+| beforeDonate          | []                      | []                       |
+| afterDonate           | []                      | []                       |
++-----------------------+-------------------------+--------------------------+
+
+Contract IPoolManager
++--------------------------+-------------------------+--------------------------+
+| Function                 | State variables written | Conditions on msg.sender |
++--------------------------+-------------------------+--------------------------+
+| exttload                 | []                      | []                       |
+| exttload                 | []                      | []                       |
+| extsload                 | []                      | []                       |
+| extsload                 | []                      | []                       |
+| extsload                 | []                      | []                       |
+| balanceOf                | []                      | []                       |
+| allowance                | []                      | []                       |
+| isOperator               | []                      | []                       |
+| transfer                 | []                      | []                       |
+| transferFrom             | []                      | []                       |
+| approve                  | []                      | []                       |
+| setOperator              | []                      | []                       |
+| protocolFeesAccrued      | []                      | []                       |
+| setProtocolFee           | []                      | []                       |
+| setProtocolFeeController | []                      | []                       |
+| collectProtocolFees      | []                      | []                       |
+| protocolFeeController    | []                      | []                       |
+| unlock                   | []                      | []                       |
+| initialize               | []                      | []                       |
+| modifyLiquidity          | []                      | []                       |
+| swap                     | []                      | []                       |
+| donate                   | []                      | []                       |
+| sync                     | []                      | []                       |
+| take                     | []                      | []                       |
+| settle                   | []                      | []                       |
+| settleFor                | []                      | []                       |
+| clear                    | []                      | []                       |
+| mint                     | []                      | []                       |
+| burn                     | []                      | []                       |
+| updateDynamicLPFee       | []                      | []                       |
++--------------------------+-------------------------+--------------------------+
+
+Contract IProtocolFees
++--------------------------+-------------------------+--------------------------+
+| Function                 | State variables written | Conditions on msg.sender |
++--------------------------+-------------------------+--------------------------+
+| protocolFeesAccrued      | []                      | []                       |
+| setProtocolFee           | []                      | []                       |
+| setProtocolFeeController | []                      | []                       |
+| collectProtocolFees      | []                      | []                       |
+| protocolFeeController    | []                      | []                       |
++--------------------------+-------------------------+--------------------------+
+
+Contract IERC20Minimal
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| balanceOf    | []                      | []                       |
+| transfer     | []                      | []                       |
+| allowance    | []                      | []                       |
+| approve      | []                      | []                       |
+| transferFrom | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract IERC6909Claims
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| balanceOf    | []                      | []                       |
+| allowance    | []                      | []                       |
+| isOperator   | []                      | []                       |
+| transfer     | []                      | []                       |
+| transferFrom | []                      | []                       |
+| approve      | []                      | []                       |
+| setOperator  | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract BitMath
++---------------------+-------------------------+--------------------------+
+| Function            | State variables written | Conditions on msg.sender |
++---------------------+-------------------------+--------------------------+
+| mostSignificantBit  | []                      | []                       |
+| leastSignificantBit | []                      | []                       |
++---------------------+-------------------------+--------------------------+
+
+Contract CustomRevert
++-----------------------+-------------------------+--------------------------+
+| Function              | State variables written | Conditions on msg.sender |
++-----------------------+-------------------------+--------------------------+
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| revertWith            | []                      | []                       |
+| bubbleUpAndRevertWith | []                      | []                       |
++-----------------------+-------------------------+--------------------------+
+
+Contract FixedPoint128
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| slitherConstructorConstantVariables | ['Q128']                | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract FixedPoint96
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| slitherConstructorConstantVariables | ['Q96', 'RESOLUTION']   | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract FullMath
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| mulDiv           | []                      | []                       |
+| mulDivRoundingUp | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract LiquidityMath
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
+| addDelta | []                      | []                       |
++----------+-------------------------+--------------------------+
+
+Contract Position
++----------------------+-------------------------+--------------------------+
+| Function             | State variables written | Conditions on msg.sender |
++----------------------+-------------------------+--------------------------+
+| get                  | []                      | []                       |
+| calculatePositionKey | []                      | []                       |
+| update               | []                      | []                       |
++----------------------+-------------------------+--------------------------+
+
+Contract SafeCast
++-----------+-------------------------+--------------------------+
+| Function  | State variables written | Conditions on msg.sender |
++-----------+-------------------------+--------------------------+
+| toUint160 | []                      | []                       |
+| toUint128 | []                      | []                       |
+| toUint128 | []                      | []                       |
+| toInt128  | []                      | []                       |
+| toInt256  | []                      | []                       |
+| toInt128  | []                      | []                       |
++-----------+-------------------------+--------------------------+
+
+Contract SqrtPriceMath
++-----------------------------------------+-------------------------+--------------------------+
+| Function                                | State variables written | Conditions on msg.sender |
++-----------------------------------------+-------------------------+--------------------------+
+| getNextSqrtPriceFromAmount0RoundingUp   | []                      | []                       |
+| getNextSqrtPriceFromAmount1RoundingDown | []                      | []                       |
+| getNextSqrtPriceFromInput               | []                      | []                       |
+| getNextSqrtPriceFromOutput              | []                      | []                       |
+| getAmount0Delta                         | []                      | []                       |
+| absDiff                                 | []                      | []                       |
+| getAmount1Delta                         | []                      | []                       |
+| getAmount0Delta                         | []                      | []                       |
+| getAmount1Delta                         | []                      | []                       |
++-----------------------------------------+-------------------------+--------------------------+
+
+Contract StateLibrary
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| Function                            | State variables written                                                                                                   | Conditions on msg.sender |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| getSlot0                            | []                                                                                                                        | []                       |
+| getTickInfo                         | []                                                                                                                        | []                       |
+| getTickLiquidity                    | []                                                                                                                        | []                       |
+| getTickFeeGrowthOutside             | []                                                                                                                        | []                       |
+| getFeeGrowthGlobals                 | []                                                                                                                        | []                       |
+| getLiquidity                        | []                                                                                                                        | []                       |
+| getTickBitmap                       | []                                                                                                                        | []                       |
+| getPositionInfo                     | []                                                                                                                        | []                       |
+| getPositionInfo                     | []                                                                                                                        | []                       |
+| getPositionLiquidity                | []                                                                                                                        | []                       |
+| getFeeGrowthInside                  | []                                                                                                                        | []                       |
+| _getPoolStateSlot                   | []                                                                                                                        | []                       |
+| _getTickInfoSlot                    | []                                                                                                                        | []                       |
+| _getPositionInfoSlot                | []                                                                                                                        | []                       |
+| slitherConstructorConstantVariables | ['FEE_GROWTH_GLOBAL0_OFFSET', 'LIQUIDITY_OFFSET', 'POOLS_SLOT', 'POSITIONS_OFFSET', 'TICKS_OFFSET', 'TICK_BITMAP_OFFSET'] | []                       |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------+--------------------------+
+
+Contract TickMath
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| Function                            | State variables written                                                                                                                               | Conditions on msg.sender |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| maxUsableTick                       | []                                                                                                                                                    | []                       |
+| minUsableTick                       | []                                                                                                                                                    | []                       |
+| getSqrtPriceAtTick                  | []                                                                                                                                                    | []                       |
+| getTickAtSqrtPrice                  | []                                                                                                                                                    | []                       |
+| slitherConstructorConstantVariables | ['MAX_SQRT_PRICE', 'MAX_SQRT_PRICE_MINUS_MIN_SQRT_PRICE_MINUS_ONE', 'MAX_TICK', 'MAX_TICK_SPACING', 'MIN_SQRT_PRICE', 'MIN_TICK', 'MIN_TICK_SPACING'] | []                       |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+
+Contract UnsafeMath
++---------------+-------------------------+--------------------------+
+| Function      | State variables written | Conditions on msg.sender |
++---------------+-------------------------+--------------------------+
+| divRoundingUp | []                      | []                       |
+| simpleMulDiv  | []                      | []                       |
++---------------+-------------------------+--------------------------+
+
+Contract BalanceDeltaLibrary
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| amount0                             | []                      | []                       |
+| amount1                             | []                      | []                       |
+| slitherConstructorConstantVariables | ['ZERO_DELTA']          | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract BeforeSwapDeltaLibrary
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| getSpecifiedDelta                   | []                      | []                       |
+| getUnspecifiedDelta                 | []                      | []                       |
+| slitherConstructorConstantVariables | ['ZERO_DELTA']          | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract CurrencyLibrary
++-------------------------------------+-------------------------+--------------------------+
+| Function                            | State variables written | Conditions on msg.sender |
++-------------------------------------+-------------------------+--------------------------+
+| transfer                            | []                      | []                       |
+| balanceOfSelf                       | []                      | []                       |
+| balanceOf                           | []                      | []                       |
+| isAddressZero                       | []                      | []                       |
+| toId                                | []                      | []                       |
+| fromId                              | []                      | []                       |
+| slitherConstructorConstantVariables | ['ADDRESS_ZERO']        | []                       |
++-------------------------------------+-------------------------+--------------------------+
+
+Contract PoolIdLibrary
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
+| toId     | []                      | []                       |
++----------+-------------------------+--------------------------+
+
+Contract IEIP712_v4
++------------------+-------------------------+--------------------------+
+| Function         | State variables written | Conditions on msg.sender |
++------------------+-------------------------+--------------------------+
+| DOMAIN_SEPARATOR | []                      | []                       |
++------------------+-------------------------+--------------------------+
+
+Contract IERC721Permit_v4
++--------------+-------------------------+--------------------------+
+| Function     | State variables written | Conditions on msg.sender |
++--------------+-------------------------+--------------------------+
+| permit       | []                      | []                       |
+| permitForAll | []                      | []                       |
++--------------+-------------------------+--------------------------+
+
+Contract IImmutableState
++-------------+-------------------------+--------------------------+
+| Function    | State variables written | Conditions on msg.sender |
++-------------+-------------------------+--------------------------+
+| poolManager | []                      | []                       |
++-------------+-------------------------+--------------------------+
+
+Contract IMulticall_v4
++-----------+-------------------------+--------------------------+
+| Function  | State variables written | Conditions on msg.sender |
++-----------+-------------------------+--------------------------+
+| multicall | []                      | []                       |
++-----------+-------------------------+--------------------------+
+
+Contract INotifier
++---------------------+-------------------------+--------------------------+
+| Function            | State variables written | Conditions on msg.sender |
++---------------------+-------------------------+--------------------------+
+| subscriber          | []                      | []                       |
+| subscribe           | []                      | []                       |
+| unsubscribe         | []                      | []                       |
+| unsubscribeGasLimit | []                      | []                       |
++---------------------+-------------------------+--------------------------+
+
+Contract IPermit2Forwarder
++-------------+-------------------------+--------------------------+
+| Function    | State variables written | Conditions on msg.sender |
++-------------+-------------------------+--------------------------+
+| permit      | []                      | []                       |
+| permitBatch | []                      | []                       |
++-------------+-------------------------+--------------------------+
+
+Contract IPoolInitializer_v4
++----------------+-------------------------+--------------------------+
+| Function       | State variables written | Conditions on msg.sender |
++----------------+-------------------------+--------------------------+
+| initializePool | []                      | []                       |
++----------------+-------------------------+--------------------------+
+
+Contract IPositionManager
++--------------------------------+-------------------------+--------------------------+
+| Function                       | State variables written | Conditions on msg.sender |
++--------------------------------+-------------------------+--------------------------+
+| permit                         | []                      | []                       |
+| permitBatch                    | []                      | []                       |
+| nonces                         | []                      | []                       |
+| revokeNonce                    | []                      | []                       |
+| initializePool                 | []                      | []                       |
+| multicall                      | []                      | []                       |
+| DOMAIN_SEPARATOR               | []                      | []                       |
+| permit                         | []                      | []                       |
+| permitForAll                   | []                      | []                       |
+| poolManager                    | []                      | []                       |
+| subscriber                     | []                      | []                       |
+| subscribe                      | []                      | []                       |
+| unsubscribe                    | []                      | []                       |
+| unsubscribeGasLimit            | []                      | []                       |
+| modifyLiquidities              | []                      | []                       |
+| modifyLiquiditiesWithoutUnlock | []                      | []                       |
+| nextTokenId                    | []                      | []                       |
+| getPositionLiquidity           | []                      | []                       |
+| getPoolAndPositionInfo         | []                      | []                       |
+| positionInfo                   | []                      | []                       |
++--------------------------------+-------------------------+--------------------------+
+
+Contract IStateView
++-------------------------+-------------------------+--------------------------+
+| Function                | State variables written | Conditions on msg.sender |
++-------------------------+-------------------------+--------------------------+
+| poolManager             | []                      | []                       |
+| getSlot0                | []                      | []                       |
+| getTickInfo             | []                      | []                       |
+| getTickLiquidity        | []                      | []                       |
+| getTickFeeGrowthOutside | []                      | []                       |
+| getFeeGrowthGlobals     | []                      | []                       |
+| getLiquidity            | []                      | []                       |
+| getTickBitmap           | []                      | []                       |
+| getPositionInfo         | []                      | []                       |
+| getPositionInfo         | []                      | []                       |
+| getPositionLiquidity    | []                      | []                       |
+| getFeeGrowthInside      | []                      | []                       |
++-------------------------+-------------------------+--------------------------+
+
+Contract ISubscriber
++-----------------------+-------------------------+--------------------------+
+| Function              | State variables written | Conditions on msg.sender |
++-----------------------+-------------------------+--------------------------+
+| notifySubscribe       | []                      | []                       |
+| notifyUnsubscribe     | []                      | []                       |
+| notifyBurn            | []                      | []                       |
+| notifyModifyLiquidity | []                      | []                       |
++-----------------------+-------------------------+--------------------------+
+
+Contract IUnorderedNonce
++-------------+-------------------------+--------------------------+
+| Function    | State variables written | Conditions on msg.sender |
++-------------+-------------------------+--------------------------+
+| nonces      | []                      | []                       |
+| revokeNonce | []                      | []                       |
++-------------+-------------------------+--------------------------+
+
+Contract Actions
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| Function                            | State variables written                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Conditions on msg.sender |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| slitherConstructorConstantVariables | ['BURN_6909', 'BURN_POSITION', 'CLEAR_OR_TAKE', 'CLOSE_CURRENCY', 'DECREASE_LIQUIDITY', 'DONATE', 'INCREASE_LIQUIDITY', 'INCREASE_LIQUIDITY_FROM_DELTAS', 'MINT_6909', 'MINT_POSITION', 'MINT_POSITION_FROM_DELTAS', 'SETTLE', 'SETTLE_ALL', 'SETTLE_PAIR', 'SUBSCRIBE', 'SWAP_EXACT_IN', 'SWAP_EXACT_IN_SINGLE', 'SWAP_EXACT_OUT', 'SWAP_EXACT_OUT_SINGLE', 'SWEEP', 'TAKE', 'TAKE_ALL', 'TAKE_PAIR', 'TAKE_PORTION', 'UNSUBSCRIBE', 'UNWIND_WITH_FALLBACK', 'UNWRAP', 'WRAP'] | []                       |
++-------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+
+Contract LiquidityAmounts
++------------------------+-------------------------+--------------------------+
+| Function               | State variables written | Conditions on msg.sender |
++------------------------+-------------------------+--------------------------+
+| getLiquidityForAmount0 | []                      | []                       |
+| getLiquidityForAmount1 | []                      | []                       |
+| getLiquidityForAmounts | []                      | []                       |
++------------------------+-------------------------+--------------------------+
+
+Contract PositionInfoLibrary
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| Function                            | State variables written                                                                                                                                     | Conditions on msg.sender |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+| poolId                              | []                                                                                                                                                          | []                       |
+| tickLower                           | []                                                                                                                                                          | []                       |
+| tickUpper                           | []                                                                                                                                                          | []                       |
+| hasSubscriber                       | []                                                                                                                                                          | []                       |
+| setSubscribe                        | []                                                                                                                                                          | []                       |
+| setUnsubscribe                      | []                                                                                                                                                          | []                       |
+| initialize                          | []                                                                                                                                                          | []                       |
+| slitherConstructorConstantVariables | ['EMPTY_POSITION_INFO', 'MASK_24_BITS', 'MASK_8_BITS', 'MASK_UPPER_200_BITS', 'SET_SUBSCRIBE', 'SET_UNSUBSCRIBE', 'TICK_LOWER_OFFSET', 'TICK_UPPER_OFFSET'] | []                       |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+
+
+Contract IPermit2Source
++----------+-------------------------+--------------------------+
+| Function | State variables written | Conditions on msg.sender |
++----------+-------------------------+--------------------------+
+| permit2  | []                      | []                       |
++----------+-------------------------+--------------------------+
+
+Contract ValariRouterV3
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------------------+
+| Function                            | State variables written                                                                                                             | Conditions on msg.sender           |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------------------+
+| pendingOwner                        | []                                                                                                                                  | []                                 |
+| transferOwnership                   | ['_pendingOwner']                                                                                                                   | []                                 |
+| _transferOwnership                  | ['_owner', '_pendingOwner']                                                                                                         | []                                 |
+| acceptOwnership                     | ['_owner', '_pendingOwner']                                                                                                         | []                                 |
+| constructor                         | ['_owner', '_pendingOwner']                                                                                                         | []                                 |
+| owner                               | []                                                                                                                                  | []                                 |
+| _checkOwner                         | []                                                                                                                                  | []                                 |
+| renounceOwnership                   | ['_owner', '_pendingOwner']                                                                                                         | []                                 |
+| transferOwnership                   | ['_owner', '_pendingOwner']                                                                                                         | []                                 |
+| _transferOwnership                  | ['_owner']                                                                                                                          | []                                 |
+| _msgSender                          | []                                                                                                                                  | []                                 |
+| _msgData                            | []                                                                                                                                  | []                                 |
+| _contextSuffixLength                | []                                                                                                                                  | []                                 |
+| constructor                         | ['_status']                                                                                                                         | []                                 |
+| _nonReentrantBefore                 | ['_status']                                                                                                                         | []                                 |
+| _nonReentrantAfter                  | ['_status']                                                                                                                         | []                                 |
+| _reentrancyGuardEntered             | []                                                                                                                                  | []                                 |
+| constructor                         | ['_owner', '_poolIds', '_pools', '_stockPoolIds', 'feeRecipient', 'permit2', 'poolManager', 'positionManager', 'stateView', 'usdg'] | []                                 |
+| addPool                             | ['_poolIds', '_pools', '_status', '_stockPoolIds']                                                                                  | []                                 |
+| setDepositsDisabled                 | ['_status', 'depositsDisabled']                                                                                                     | []                                 |
+| setEjectEnabled                     | ['_status', 'ejectEnabled']                                                                                                         | []                                 |
+| openPosition                        | ['_depositorPositionIds', '_deposits', '_positionIds', '_status']                                                                   | []                                 |
+| setFeeRecipient                     | ['_status', 'feeRecipient']                                                                                                         | []                                 |
+| withdrawCommission                  | ['_status', 'claimableCommission', 'totalClaimableCommission']                                                                      | []                                 |
+| collectFees                         | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission']                                                         | ['record.depositor != msg.sender'] |
+| collectFeesTo                       | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission']                                                         | ['record.depositor != msg.sender'] |
+| exitPosition                        | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission']                                                         | ['record.depositor != msg.sender'] |
+| exitPositionTo                      | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission']                                                         | ['record.depositor != msg.sender'] |
+| ejectPosition                       | ['_deposits', '_status']                                                                                                            | ['record.depositor != msg.sender'] |
+| _collectFees                        | ['_deposits', 'claimableCommission', 'totalClaimableCommission']                                                                    | ['record.depositor != msg.sender'] |
+| _exitPosition                       | ['_deposits', 'claimableCommission', 'totalClaimableCommission']                                                                    | ['record.depositor != msg.sender'] |
+| previewDeposit                      | []                                                                                                                                  | []                                 |
+| getPoolKey                          | []                                                                                                                                  | []                                 |
+| poolCount                           | []                                                                                                                                  | []                                 |
+| positionCount                       | []                                                                                                                                  | []                                 |
+| depositCount                        | []                                                                                                                                  | []                                 |
+| stockPoolCount                      | []                                                                                                                                  | []                                 |
+| getPoolIds                          | []                                                                                                                                  | []                                 |
+| getStockPoolIds                     | []                                                                                                                                  | []                                 |
+| getDepositorPositionIds             | []                                                                                                                                  | []                                 |
+| getPosition                         | []                                                                                                                                  | []                                 |
+| getUserPositions                    | []                                                                                                                                  | []                                 |
+| _positionView                       | []                                                                                                                                  | []                                 |
+| _ownedPosition                      | ['_deposits']                                                                                                                       | ['record.depositor != msg.sender'] |
+| _commission                         | []                                                                                                                                  | []                                 |
+| _distribute                         | ['claimableCommission', 'totalClaimableCommission']                                                                                 | []                                 |
+| _split                              | []                                                                                                                                  | []                                 |
+| _checkRecipient                     | []                                                                                                                                  | []                                 |
+| _checkRetained                      | []                                                                                                                                  | []                                 |
+| _addPool                            | ['_poolIds', '_pools', '_stockPoolIds']                                                                                             | []                                 |
+| _accrueCommission                   | ['claimableCommission', 'totalClaimableCommission']                                                                                 | []                                 |
+| _ownerOf                            | []                                                                                                                                  | []                                 |
+| _page                               | []                                                                                                                                  | []                                 |
+| _pageEnd                            | []                                                                                                                                  | []                                 |
+| _pull                               | []                                                                                                                                  | []                                 |
+| _approve                            | []                                                                                                                                  | []                                 |
+| _refund                             | []                                                                                                                                  | []                                 |
+| _amounts                            | []                                                                                                                                  | []                                 |
+| slitherConstructorConstantVariables | ['BPS_DENOMINATOR', 'COMMISSION_BPS', 'MAX_INITIAL_POOLS', 'MAX_PAGE_SIZE', 'MAX_PAYOUT_DUST']                                      | []                                 |
++-------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------------------------+
+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

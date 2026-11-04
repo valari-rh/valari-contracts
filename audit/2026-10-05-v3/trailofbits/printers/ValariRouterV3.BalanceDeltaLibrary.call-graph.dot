@@ -1,0 +1,16 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6474_BalanceDeltaLibrary {
+label = "BalanceDeltaLibrary"
+"6474_amount1(BalanceDelta)" [label="amount1(BalanceDelta)"]
+"6474_amount0(BalanceDelta)" [label="amount0(BalanceDelta)"]
+"6474_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"signextend(uint256,uint256)" 
+"6474_amount1(BalanceDelta)" -> "signextend(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

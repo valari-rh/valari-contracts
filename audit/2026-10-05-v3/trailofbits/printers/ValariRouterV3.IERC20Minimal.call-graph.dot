@@ -1,0 +1,16 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_3779_IERC20Minimal {
+label = "IERC20Minimal"
+"3779_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+"3779_transfer(address,uint256)" [label="transfer(address,uint256)"]
+"3779_balanceOf(address)" [label="balanceOf(address)"]
+"3779_allowance(address,address)" [label="allowance(address,address)"]
+"3779_approve(address,uint256)" [label="approve(address,uint256)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

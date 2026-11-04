@@ -1,0 +1,26 @@
+'forge clean' running (wd: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts)
+'forge config --json' running
+'forge build --build-info --deny never src/ValariRouterV3.sol' running (wd: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts)
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
+Compiled with Foundry
+Total number of contracts in source files: 2
+Number of contracts in dependencies: 50
+Source lines of code (SLOC) in source files: 779
+Source lines of code (SLOC) in dependencies: 2189
+Number of  assembly lines: 0
+Number of optimization issues: 0
+Number of informational issues: 80
+Number of low issues: 13
+Number of medium issues: 19
+Number of high issues: 3
+ERCs: ERC721, ERC165, ERC20
+
++----------------+-------------+------+------------+--------------+--------------------+
+| Name           | # functions | ERCS | ERC20 info | Complex code | Features           |
++----------------+-------------+------+------------+--------------+--------------------+
+| IPermit2Source | 1           |      |            | No           |                    |
+| ValariRouterV3 | 59          |      |            | Yes          | Send ETH           |
+|                |             |      |            |              | Tokens interaction |
++----------------+-------------+------+------------+--------------+--------------------+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

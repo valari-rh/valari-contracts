@@ -1,0 +1,4 @@
+[1m[32m⇾[0m[0m [1mReading the configuration file at: [1mmedusa.json[0m[0m
+[1m[32m⇾[0m[0m [1mCompiling targets with [1mcrytic-compile[0m[0m
+[1m[32m⇾[0m[0m [1mRunning command:
+/tmp/claude-1000/-home-redkidd-SoloTime-HedgeyFund-valari/093dab8a-1b1a-4cc8-a252-af4faeb14887/scratchpad/tools/crytic/bin/crytic-compile . --export-format solc --export-dir fizz_data/crytic-export --foundry-compile-all[0m

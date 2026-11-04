@@ -1,0 +1,32 @@
+testMode: property
+testLimit: 2000
+seqLen: 64
+shrinkLimit: 1000
+seed: 20261005
+workers: 4
+coverage: true
+corpusDir: audit/2026-10-05-v3/echidna/corpus-reach
+codeSize: 0x100000
+testMaxGas: 30000000
+propMaxGas: 30000000
+maxTimeDelay: 60
+maxBlockDelay: 10
+allContracts: false
+filterBlacklist: false
+filterFunctions:
+  - RouterEchidnaV3Reach.actionAddPool(uint8)
+  - RouterEchidnaV3Reach.actionCatalogAbuse(uint8,uint8)
+  - RouterEchidnaV3Reach.actionOpen(uint8,uint8,uint128,uint128,uint8)
+  - RouterEchidnaV3Reach.actionOpenOutsideBounds(uint8,uint8,bool)
+  - RouterEchidnaV3Reach.actionOpenAfterPriceMove(uint8,uint8,bool,uint128,uint128,uint128,uint8)
+  - RouterEchidnaV3Reach.actionSwap(uint8,bool,uint128)
+  - RouterEchidnaV3Reach.actionDonate(uint8,uint128,uint128)
+  - RouterEchidnaV3Reach.actionCollect(uint8,bool)
+  - RouterEchidnaV3Reach.actionExit(uint8,bool)
+  - RouterEchidnaV3Reach.actionRotateRecipient(uint8)
+  - RouterEchidnaV3Reach.actionWithdraw(uint8,uint8,uint256)
+  - RouterEchidnaV3Reach.actionUnauthorized(uint8,bool)
+  - RouterEchidnaV3Reach.actionDust(uint8,uint64)
+  - RouterEchidnaV3Reach.actionSetDeposits(uint8,bool)
+  - RouterEchidnaV3Reach.actionSetEject(uint8,bool)
+  - RouterEchidnaV3Reach.actionEject(uint8,bool)

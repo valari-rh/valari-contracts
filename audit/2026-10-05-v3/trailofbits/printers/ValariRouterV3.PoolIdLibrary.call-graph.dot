@@ -1,0 +1,14 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6844_PoolIdLibrary {
+label = "PoolIdLibrary"
+"6844_toId(PoolKey)" [label="toId(PoolKey)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"keccak256(uint256,uint256)" 
+"6844_toId(PoolKey)" -> "keccak256(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

@@ -1,0 +1,33 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6824_CurrencyLibrary {
+label = "CurrencyLibrary"
+"6824_transfer(Currency,address,uint256)" [label="transfer(Currency,address,uint256)"]
+"6824_fromId(uint256)" [label="fromId(uint256)"]
+"6824_balanceOf(Currency,address)" [label="balanceOf(Currency,address)"]
+"6824_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+"6824_toId(Currency)" [label="toId(Currency)"]
+"6824_balanceOfSelf(Currency)" [label="balanceOfSelf(Currency)"]
+"6824_isAddressZero(Currency)" [label="isAddressZero(Currency)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"balance(address)" 
+"mload(uint256)" 
+"gas()" 
+"mstore(uint256,uint256)" 
+"returndatasize()" 
+"call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)" 
+"6824_transfer(Currency,address,uint256)" -> "mstore(uint256,uint256)"
+"6824_balanceOfSelf(Currency)" -> "balance(address)"
+"6824_transfer(Currency,address,uint256)" -> "mload(uint256)"
+"6824_transfer(Currency,address,uint256)" -> "returndatasize()"
+"6824_transfer(Currency,address,uint256)" -> "call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)"
+"6824_balanceOf(Currency,address)" -> "balance(address)"
+"6824_transfer(Currency,address,uint256)" -> "gas()"
+}"6824_balanceOfSelf(Currency)" -> "6824_isAddressZero(Currency)"
+"6824_balanceOf(Currency,address)" -> "6824_isAddressZero(Currency)"
+"6824_transfer(Currency,address,uint256)" -> "6824_isAddressZero(Currency)"subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

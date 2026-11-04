@@ -1,0 +1,897 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6913_IEIP712_v4 {
+label = "IEIP712_v4"
+"6913_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_6280_TickMath {
+label = "TickMath"
+"6280_getTickAtSqrtPrice(uint160)" [label="getTickAtSqrtPrice(uint160)"]
+"6280_getSqrtPriceAtTick(int24)" [label="getSqrtPriceAtTick(int24)"]
+"6280_minUsableTick(int24)" [label="minUsableTick(int24)"]
+"6280_maxUsableTick(int24)" [label="maxUsableTick(int24)"]
+"6280_getTickAtSqrtPrice(uint160)" -> "6280_getSqrtPriceAtTick(int24)"
+}subgraph cluster_11660_ValariRouterV3 {
+label = "ValariRouterV3"
+"11660__split(uint256,uint256)" [label="_split(uint256,uint256)"]
+"11660_getDepositorPositionIds(address,uint256,uint256)" [label="getDepositorPositionIds(address,uint256,uint256)"]
+"11660__ownedPosition(uint256)" [label="_ownedPosition(uint256)"]
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" [label="exitPositionTo(uint256,address,uint128,uint128,uint256)"]
+"11660_stockPoolCount(address)" [label="stockPoolCount(address)"]
+"11660_setFeeRecipient(address)" [label="setFeeRecipient(address)"]
+"11660__positionView(uint256,address)" [label="_positionView(uint256,address)"]
+"11660__ownerOf(uint256)" [label="_ownerOf(uint256)"]
+"11660__page(bytes32[],uint256,uint256)" [label="_page(bytes32[],uint256,uint256)"]
+"11660__amounts(uint160,uint160,uint160,uint128,bool)" [label="_amounts(uint160,uint160,uint160,uint128,bool)"]
+"11660_collectFees(uint256,uint256)" [label="collectFees(uint256,uint256)"]
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" [label="_distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"]
+"11660__refund(IERC20,uint256,uint128)" [label="_refund(IERC20,uint256,uint128)"]
+"11660_positionCount()" [label="positionCount()"]
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" [label="_exitPosition(uint256,address,uint128,uint128,uint256)"]
+"11660_getPosition(uint256)" [label="getPosition(uint256)"]
+"11660__pull(IERC20,uint128)" [label="_pull(IERC20,uint128)"]
+"11660_setDepositsDisabled(bytes32,bool)" [label="setDepositsDisabled(bytes32,bool)"]
+"11660_depositCount(address)" [label="depositCount(address)"]
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" [label="openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)"]
+"11660_getStockPoolIds(address,uint256,uint256)" [label="getStockPoolIds(address,uint256,uint256)"]
+"11660_ejectPosition(uint256,address)" [label="ejectPosition(uint256,address)"]
+"11660_getPoolKey(bytes32)" [label="getPoolKey(bytes32)"]
+"11660_withdrawCommission(address,address,uint256)" [label="withdrawCommission(address,address,uint256)"]
+"11660_getUserPositions(address,uint256,uint256)" [label="getUserPositions(address,uint256,uint256)"]
+"11660_collectFeesTo(uint256,address,uint256)" [label="collectFeesTo(uint256,address,uint256)"]
+"11660_exitPosition(uint256,uint128,uint128,uint256)" [label="exitPosition(uint256,uint128,uint128,uint256)"]
+"11660__collectFees(uint256,address,uint256)" [label="_collectFees(uint256,address,uint256)"]
+"11660__accrueCommission(address,address,uint256)" [label="_accrueCommission(address,address,uint256)"]
+"11660_setEjectEnabled(bytes32,bool)" [label="setEjectEnabled(bytes32,bool)"]
+"11660__approve(IERC20,uint128)" [label="_approve(IERC20,uint128)"]
+"11660_poolCount()" [label="poolCount()"]
+"11660__checkRetained(IERC20,uint256)" [label="_checkRetained(IERC20,uint256)"]
+"11660__addPool(PoolKey,IStateView,address)" [label="_addPool(PoolKey,IStateView,address)"]
+"11660__commission(uint256,uint16)" [label="_commission(uint256,uint16)"]
+"11660__pageEnd(uint256,uint256,uint256)" [label="_pageEnd(uint256,uint256,uint256)"]
+"11660__checkRecipient(address)" [label="_checkRecipient(address)"]
+"11660_addPool(PoolKey)" [label="addPool(PoolKey)"]
+"11660_getPoolIds(uint256,uint256)" [label="getPoolIds(uint256,uint256)"]
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" [label="previewDeposit(bytes32,uint128,uint128,int24,int24)"]
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" [label="constructor(IPositionManager,IStateView,address,PoolKey[])"]
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_nonReentrant()"
+"11660_collectFeesTo(uint256,address,uint256)" -> "11660__collectFees(uint256,address,uint256)"
+"11660_collectFeesTo(uint256,address,uint256)" -> "11660_nonReentrant()"
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" -> "11660_nonReentrant()"
+"11660_getPosition(uint256)" -> "11660__positionView(uint256,address)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__commission(uint256,uint16)"
+"11660_addPool(PoolKey)" -> "11660__addPool(PoolKey,IStateView,address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__refund(IERC20,uint256,uint128)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_previewDeposit(bytes32,uint128,uint128,int24,int24)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_getPoolIds(uint256,uint256)" -> "11660__page(bytes32[],uint256,uint256)"
+"11660_withdrawCommission(address,address,uint256)" -> "11660_nonReentrant()"
+"11660__ownedPosition(uint256)" -> "11660__ownerOf(uint256)"
+"11660_collectFees(uint256,uint256)" -> "11660_nonReentrant()"
+"11660__positionView(uint256,address)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_getPoolKey(bytes32)"
+"11660_withdrawCommission(address,address,uint256)" -> "11660__checkRetained(IERC20,uint256)"
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_getPoolKey(bytes32)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__ownerOf(uint256)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__split(uint256,uint256)"
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" -> "11660__exitPosition(uint256,address,uint128,uint128,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__ownerOf(uint256)"
+"11660_ejectPosition(uint256,address)" -> "11660_nonReentrant()"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__positionView(uint256,address)"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_onlyOwner()"
+"11660_exitPosition(uint256,uint128,uint128,uint256)" -> "11660_nonReentrant()"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_nonReentrant()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__approve(IERC20,uint128)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"
+"11660_getStockPoolIds(address,uint256,uint256)" -> "11660__page(bytes32[],uint256,uint256)"
+"11660_collectFees(uint256,uint256)" -> "11660__collectFees(uint256,address,uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "11660__addPool(PoolKey,IStateView,address)"
+"11660_exitPosition(uint256,uint128,uint128,uint256)" -> "11660__exitPosition(uint256,address,uint128,uint128,uint256)"
+"11660_addPool(PoolKey)" -> "11660_nonReentrant()"
+"11660_ejectPosition(uint256,address)" -> "11660__ownedPosition(uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__checkRecipient(address)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__checkRecipient(address)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "11660_getPoolKey(bytes32)"
+"11660_ejectPosition(uint256,address)" -> "11660__ownerOf(uint256)"
+"11660_getPosition(uint256)" -> "11660__ownerOf(uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__ownedPosition(uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__pull(IERC20,uint128)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__ownedPosition(uint256)"
+"11660__page(bytes32[],uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_setFeeRecipient(address)" -> "11660_onlyOwner()"
+"11660_getDepositorPositionIds(address,uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__ownerOf(uint256)"
+"11660_setFeeRecipient(address)" -> "11660_nonReentrant()"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "11660_constructor(address)"
+"11660__positionView(uint256,address)" -> "11660__commission(uint256,uint16)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__accrueCommission(address,address,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_nonReentrant()"
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_onlyOwner()"
+"11660__collectFees(uint256,address,uint256)" -> "11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"
+"11660_ejectPosition(uint256,address)" -> "11660__checkRecipient(address)"
+"11660_addPool(PoolKey)" -> "11660_onlyOwner()"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__checkRetained(IERC20,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_getPoolKey(bytes32)"
+}subgraph cluster_1037_Context {
+label = "Context"
+"1037__msgSender()" [label="_msgSender()"]
+"1037__msgData()" [label="_msgData()"]
+"1037__contextSuffixLength()" [label="_contextSuffixLength()"]
+}subgraph cluster_3085_IAllowanceTransfer {
+label = "IAllowanceTransfer"
+"3085_transferFrom(IAllowanceTransfer.AllowanceTransferDetails[])" [label="transferFrom(IAllowanceTransfer.AllowanceTransferDetails[])"]
+"3085_permit(address,IAllowanceTransfer.PermitSingle,bytes)" [label="permit(address,IAllowanceTransfer.PermitSingle,bytes)"]
+"3085_permit(address,IAllowanceTransfer.PermitBatch,bytes)" [label="permit(address,IAllowanceTransfer.PermitBatch,bytes)"]
+"3085_lockdown(IAllowanceTransfer.TokenSpenderPair[])" [label="lockdown(IAllowanceTransfer.TokenSpenderPair[])"]
+"3085_transferFrom(address,address,uint160,address)" [label="transferFrom(address,address,uint160,address)"]
+"3085_invalidateNonces(address,address,uint48)" [label="invalidateNonces(address,address,uint48)"]
+"3085_approve(address,address,uint160,uint48)" [label="approve(address,address,uint160,uint48)"]
+"3085_allowance(address,address,address)" [label="allowance(address,address,address)"]
+}subgraph cluster_4236_LiquidityMath {
+label = "LiquidityMath"
+"4236_addDelta(uint128,int128)" [label="addDelta(uint128,int128)"]
+}subgraph cluster_147_Ownable {
+label = "Ownable"
+"147_transferOwnership(address)" [label="transferOwnership(address)"]
+"147_constructor(address)" [label="constructor(address)"]
+"147_renounceOwnership()" [label="renounceOwnership()"]
+"147__transferOwnership(address)" [label="_transferOwnership(address)"]
+"147_owner()" [label="owner()"]
+"147__checkOwner()" [label="_checkOwner()"]
+"147_constructor(address)" -> "147__transferOwnership(address)"
+"147__checkOwner()" -> "147_owner()"
+"147_transferOwnership(address)" -> "147_onlyOwner()"
+"147_transferOwnership(address)" -> "147__transferOwnership(address)"
+"147_renounceOwnership()" -> "147__transferOwnership(address)"
+"147_renounceOwnership()" -> "147_onlyOwner()"
+"147__checkOwner()" -> "147__msgSender()"
+}subgraph cluster_3347_IHooks {
+label = "IHooks"
+"3347_afterRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes)" [label="afterRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes)"]
+"3347_afterSwap(address,PoolKey,SwapParams,BalanceDelta,bytes)" [label="afterSwap(address,PoolKey,SwapParams,BalanceDelta,bytes)"]
+"3347_afterDonate(address,PoolKey,uint256,uint256,bytes)" [label="afterDonate(address,PoolKey,uint256,uint256,bytes)"]
+"3347_afterInitialize(address,PoolKey,uint160,int24)" [label="afterInitialize(address,PoolKey,uint160,int24)"]
+"3347_beforeInitialize(address,PoolKey,uint160)" [label="beforeInitialize(address,PoolKey,uint160)"]
+"3347_beforeDonate(address,PoolKey,uint256,uint256,bytes)" [label="beforeDonate(address,PoolKey,uint256,uint256,bytes)"]
+"3347_afterAddLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes)" [label="afterAddLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes)"]
+"3347_beforeSwap(address,PoolKey,SwapParams,bytes)" [label="beforeSwap(address,PoolKey,SwapParams,bytes)"]
+"3347_beforeAddLiquidity(address,PoolKey,ModifyLiquidityParams,bytes)" [label="beforeAddLiquidity(address,PoolKey,ModifyLiquidityParams,bytes)"]
+"3347_beforeRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,bytes)" [label="beforeRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,bytes)"]
+}subgraph cluster_3093_IEIP712 {
+label = "IEIP712"
+"3093_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_7068_INotifier {
+label = "INotifier"
+"7068_unsubscribe(uint256)" [label="unsubscribe(uint256)"]
+"7068_unsubscribeGasLimit()" [label="unsubscribeGasLimit()"]
+"7068_subscriber(uint256)" [label="subscriber(uint256)"]
+"7068_subscribe(uint256,address,bytes)" [label="subscribe(uint256,address,bytes)"]
+}subgraph cluster_7456_ISubscriber {
+label = "ISubscriber"
+"7456_notifyModifyLiquidity(uint256,int256,BalanceDelta)" [label="notifyModifyLiquidity(uint256,int256,BalanceDelta)"]
+"7456_notifySubscribe(uint256,bytes)" [label="notifySubscribe(uint256,bytes)"]
+"7456_notifyBurn(uint256,address,PositionInfo,uint256,BalanceDelta)" [label="notifyBurn(uint256,address,PositionInfo,uint256,BalanceDelta)"]
+"7456_notifyUnsubscribe(uint256)" [label="notifyUnsubscribe(uint256)"]
+}subgraph cluster_6310_UnsafeMath {
+label = "UnsafeMath"
+"6310_divRoundingUp(uint256,uint256)" [label="divRoundingUp(uint256,uint256)"]
+"6310_simpleMulDiv(uint256,uint256,uint256)" [label="simpleMulDiv(uint256,uint256,uint256)"]
+}subgraph cluster_6824_CurrencyLibrary {
+label = "CurrencyLibrary"
+"6824_transfer(Currency,address,uint256)" [label="transfer(Currency,address,uint256)"]
+"6824_fromId(uint256)" [label="fromId(uint256)"]
+"6824_balanceOf(Currency,address)" [label="balanceOf(Currency,address)"]
+"6824_toId(Currency)" [label="toId(Currency)"]
+"6824_balanceOfSelf(Currency)" [label="balanceOfSelf(Currency)"]
+"6824_isAddressZero(Currency)" [label="isAddressZero(Currency)"]
+}subgraph cluster_6953_IERC721Permit_v4 {
+label = "IERC721Permit_v4"
+"6953_permitForAll(address,address,bool,uint256,uint256,bytes)" [label="permitForAll(address,address,bool,uint256,uint256,bytes)"]
+"6953_permit(address,uint256,uint256,uint256,bytes)" [label="permit(address,uint256,uint256,uint256,bytes)"]
+}subgraph cluster_3630_IPoolManager {
+label = "IPoolManager"
+"3630_sync(Currency)" [label="sync(Currency)"]
+"3630_unlock(bytes)" [label="unlock(bytes)"]
+"3630_settle()" [label="settle()"]
+"3630_mint(address,uint256,uint256)" [label="mint(address,uint256,uint256)"]
+"3630_modifyLiquidity(PoolKey,ModifyLiquidityParams,bytes)" [label="modifyLiquidity(PoolKey,ModifyLiquidityParams,bytes)"]
+"3630_take(Currency,address,uint256)" [label="take(Currency,address,uint256)"]
+"3630_updateDynamicLPFee(PoolKey,uint24)" [label="updateDynamicLPFee(PoolKey,uint24)"]
+"3630_initialize(PoolKey,uint160)" [label="initialize(PoolKey,uint160)"]
+"3630_settleFor(address)" [label="settleFor(address)"]
+"3630_clear(Currency,uint256)" [label="clear(Currency,uint256)"]
+"3630_donate(PoolKey,uint256,uint256,bytes)" [label="donate(PoolKey,uint256,uint256,bytes)"]
+"3630_swap(PoolKey,SwapParams,bytes)" [label="swap(PoolKey,SwapParams,bytes)"]
+"3630_burn(address,uint256,uint256)" [label="burn(address,uint256,uint256)"]
+}subgraph cluster_6522_BeforeSwapDeltaLibrary {
+label = "BeforeSwapDeltaLibrary"
+"6522_getSpecifiedDelta(BeforeSwapDelta)" [label="getSpecifiedDelta(BeforeSwapDelta)"]
+"6522_getUnspecifiedDelta(BeforeSwapDelta)" [label="getUnspecifiedDelta(BeforeSwapDelta)"]
+}subgraph cluster_4402_Position {
+label = "Position"
+"4402_update(Position.State,int128,uint256,uint256)" [label="update(Position.State,int128,uint256,uint256)"]
+"4402_calculatePositionKey(address,int24,int24,bytes32)" [label="calculatePositionKey(address,int24,int24,bytes32)"]
+"4402_get(mapping(bytes32 => Position.State),address,int24,int24,bytes32)" [label="get(mapping(bytes32 => Position.State),address,int24,int24,bytes32)"]
+"4402_get(mapping(bytes32 => Position.State),address,int24,int24,bytes32)" -> "4402_calculatePositionKey(address,int24,int24,bytes32)"
+}subgraph cluster_3893_IERC6909Claims {
+label = "IERC6909Claims"
+"3893_approve(address,uint256,uint256)" [label="approve(address,uint256,uint256)"]
+"3893_transfer(address,uint256,uint256)" [label="transfer(address,uint256,uint256)"]
+"3893_setOperator(address,bool)" [label="setOperator(address,bool)"]
+"3893_isOperator(address,address)" [label="isOperator(address,address)"]
+"3893_balanceOf(address,uint256)" [label="balanceOf(address,uint256)"]
+"3893_transferFrom(address,address,uint256,uint256)" [label="transferFrom(address,address,uint256,uint256)"]
+"3893_allowance(address,address,uint256)" [label="allowance(address,address,uint256)"]
+}subgraph cluster_3126_IExtsload {
+label = "IExtsload"
+"3126_extsload(bytes32)" [label="extsload(bytes32)"]
+"3126_extsload(bytes32,uint256)" [label="extsload(bytes32,uint256)"]
+"3126_extsload(bytes32[])" [label="extsload(bytes32[])"]
+}subgraph cluster_7478_IUnorderedNonce {
+label = "IUnorderedNonce"
+"7478_nonces(address,uint256)" [label="nonces(address,uint256)"]
+"7478_revokeNonce(uint256)" [label="revokeNonce(uint256)"]
+}subgraph cluster_6966_IImmutableState {
+label = "IImmutableState"
+"6966_poolManager()" [label="poolManager()"]
+}subgraph cluster_311_IERC20 {
+label = "IERC20"
+"311_approve(address,uint256)" [label="approve(address,uint256)"]
+"311_balanceOf(address)" [label="balanceOf(address)"]
+"311_totalSupply()" [label="totalSupply()"]
+"311_transfer(address,uint256)" [label="transfer(address,uint256)"]
+"311_allowance(address,address)" [label="allowance(address,address)"]
+"311_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+}subgraph cluster_2873_SafeCast {
+label = "SafeCast"
+"2873_toInt56(int256)" [label="toInt56(int256)"]
+"2873_toUint248(uint256)" [label="toUint248(uint256)"]
+"2873_toInt88(int256)" [label="toInt88(int256)"]
+"2873_toUint48(uint256)" [label="toUint48(uint256)"]
+"2873_toUint88(uint256)" [label="toUint88(uint256)"]
+"2873_toInt200(int256)" [label="toInt200(int256)"]
+"2873_toInt192(int256)" [label="toInt192(int256)"]
+"2873_toInt176(int256)" [label="toInt176(int256)"]
+"2873_toUint192(uint256)" [label="toUint192(uint256)"]
+"2873_toUint8(uint256)" [label="toUint8(uint256)"]
+"2873_toUint16(uint256)" [label="toUint16(uint256)"]
+"2873_toInt248(int256)" [label="toInt248(int256)"]
+"2873_toUint224(uint256)" [label="toUint224(uint256)"]
+"2873_toUint176(uint256)" [label="toUint176(uint256)"]
+"2873_toInt24(int256)" [label="toInt24(int256)"]
+"2873_toUint40(uint256)" [label="toUint40(uint256)"]
+"2873_toInt240(int256)" [label="toInt240(int256)"]
+"2873_toUint240(uint256)" [label="toUint240(uint256)"]
+"2873_toUint168(uint256)" [label="toUint168(uint256)"]
+"2873_toUint32(uint256)" [label="toUint32(uint256)"]
+"2873_toInt136(int256)" [label="toInt136(int256)"]
+"2873_toInt112(int256)" [label="toInt112(int256)"]
+"2873_toInt216(int256)" [label="toInt216(int256)"]
+"2873_toInt184(int256)" [label="toInt184(int256)"]
+"2873_toUint64(uint256)" [label="toUint64(uint256)"]
+"2873_toInt96(int256)" [label="toInt96(int256)"]
+"2873_toInt8(int256)" [label="toInt8(int256)"]
+"2873_toInt224(int256)" [label="toInt224(int256)"]
+"2873_toInt48(int256)" [label="toInt48(int256)"]
+"2873_toInt64(int256)" [label="toInt64(int256)"]
+"2873_toInt104(int256)" [label="toInt104(int256)"]
+"2873_toInt32(int256)" [label="toInt32(int256)"]
+"2873_toInt72(int256)" [label="toInt72(int256)"]
+"2873_toUint24(uint256)" [label="toUint24(uint256)"]
+"2873_toUint200(uint256)" [label="toUint200(uint256)"]
+"2873_toUint136(uint256)" [label="toUint136(uint256)"]
+"2873_toUint112(uint256)" [label="toUint112(uint256)"]
+"2873_toInt144(int256)" [label="toInt144(int256)"]
+"2873_toInt16(int256)" [label="toInt16(int256)"]
+"2873_toInt120(int256)" [label="toInt120(int256)"]
+"2873_toUint80(uint256)" [label="toUint80(uint256)"]
+"2873_toInt208(int256)" [label="toInt208(int256)"]
+"2873_toUint152(uint256)" [label="toUint152(uint256)"]
+"2873_toUint104(uint256)" [label="toUint104(uint256)"]
+"2873_toUint208(uint256)" [label="toUint208(uint256)"]
+"2873_toUint216(uint256)" [label="toUint216(uint256)"]
+"2873_toUint120(uint256)" [label="toUint120(uint256)"]
+"2873_toUint96(uint256)" [label="toUint96(uint256)"]
+"2873_toUint56(uint256)" [label="toUint56(uint256)"]
+"2873_toUint72(uint256)" [label="toUint72(uint256)"]
+"2873_toInt160(int256)" [label="toInt160(int256)"]
+"2873_toInt152(int256)" [label="toInt152(int256)"]
+"2873_toUint256(int256)" [label="toUint256(int256)"]
+"2873_toInt80(int256)" [label="toInt80(int256)"]
+"2873_toInt232(int256)" [label="toInt232(int256)"]
+"2873_toInt40(int256)" [label="toInt40(int256)"]
+"2873_toUint144(uint256)" [label="toUint144(uint256)"]
+"2873_toUint184(uint256)" [label="toUint184(uint256)"]
+"2873_toUint232(uint256)" [label="toUint232(uint256)"]
+"2873_toInt168(int256)" [label="toInt168(int256)"]
+}subgraph cluster_7100_IPermit2Forwarder {
+label = "IPermit2Forwarder"
+"7100_permitBatch(address,IAllowanceTransfer.PermitBatch,bytes)" [label="permitBatch(address,IAllowanceTransfer.PermitBatch,bytes)"]
+"7100_permit(address,IAllowanceTransfer.PermitSingle,bytes)" [label="permit(address,IAllowanceTransfer.PermitSingle,bytes)"]
+}subgraph cluster_6844_PoolIdLibrary {
+label = "PoolIdLibrary"
+"6844_toId(PoolKey)" [label="toId(PoolKey)"]
+}subgraph cluster_3779_IERC20Minimal {
+label = "IERC20Minimal"
+"3779_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+"3779_transfer(address,uint256)" [label="transfer(address,uint256)"]
+"3779_balanceOf(address)" [label="balanceOf(address)"]
+"3779_allowance(address,address)" [label="allowance(address,address)"]
+"3779_approve(address,uint256)" [label="approve(address,uint256)"]
+}subgraph cluster_6980_IMulticall_v4 {
+label = "IMulticall_v4"
+"6980_multicall(bytes[])" [label="multicall(bytes[])"]
+}subgraph cluster_7748_LiquidityAmounts {
+label = "LiquidityAmounts"
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" [label="getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)"]
+"7748_getLiquidityForAmount0(uint160,uint160,uint256)" [label="getLiquidityForAmount0(uint160,uint160,uint256)"]
+"7748_getLiquidityForAmount1(uint160,uint160,uint256)" [label="getLiquidityForAmount1(uint160,uint160,uint256)"]
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" -> "7748_getLiquidityForAmount1(uint160,uint160,uint256)"
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" -> "7748_getLiquidityForAmount0(uint160,uint160,uint256)"
+}subgraph cluster_4035_CustomRevert {
+label = "CustomRevert"
+"4035_revertWith(bytes4,address)" [label="revertWith(bytes4,address)"]
+"4035_revertWith(bytes4,int24,int24)" [label="revertWith(bytes4,int24,int24)"]
+"4035_revertWith(bytes4,uint160,uint160)" [label="revertWith(bytes4,uint160,uint160)"]
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" [label="bubbleUpAndRevertWith(address,bytes4,bytes4)"]
+"4035_revertWith(bytes4)" [label="revertWith(bytes4)"]
+"4035_revertWith(bytes4,address,address)" [label="revertWith(bytes4,address,address)"]
+"4035_revertWith(bytes4,int24)" [label="revertWith(bytes4,int24)"]
+"4035_revertWith(bytes4,uint160)" [label="revertWith(bytes4,uint160)"]
+}subgraph cluster_7240_IPositionManager {
+label = "IPositionManager"
+"7240_getPositionLiquidity(uint256)" [label="getPositionLiquidity(uint256)"]
+"7240_modifyLiquidities(bytes,uint256)" [label="modifyLiquidities(bytes,uint256)"]
+"7240_getPoolAndPositionInfo(uint256)" [label="getPoolAndPositionInfo(uint256)"]
+"7240_modifyLiquiditiesWithoutUnlock(bytes,bytes[])" [label="modifyLiquiditiesWithoutUnlock(bytes,bytes[])"]
+"7240_nextTokenId()" [label="nextTokenId()"]
+"7240_positionInfo(uint256)" [label="positionInfo(uint256)"]
+}subgraph cluster_7882_PositionInfoLibrary {
+label = "PositionInfoLibrary"
+"7882_tickLower(PositionInfo)" [label="tickLower(PositionInfo)"]
+"7882_poolId(PositionInfo)" [label="poolId(PositionInfo)"]
+"7882_hasSubscriber(PositionInfo)" [label="hasSubscriber(PositionInfo)"]
+"7882_initialize(PoolKey,int24,int24)" [label="initialize(PoolKey,int24,int24)"]
+"7882_setSubscribe(PositionInfo)" [label="setSubscribe(PositionInfo)"]
+"7882_tickUpper(PositionInfo)" [label="tickUpper(PositionInfo)"]
+"7882_setUnsubscribe(PositionInfo)" [label="setUnsubscribe(PositionInfo)"]
+}subgraph cluster_6474_BalanceDeltaLibrary {
+label = "BalanceDeltaLibrary"
+"6474_amount1(BalanceDelta)" [label="amount1(BalanceDelta)"]
+"6474_amount0(BalanceDelta)" [label="amount0(BalanceDelta)"]
+}subgraph cluster_3148_IExttload {
+label = "IExttload"
+"3148_exttload(bytes32[])" [label="exttload(bytes32[])"]
+"3148_exttload(bytes32)" [label="exttload(bytes32)"]
+}subgraph cluster_7117_IPoolInitializer_v4 {
+label = "IPoolInitializer_v4"
+"7117_initializePool(PoolKey,uint160)" [label="initializePool(PoolKey,uint160)"]
+}subgraph cluster_5069_SqrtPriceMath {
+label = "SqrtPriceMath"
+"5069_getAmount1Delta(uint160,uint160,int128)" [label="getAmount1Delta(uint160,uint160,int128)"]
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" [label="getAmount0Delta(uint160,uint160,uint128,bool)"]
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)"]
+"5069_absDiff(uint160,uint160)" [label="absDiff(uint160,uint160)"]
+"5069_getAmount0Delta(uint160,uint160,int128)" [label="getAmount0Delta(uint160,uint160,int128)"]
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"]
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" [label="getAmount1Delta(uint160,uint160,uint128,bool)"]
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)"]
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"]
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"
+"5069_getAmount1Delta(uint160,uint160,int128)" -> "5069_getAmount1Delta(uint160,uint160,uint128,bool)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" -> "5069_absDiff(uint160,uint160)"
+"5069_getAmount0Delta(uint160,uint160,int128)" -> "5069_getAmount0Delta(uint160,uint160,uint128,bool)"
+}subgraph cluster_1106_ReentrancyGuard {
+label = "ReentrancyGuard"
+"1106__reentrancyGuardEntered()" [label="_reentrancyGuardEntered()"]
+"1106_constructor()" [label="constructor()"]
+"1106__nonReentrantBefore()" [label="_nonReentrantBefore()"]
+"1106__nonReentrantAfter()" [label="_nonReentrantAfter()"]
+}subgraph cluster_3929_BitMath {
+label = "BitMath"
+"3929_mostSignificantBit(uint256)" [label="mostSignificantBit(uint256)"]
+"3929_leastSignificantBit(uint256)" [label="leastSignificantBit(uint256)"]
+}subgraph cluster_347_IERC20Permit {
+label = "IERC20Permit"
+"347_permit(address,address,uint256,uint256,uint8,bytes32,bytes32)" [label="permit(address,address,uint256,uint256,uint8,bytes32,bytes32)"]
+"347_nonces(address)" [label="nonces(address)"]
+"347_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_1118_IERC165 {
+label = "IERC165"
+"1118_supportsInterface(bytes4)" [label="supportsInterface(bytes4)"]
+}subgraph cluster_5726_StateLibrary {
+label = "StateLibrary"
+"5726_getTickLiquidity(IPoolManager,PoolId,int24)" [label="getTickLiquidity(IPoolManager,PoolId,int24)"]
+"5726__getTickInfoSlot(PoolId,int24)" [label="_getTickInfoSlot(PoolId,int24)"]
+"5726_getTickInfo(IPoolManager,PoolId,int24)" [label="getTickInfo(IPoolManager,PoolId,int24)"]
+"5726_getPositionLiquidity(IPoolManager,PoolId,bytes32)" [label="getPositionLiquidity(IPoolManager,PoolId,bytes32)"]
+"5726_getFeeGrowthGlobals(IPoolManager,PoolId)" [label="getFeeGrowthGlobals(IPoolManager,PoolId)"]
+"5726_getTickFeeGrowthOutside(IPoolManager,PoolId,int24)" [label="getTickFeeGrowthOutside(IPoolManager,PoolId,int24)"]
+"5726_getFeeGrowthInside(IPoolManager,PoolId,int24,int24)" [label="getFeeGrowthInside(IPoolManager,PoolId,int24,int24)"]
+"5726__getPoolStateSlot(PoolId)" [label="_getPoolStateSlot(PoolId)"]
+"5726_getLiquidity(IPoolManager,PoolId)" [label="getLiquidity(IPoolManager,PoolId)"]
+"5726_getTickBitmap(IPoolManager,PoolId,int16)" [label="getTickBitmap(IPoolManager,PoolId,int16)"]
+"5726_getPositionInfo(IPoolManager,PoolId,bytes32)" [label="getPositionInfo(IPoolManager,PoolId,bytes32)"]
+"5726__getPositionInfoSlot(PoolId,bytes32)" [label="_getPositionInfoSlot(PoolId,bytes32)"]
+"5726_getSlot0(IPoolManager,PoolId)" [label="getSlot0(IPoolManager,PoolId)"]
+"5726_getPositionInfo(IPoolManager,PoolId,address,int24,int24,bytes32)" [label="getPositionInfo(IPoolManager,PoolId,address,int24,int24,bytes32)"]
+"5726_getPositionInfo(IPoolManager,PoolId,address,int24,int24,bytes32)" -> "5726_getPositionInfo(IPoolManager,PoolId,bytes32)"
+"5726_getFeeGrowthInside(IPoolManager,PoolId,int24,int24)" -> "5726_getSlot0(IPoolManager,PoolId)"
+"5726__getTickInfoSlot(PoolId,int24)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getTickInfo(IPoolManager,PoolId,int24)" -> "5726__getTickInfoSlot(PoolId,int24)"
+"5726_getFeeGrowthInside(IPoolManager,PoolId,int24,int24)" -> "5726_getTickFeeGrowthOutside(IPoolManager,PoolId,int24)"
+"5726_getPositionLiquidity(IPoolManager,PoolId,bytes32)" -> "5726__getPositionInfoSlot(PoolId,bytes32)"
+"5726_getSlot0(IPoolManager,PoolId)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getLiquidity(IPoolManager,PoolId)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getPositionInfo(IPoolManager,PoolId,bytes32)" -> "5726__getPositionInfoSlot(PoolId,bytes32)"
+"5726_getFeeGrowthInside(IPoolManager,PoolId,int24,int24)" -> "5726_getFeeGrowthGlobals(IPoolManager,PoolId)"
+"5726_getTickBitmap(IPoolManager,PoolId,int16)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getFeeGrowthGlobals(IPoolManager,PoolId)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getTickFeeGrowthOutside(IPoolManager,PoolId,int24)" -> "5726__getTickInfoSlot(PoolId,int24)"
+"5726__getPositionInfoSlot(PoolId,bytes32)" -> "5726__getPoolStateSlot(PoolId)"
+"5726_getTickLiquidity(IPoolManager,PoolId,int24)" -> "5726__getTickInfoSlot(PoolId,int24)"
+}subgraph cluster_4578_SafeCast {
+label = "SafeCast"
+"4578_toInt256(uint256)" [label="toInt256(uint256)"]
+"4578_toInt128(int256)" [label="toInt128(int256)"]
+"4578_toUint160(uint256)" [label="toUint160(uint256)"]
+"4578_toUint128(int128)" [label="toUint128(int128)"]
+"4578_toInt128(uint256)" [label="toInt128(uint256)"]
+"4578_toUint128(uint256)" [label="toUint128(uint256)"]
+}subgraph cluster_233_Ownable2Step {
+label = "Ownable2Step"
+"233_acceptOwnership()" [label="acceptOwnership()"]
+"233_transferOwnership(address)" [label="transferOwnership(address)"]
+"233_pendingOwner()" [label="pendingOwner()"]
+"233__transferOwnership(address)" [label="_transferOwnership(address)"]
+"233_transferOwnership(address)" -> "233_owner()"
+"233_acceptOwnership()" -> "233__transferOwnership(address)"
+"233_acceptOwnership()" -> "233_pendingOwner()"
+"233__transferOwnership(address)" -> "233__transferOwnership(address)"
+"233_acceptOwnership()" -> "233__msgSender()"
+"233_transferOwnership(address)" -> "233_onlyOwner()"
+}subgraph cluster_7407_IStateView {
+label = "IStateView"
+"7407_getTickInfo(PoolId,int24)" [label="getTickInfo(PoolId,int24)"]
+"7407_getLiquidity(PoolId)" [label="getLiquidity(PoolId)"]
+"7407_getTickLiquidity(PoolId,int24)" [label="getTickLiquidity(PoolId,int24)"]
+"7407_getFeeGrowthInside(PoolId,int24,int24)" [label="getFeeGrowthInside(PoolId,int24,int24)"]
+"7407_getPositionLiquidity(PoolId,bytes32)" [label="getPositionLiquidity(PoolId,bytes32)"]
+"7407_getPositionInfo(PoolId,address,int24,int24,bytes32)" [label="getPositionInfo(PoolId,address,int24,int24,bytes32)"]
+"7407_getSlot0(PoolId)" [label="getSlot0(PoolId)"]
+"7407_getTickBitmap(PoolId,int16)" [label="getTickBitmap(PoolId,int16)"]
+"7407_getTickFeeGrowthOutside(PoolId,int24)" [label="getTickFeeGrowthOutside(PoolId,int24)"]
+"7407_getPositionInfo(PoolId,bytes32)" [label="getPositionInfo(PoolId,bytes32)"]
+"7407_getFeeGrowthGlobals(PoolId)" [label="getFeeGrowthGlobals(PoolId)"]
+}subgraph cluster_1007_Address {
+label = "Address"
+"1007_functionCall(address,bytes)" [label="functionCall(address,bytes)"]
+"1007_verifyCallResultFromTarget(address,bool,bytes)" [label="verifyCallResultFromTarget(address,bool,bytes)"]
+"1007_verifyCallResult(bool,bytes)" [label="verifyCallResult(bool,bytes)"]
+"1007_functionDelegateCall(address,bytes)" [label="functionDelegateCall(address,bytes)"]
+"1007_functionStaticCall(address,bytes)" [label="functionStaticCall(address,bytes)"]
+"1007_sendValue(address,uint256)" [label="sendValue(address,uint256)"]
+"1007__revert(bytes)" [label="_revert(bytes)"]
+"1007_functionCallWithValue(address,bytes,uint256)" [label="functionCallWithValue(address,bytes,uint256)"]
+"1007_functionCallWithValue(address,bytes,uint256)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_functionDelegateCall(address,bytes)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_functionCall(address,bytes)" -> "1007_functionCallWithValue(address,bytes,uint256)"
+"1007_functionStaticCall(address,bytes)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "1007__revert(bytes)"
+"1007_verifyCallResult(bool,bytes)" -> "1007__revert(bytes)"
+}subgraph cluster_754_IERC721 {
+label = "IERC721"
+"754_safeTransferFrom(address,address,uint256,bytes)" [label="safeTransferFrom(address,address,uint256,bytes)"]
+"754_approve(address,uint256)" [label="approve(address,uint256)"]
+"754_getApproved(uint256)" [label="getApproved(uint256)"]
+"754_isApprovedForAll(address,address)" [label="isApprovedForAll(address,address)"]
+"754_balanceOf(address)" [label="balanceOf(address)"]
+"754_setApprovalForAll(address,bool)" [label="setApprovalForAll(address,bool)"]
+"754_safeTransferFrom(address,address,uint256)" [label="safeTransferFrom(address,address,uint256)"]
+"754_ownerOf(uint256)" [label="ownerOf(uint256)"]
+"754_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+}subgraph cluster_7930_IPermit2Source {
+label = "IPermit2Source"
+"7930_permit2()" [label="permit2()"]
+}subgraph cluster_3707_IProtocolFees {
+label = "IProtocolFees"
+"3707_protocolFeesAccrued(Currency)" [label="protocolFeesAccrued(Currency)"]
+"3707_collectProtocolFees(address,Currency,uint256)" [label="collectProtocolFees(address,Currency,uint256)"]
+"3707_setProtocolFee(PoolKey,uint24)" [label="setProtocolFee(PoolKey,uint24)"]
+"3707_protocolFeeController()" [label="protocolFeeController()"]
+"3707_setProtocolFeeController(address)" [label="setProtocolFeeController(address)"]
+}subgraph cluster_4220_FullMath {
+label = "FullMath"
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" [label="mulDivRoundingUp(uint256,uint256,uint256)"]
+"4220_mulDiv(uint256,uint256,uint256)" [label="mulDiv(uint256,uint256,uint256)"]
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "4220_mulDiv(uint256,uint256,uint256)"
+}subgraph cluster_637_SafeERC20 {
+label = "SafeERC20"
+"637_safeTransfer(IERC20,address,uint256)" [label="safeTransfer(IERC20,address,uint256)"]
+"637_safeIncreaseAllowance(IERC20,address,uint256)" [label="safeIncreaseAllowance(IERC20,address,uint256)"]
+"637_forceApprove(IERC20,address,uint256)" [label="forceApprove(IERC20,address,uint256)"]
+"637__callOptionalReturnBool(IERC20,bytes)" [label="_callOptionalReturnBool(IERC20,bytes)"]
+"637__callOptionalReturn(IERC20,bytes)" [label="_callOptionalReturn(IERC20,bytes)"]
+"637_safeTransferFrom(IERC20,address,address,uint256)" [label="safeTransferFrom(IERC20,address,address,uint256)"]
+"637_safeDecreaseAllowance(IERC20,address,uint256)" [label="safeDecreaseAllowance(IERC20,address,uint256)"]
+"637_safeIncreaseAllowance(IERC20,address,uint256)" -> "637_forceApprove(IERC20,address,uint256)"
+"637_safeTransfer(IERC20,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+"637_forceApprove(IERC20,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+"637_forceApprove(IERC20,address,uint256)" -> "637__callOptionalReturnBool(IERC20,bytes)"
+"637_safeDecreaseAllowance(IERC20,address,uint256)" -> "637_forceApprove(IERC20,address,uint256)"
+"637_safeTransferFrom(IERC20,address,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert LiquidityBelowMinimum(uint128,uint128)" 
+"revert AddressEmptyCode(address)" 
+"revert InvalidRange()" 
+"revert InvalidFeeRecipient()" 
+"revert FailedInnerCall()" 
+"revert DeadlineExpired()" 
+"revert InsufficientCommission()" 
+"revert UnsupportedToken(address)" 
+"call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)" 
+"gas()" 
+"revert(uint256,uint256)" 
+"revert InvalidConfiguration()" 
+"revert InvalidPool(bytes32)" 
+"byte(uint256,uint256)" 
+"revert PositionClosed()" 
+"revert InsufficientProceeds()" 
+"revert SafeCastOverflowedIntToUint(int256)" 
+"revert ReentrancyGuardReentrantCall()" 
+"mload(uint256)" 
+"revert OwnableInvalidOwner(address)" 
+"abi.encode()" 
+"revert DuplicatePool(bytes32)" 
+"revert SafeCastOverflowedIntDowncast(uint8,int256)" 
+"revert SafeERC20FailedOperation(address)" 
+"revert SafeERC20FailedDecreaseAllowance(address,uint256,uint256)" 
+"revert InvalidPriceBounds()" 
+"revert DepositsDisabled(bytes32)" 
+"signextend(uint256,uint256)" 
+"balance(address)" 
+"revert EjectDisabled(bytes32)" 
+"revert UnexpectedPosition()" 
+"keccak256(uint256,uint256)" 
+"revert InvalidCommissionWithdrawal()" 
+"keccak256(bytes)" 
+"revert PriceOutOfBounds(uint160,uint160,uint160)" 
+"abi.encodePacked()" 
+"mulmod(uint256,uint256,uint256)" 
+"returndatacopy(uint256,uint256,uint256)" 
+"code(address)" 
+"revert UnknownPosition(uint256)" 
+"revert InvalidLiquidity()" 
+"revert AddressInsufficientBalance(address)" 
+"abi.encodeCall()" 
+"revert NotPositionOwner()" 
+"revert OwnableUnauthorizedAccount(address)" 
+"revert SafeCastOverflowedUintDowncast(uint8,uint256)" 
+"require(bool)" 
+"abi.decode()" 
+"revert InvalidRecipient()" 
+"revert InvalidPageSize()" 
+"mstore(uint256,uint256)" 
+"returndatasize()" 
+"revert InvalidOwner()" 
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "revert(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "returndatasize()"
+"toplevel_add(BalanceDelta,BalanceDelta)" -> "signextend(uint256,uint256)"
+"2873_toUint240(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"7882_tickUpper(PositionInfo)" -> "signextend(uint256,uint256)"
+"4236_addDelta(uint128,int128)" -> "signextend(uint256,uint256)"
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,address,address)" -> "mstore(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "returndatacopy(uint256,uint256,uint256)"
+"2873_toUint216(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4035_revertWith(bytes4,int24)" -> "mstore(uint256,uint256)"
+"2873_toUint8(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"637__callOptionalReturnBool(IERC20,bytes)" -> "abi.decode()"
+"2873_toInt104(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4220_mulDiv(uint256,uint256,uint256)" -> "mulmod(uint256,uint256,uint256)"
+"2873_toUint192(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"1007__revert(bytes)" -> "mload(uint256)"
+"2873_toUint200(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__addPool(PoolKey,IStateView,address)" -> "revert InvalidPool(bytes32)"
+"2873_toInt208(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"2873_toUint88(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert LiquidityBelowMinimum(uint128,uint128)"
+"2873_toUint248(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"3929_mostSignificantBit(uint256)" -> "byte(uint256,uint256)"
+"4035_revertWith(bytes4,uint160)" -> "revert(uint256,uint256)"
+"2873_toUint136(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "revert InvalidRange()"
+"6824_transfer(Currency,address,uint256)" -> "mload(uint256)"
+"2873_toInt64(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "revert InsufficientProceeds()"
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "require(bool)"
+"2873_toInt184(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4035_revertWith(bytes4,address)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,int24,int24)" -> "mstore(uint256,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert UnexpectedPosition()"
+"11660__ownedPosition(uint256)" -> "revert UnknownPosition(uint256)"
+"1007_functionCallWithValue(address,bytes,uint256)" -> "revert AddressInsufficientBalance(address)"
+"637_safeTransferFrom(IERC20,address,address,uint256)" -> "abi.encodeCall()"
+"2873_toUint72(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"2873_toUint152(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "mulmod(uint256,uint256,uint256)"
+"11660_ejectPosition(uint256,address)" -> "revert EjectDisabled(bytes32)"
+"1007_sendValue(address,uint256)" -> "balance(address)"
+"11660__ownedPosition(uint256)" -> "revert NotPositionOwner()"
+"5726__getPoolStateSlot(PoolId)" -> "abi.encodePacked()"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "revert InvalidLiquidity()"
+"4035_revertWith(bytes4,int24,int24)" -> "revert(uint256,uint256)"
+"2873_toInt32(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toInt8(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"5726__getPoolStateSlot(PoolId)" -> "keccak256(bytes)"
+"7882_tickLower(PositionInfo)" -> "signextend(uint256,uint256)"
+"2873_toInt24(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toInt96(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"5726__getPositionInfoSlot(PoolId,bytes32)" -> "keccak256(bytes)"
+"6824_transfer(Currency,address,uint256)" -> "call(uint256,uint256,uint256,uint256,uint256,uint256,uint256)"
+"2873_toInt40(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toInt16(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4402_calculatePositionKey(address,int24,int24,bytes32)" -> "keccak256(uint256,uint256)"
+"2873_toInt224(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert DeadlineExpired()"
+"11660__checkRecipient(address)" -> "revert InvalidRecipient()"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "revert InvalidConfiguration()"
+"2873_toInt248(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"637_safeTransfer(IERC20,address,uint256)" -> "abi.encodeCall()"
+"2873_toInt136(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toInt232(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"147_constructor(address)" -> "revert OwnableInvalidOwner(address)"
+"637__callOptionalReturnBool(IERC20,bytes)" -> "code(address)"
+"toplevel_sub(BalanceDelta,BalanceDelta)" -> "signextend(uint256,uint256)"
+"233_acceptOwnership()" -> "revert OwnableUnauthorizedAccount(address)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "mload(uint256)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"11660__addPool(PoolKey,IStateView,address)" -> "code(address)"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InsufficientCommission()"
+"1007_sendValue(address,uint256)" -> "revert AddressInsufficientBalance(address)"
+"2873_toInt72(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660_setFeeRecipient(address)" -> "revert InvalidFeeRecipient()"
+"2873_toInt56(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert DepositsDisabled(bytes32)"
+"11660_getPoolKey(bytes32)" -> "revert InvalidPool(bytes32)"
+"4035_revertWith(bytes4,address)" -> "revert(uint256,uint256)"
+"147_transferOwnership(address)" -> "revert OwnableInvalidOwner(address)"
+"2873_toUint176(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"2873_toUint80(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__pageEnd(uint256,uint256,uint256)" -> "revert InvalidPageSize()"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "mstore(uint256,uint256)"
+"2873_toInt160(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "abi.encodePacked()"
+"2873_toInt216(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint184(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__checkRetained(IERC20,uint256)" -> "revert UnsupportedToken(address)"
+"4035_revertWith(bytes4)" -> "revert(uint256,uint256)"
+"2873_toUint56(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"2873_toInt192(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint208(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"6824_transfer(Currency,address,uint256)" -> "mstore(uint256,uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "revert UnexpectedPosition()"
+"11660__collectFees(uint256,address,uint256)" -> "revert DeadlineExpired()"
+"5726_getPositionInfo(IPoolManager,PoolId,bytes32)" -> "mload(uint256)"
+"11660__commission(uint256,uint16)" -> "mulmod(uint256,uint256,uint256)"
+"2873_toInt168(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "mstore(uint256,uint256)"
+"2873_toUint40(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5726_getSlot0(IPoolManager,PoolId)" -> "signextend(uint256,uint256)"
+"4035_revertWith(bytes4,uint160)" -> "mstore(uint256,uint256)"
+"1106__nonReentrantBefore()" -> "revert ReentrancyGuardReentrantCall()"
+"6824_balanceOf(Currency,address)" -> "balance(address)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "mload(uint256)"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "code(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert InvalidPriceBounds()"
+"5726_getTickFeeGrowthOutside(IPoolManager,PoolId,int24)" -> "mload(uint256)"
+"5726__getTickInfoSlot(PoolId,int24)" -> "keccak256(bytes)"
+"2873_toUint24(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,int24)" -> "revert(uint256,uint256)"
+"4035_revertWith(bytes4,address,address)" -> "mload(uint256)"
+"4035_revertWith(bytes4,address,address)" -> "revert(uint256,uint256)"
+"6522_getUnspecifiedDelta(BeforeSwapDelta)" -> "signextend(uint256,uint256)"
+"3929_mostSignificantBit(uint256)" -> "require(bool)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "abi.encode()"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "mstore(uint256,uint256)"
+"1007__revert(bytes)" -> "revert FailedInnerCall()"
+"6280_getSqrtPriceAtTick(int24)" -> "signextend(uint256,uint256)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"2873_toUint16(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"1007_functionCallWithValue(address,bytes,uint256)" -> "balance(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert PriceOutOfBounds(uint160,uint160,uint160)"
+"2873_toUint32(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__pull(IERC20,uint128)" -> "revert UnsupportedToken(address)"
+"11660__collectFees(uint256,address,uint256)" -> "abi.encode()"
+"3929_leastSignificantBit(uint256)" -> "require(bool)"
+"2873_toInt112(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint168(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__ownedPosition(uint256)" -> "revert PositionClosed()"
+"6474_amount1(BalanceDelta)" -> "signextend(uint256,uint256)"
+"3929_leastSignificantBit(uint256)" -> "byte(uint256,uint256)"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InsufficientProceeds()"
+"5726_getTickBitmap(IPoolManager,PoolId,int16)" -> "keccak256(bytes)"
+"2873_toUint224(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__ownedPosition(uint256)" -> "revert UnexpectedPosition()"
+"1007__revert(bytes)" -> "revert(uint256,uint256)"
+"11660__addPool(PoolKey,IStateView,address)" -> "revert DuplicatePool(bytes32)"
+"2873_toInt88(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint48(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "code(address)"
+"11660__refund(IERC20,uint256,uint128)" -> "revert UnsupportedToken(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert DeadlineExpired()"
+"2873_toInt48(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert UnexpectedPosition()"
+"637__callOptionalReturn(IERC20,bytes)" -> "revert SafeERC20FailedOperation(address)"
+"4236_addDelta(uint128,int128)" -> "revert(uint256,uint256)"
+"2873_toUint232(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5726__getTickInfoSlot(PoolId,int24)" -> "abi.encodePacked()"
+"11660__split(uint256,uint256)" -> "revert InsufficientProceeds()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert InvalidLiquidity()"
+"6844_toId(PoolKey)" -> "keccak256(uint256,uint256)"
+"4220_mulDiv(uint256,uint256,uint256)" -> "require(bool)"
+"5726_getTickInfo(IPoolManager,PoolId,int24)" -> "mload(uint256)"
+"2873_toInt144(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"4035_revertWith(bytes4,int24,int24)" -> "signextend(uint256,uint256)"
+"2873_toInt176(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint104(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"2873_toUint64(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4402_calculatePositionKey(address,int24,int24,bytes32)" -> "mstore(uint256,uint256)"
+"6824_transfer(Currency,address,uint256)" -> "gas()"
+"147__checkOwner()" -> "revert OwnableUnauthorizedAccount(address)"
+"5726_getFeeGrowthGlobals(IPoolManager,PoolId)" -> "mload(uint256)"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InvalidCommissionWithdrawal()"
+"11660_ejectPosition(uint256,address)" -> "revert UnexpectedPosition()"
+"4035_revertWith(bytes4,int24)" -> "signextend(uint256,uint256)"
+"2873_toInt80(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"1007_sendValue(address,uint256)" -> "revert FailedInnerCall()"
+"637_forceApprove(IERC20,address,uint256)" -> "abi.encodeCall()"
+"5726_getTickBitmap(IPoolManager,PoolId,int16)" -> "abi.encodePacked()"
+"4236_addDelta(uint128,int128)" -> "mstore(uint256,uint256)"
+"11660_getPosition(uint256)" -> "revert UnknownPosition(uint256)"
+"4035_revertWith(bytes4)" -> "mstore(uint256,uint256)"
+"2873_toUint96(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "abi.encodePacked()"
+"2873_toInt120(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"2873_toUint112(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"2873_toInt200(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "abi.encode()"
+"11660__collectFees(uint256,address,uint256)" -> "abi.encodePacked()"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "revert(uint256,uint256)"
+"2873_toUint120(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"5726__getPositionInfoSlot(PoolId,bytes32)" -> "abi.encodePacked()"
+"4035_revertWith(bytes4,int24,int24)" -> "mload(uint256)"
+"2873_toUint256(int256)" -> "revert SafeCastOverflowedIntToUint(int256)"
+"2873_toInt240(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" -> "mulmod(uint256,uint256,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert InsufficientProceeds()"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "revert AddressEmptyCode(address)"
+"2873_toUint144(uint256)" -> "revert SafeCastOverflowedUintDowncast(uint8,uint256)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "revert(uint256,uint256)"
+"11660_getUserPositions(address,uint256,uint256)" -> "revert InvalidOwner()"
+"6824_balanceOfSelf(Currency)" -> "balance(address)"
+"637__callOptionalReturn(IERC20,bytes)" -> "abi.decode()"
+"637_safeDecreaseAllowance(IERC20,address,uint256)" -> "revert SafeERC20FailedDecreaseAllowance(address,uint256,uint256)"
+"6824_transfer(Currency,address,uint256)" -> "returndatasize()"
+"2873_toInt152(int256)" -> "revert SafeCastOverflowedIntDowncast(uint8,int256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"4402_calculatePositionKey(address,int24,int24,bytes32)" -> "mload(uint256)"
+}"11660__ownerOf(uint256)" -> "754_ownerOf(uint256)"
+"11660__approve(IERC20,uint128)" -> "3085_approve(address,address,uint160,uint48)"
+"637__callOptionalReturn(IERC20,bytes)" -> "1007_functionCall(address,bytes)"
+"637_safeIncreaseAllowance(IERC20,address,uint256)" -> "311_allowance(address,address)"
+"11660__positionView(uint256,address)" -> "6280_getSqrtPriceAtTick(int24)"
+"11660__positionView(uint256,address)" -> "7407_getFeeGrowthInside(PoolId,int24,int24)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "4220_mulDivRoundingUp(uint256,uint256,uint256)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "6280_getSqrtPriceAtTick(int24)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "2873_toUint128(uint256)"
+"11660__addPool(PoolKey,IStateView,address)" -> "6844_toId(PoolKey)"
+"11660__pull(IERC20,uint128)" -> "637_safeTransferFrom(IERC20,address,address,uint256)"
+"11660_ejectPosition(uint256,address)" -> "754_transferFrom(address,address,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "7240_getPositionLiquidity(uint256)"
+"11660__positionView(uint256,address)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "7240_poolManager()"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "7407_getSlot0(PoolId)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"5069_getAmount1Delta(uint160,uint160,int128)" -> "4578_toInt256(uint256)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "637_safeTransfer(IERC20,address,uint256)"
+"6824_transfer(Currency,address,uint256)" -> "6824_isAddressZero(Currency)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "311_balanceOf(address)"
+"11660_withdrawCommission(address,address,uint256)" -> "311_balanceOf(address)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "4220_mulDivRoundingUp(uint256,uint256,uint256)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "311_balanceOf(address)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "6310_divRoundingUp(uint256,uint256)"
+"5726_getLiquidity(IPoolManager,PoolId)" -> "3630_extsload(bytes32)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "4578_toUint160(uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "2873_toUint64(uint256)"
+"11660__addPool(PoolKey,IStateView,address)" -> "7407_getSlot0(PoolId)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "7240_modifyLiquidities(bytes,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "4220_mulDivRoundingUp(uint256,uint256,uint256)"
+"6824_balanceOfSelf(Currency)" -> "3779_balanceOf(address)"
+"7748_getLiquidityForAmount0(uint160,uint160,uint256)" -> "4578_toUint128(uint256)"
+"11660__positionView(uint256,address)" -> "7407_getSlot0(PoolId)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "7407_poolManager()"
+"6824_transfer(Currency,address,uint256)" -> "4035_bubbleUpAndRevertWith(address,bytes4,bytes4)"
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"11660__refund(IERC20,uint256,uint128)" -> "637_safeTransfer(IERC20,address,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "6280_getSqrtPriceAtTick(int24)"
+"7748_getLiquidityForAmount1(uint160,uint160,uint256)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "7407_getSlot0(PoolId)"
+"7748_getLiquidityForAmount1(uint160,uint160,uint256)" -> "4578_toUint128(uint256)"
+"6280_getTickAtSqrtPrice(uint160)" -> "4035_revertWith(bytes4,uint160)"
+"637_safeDecreaseAllowance(IERC20,address,uint256)" -> "311_allowance(address,address)"
+"11660__collectFees(uint256,address,uint256)" -> "7240_modifyLiquidities(bytes,uint256)"
+"5726_getTickBitmap(IPoolManager,PoolId,int16)" -> "3630_extsload(bytes32)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "754_ownerOf(uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "7240_getPositionLiquidity(uint256)"
+"11660__commission(uint256,uint16)" -> "2873_toUint16(uint256)"
+"7748_getLiquidityForAmount0(uint160,uint160,uint256)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"11660__refund(IERC20,uint256,uint128)" -> "311_balanceOf(address)"
+"6280_getTickAtSqrtPrice(uint160)" -> "3929_mostSignificantBit(uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "311_balanceOf(address)"
+"5069_getAmount0Delta(uint160,uint160,int128)" -> "4578_toInt256(uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "7240_modifyLiquidities(bytes,uint256)"
+"4578_toUint128(uint256)" -> "4035_revertWith(bytes4)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "6310_divRoundingUp(uint256,uint256)"
+"4402_update(Position.State,int128,uint256,uint256)" -> "4035_revertWith(bytes4)"
+"5726_getPositionInfo(IPoolManager,PoolId,address,int24,int24,bytes32)" -> "4402_calculatePositionKey(address,int24,int24,bytes32)"
+"11660__commission(uint256,uint16)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"5726_getPositionInfo(IPoolManager,PoolId,bytes32)" -> "3630_extsload(bytes32,uint256)"
+"4578_toUint128(int128)" -> "4035_revertWith(bytes4)"
+"11660__positionView(uint256,address)" -> "7407_getPositionInfo(PoolId,address,int24,int24,bytes32)"
+"6824_balanceOfSelf(Currency)" -> "6824_isAddressZero(Currency)"
+"5726_getTickLiquidity(IPoolManager,PoolId,int24)" -> "3630_extsload(bytes32)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "7240_nextTokenId()"
+"6280_getSqrtPriceAtTick(int24)" -> "4035_revertWith(bytes4,int24)"
+"11660__amounts(uint160,uint160,uint160,uint128,bool)" -> "5069_getAmount0Delta(uint160,uint160,uint128,bool)"
+"5726_getTickFeeGrowthOutside(IPoolManager,PoolId,int24)" -> "3630_extsload(bytes32,uint256)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "4578_toUint160(uint256)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)"
+"7882_initialize(PoolKey,int24,int24)" -> "6844_toId(PoolKey)"
+"4578_toInt128(int256)" -> "4035_revertWith(bytes4)"
+"6824_balanceOf(Currency,address)" -> "3779_balanceOf(address)"
+"11660__checkRetained(IERC20,uint256)" -> "311_balanceOf(address)"
+"11660__amounts(uint160,uint160,uint160,uint128,bool)" -> "5069_getAmount1Delta(uint160,uint160,uint128,bool)"
+"5726_getPositionLiquidity(IPoolManager,PoolId,bytes32)" -> "3630_extsload(bytes32)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "7407_getSlot0(PoolId)"
+"4578_toInt128(uint256)" -> "4035_revertWith(bytes4)"
+"5726_getTickInfo(IPoolManager,PoolId,int24)" -> "3630_extsload(bytes32,uint256)"
+"6824_balanceOf(Currency,address)" -> "6824_isAddressZero(Currency)"
+"4578_toUint160(uint256)" -> "4035_revertWith(bytes4)"
+"11660__approve(IERC20,uint128)" -> "637_forceApprove(IERC20,address,uint256)"
+"4402_update(Position.State,int128,uint256,uint256)" -> "4236_addDelta(uint128,int128)"
+"4402_update(Position.State,int128,uint256,uint256)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "4220_mulDiv(uint256,uint256,uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "7240_getPositionLiquidity(uint256)"
+"5726_getSlot0(IPoolManager,PoolId)" -> "3630_extsload(bytes32)"
+"4578_toInt256(uint256)" -> "4035_revertWith(bytes4)"
+"11660__pull(IERC20,uint128)" -> "311_balanceOf(address)"
+"11660_withdrawCommission(address,address,uint256)" -> "637_safeTransfer(IERC20,address,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "6310_divRoundingUp(uint256,uint256)"
+"5726_getFeeGrowthGlobals(IPoolManager,PoolId)" -> "3630_extsload(bytes32,uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "7930_permit2()"subgraph cluster_toplevel {
+label = "[Top Level]"
+"toplevel_toBalanceDelta(int128,int128)" [label="toBalanceDelta(int128,int128)"]
+"toplevel_greaterThan(Currency,Currency)" [label="greaterThan(Currency,Currency)"]
+"toplevel_toBeforeSwapDelta(int128,int128)" [label="toBeforeSwapDelta(int128,int128)"]
+"toplevel_lessThan(Currency,Currency)" [label="lessThan(Currency,Currency)"]
+"toplevel_neq(BalanceDelta,BalanceDelta)" [label="neq(BalanceDelta,BalanceDelta)"]
+"toplevel_eq(BalanceDelta,BalanceDelta)" [label="eq(BalanceDelta,BalanceDelta)"]
+"toplevel_greaterThanOrEqualTo(Currency,Currency)" [label="greaterThanOrEqualTo(Currency,Currency)"]
+"toplevel_sub(BalanceDelta,BalanceDelta)" [label="sub(BalanceDelta,BalanceDelta)"]
+"toplevel_add(BalanceDelta,BalanceDelta)" [label="add(BalanceDelta,BalanceDelta)"]
+"toplevel_equals(Currency,Currency)" [label="equals(Currency,Currency)"]
+"toplevel_add(BalanceDelta,BalanceDelta)" -> "toplevel_toBalanceDelta(int128,int128)"
+"toplevel_sub(BalanceDelta,BalanceDelta)" -> "toplevel_toBalanceDelta(int128,int128)"
+}
+}

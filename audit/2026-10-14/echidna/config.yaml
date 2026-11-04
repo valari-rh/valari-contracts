@@ -1,0 +1,32 @@
+testMode: property
+testLimit: 2000
+seqLen: 64
+shrinkLimit: 1000
+seed: 20261005
+workers: 6
+coverage: true
+corpusDir: audit/2026-10-14/echidna/corpus
+codeSize: 0x100000
+testMaxGas: 30000000
+propMaxGas: 30000000
+maxTimeDelay: 60
+maxBlockDelay: 10
+allContracts: false
+filterBlacklist: false
+filterFunctions:
+  - RouterEchidnaV3.actionAddPool(uint8)
+  - RouterEchidnaV3.actionCatalogAbuse(uint8,uint8)
+  - RouterEchidnaV3.actionOpen(uint8,uint8,uint128,uint128,uint8)
+  - RouterEchidnaV3.actionOpenOutsideBounds(uint8,uint8,bool)
+  - RouterEchidnaV3.actionOpenAfterPriceMove(uint8,uint8,bool,uint128,uint128,uint128,uint8)
+  - RouterEchidnaV3.actionSwap(uint8,bool,uint128)
+  - RouterEchidnaV3.actionDonate(uint8,uint128,uint128)
+  - RouterEchidnaV3.actionCollect(uint8,bool)
+  - RouterEchidnaV3.actionExit(uint8,bool)
+  - RouterEchidnaV3.actionRotateRecipient(uint8)
+  - RouterEchidnaV3.actionWithdraw(uint8,uint8,uint256)
+  - RouterEchidnaV3.actionUnauthorized(uint8,bool)
+  - RouterEchidnaV3.actionDust(uint8,uint64)
+  - RouterEchidnaV3.actionSetDeposits(uint8,bool)
+  - RouterEchidnaV3.actionSetEject(uint8,bool)
+  - RouterEchidnaV3.actionEject(uint8,bool)

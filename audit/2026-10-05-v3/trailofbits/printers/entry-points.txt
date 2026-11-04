@@ -1,0 +1,44 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
+
+Contract [1m[93mValariRouterV3[0m is Ownable2Step is Ownable is Context is ReentrancyGuard (src/ValariRouterV3.sol#38-946)
++--------------------------+--------------------------------------------------+-----------------+
+| Variables                | Types                                            | Inherited From  |
++--------------------------+--------------------------------------------------+-----------------+
+| [1m[94m_status[0m                  | [92muint256[0m                                          | [95mReentrancyGuard[0m |
+| [1m[94m_owner[0m                   | [92maddress[0m                                          | [95mOwnable[0m         |
+| [1m[94m_pendingOwner[0m            | [92maddress[0m                                          | [95mOwnable2Step[0m    |
+| [1m[94mfeeRecipient[0m             | [92maddress[0m                                          |                 |
+| [1m[94mclaimableCommission[0m      | [92mmapping(address => mapping(address => uint256))[0m  |                 |
+| [1m[94mtotalClaimableCommission[0m | [92mmapping(address => uint256)[0m                      |                 |
+| [1m[94m_pools[0m                   | [92mmapping(bytes32 => PoolKey)[0m                      |                 |
+| [1m[94m_poolIds[0m                 | [92mbytes32[][0m                                        |                 |
+| [1m[94m_stockPoolIds[0m            | [92mmapping(address => bytes32[])[0m                    |                 |
+| [1m[94mdepositsDisabled[0m         | [92mmapping(bytes32 => bool)[0m                         |                 |
+| [1m[94mejectEnabled[0m             | [92mmapping(bytes32 => bool)[0m                         |                 |
+| [1m[94m_deposits[0m                | [92mmapping(uint256 => ValariRouterV3.DepositRecord)[0m |                 |
+| [1m[94m_positionIds[0m             | [92muint256[][0m                                        |                 |
+| [1m[94m_depositorPositionIds[0m    | [92mmapping(address => uint256[])[0m                    |                 |
++--------------------------+--------------------------------------------------+-----------------+
++-----------------------------------------------------------------------------------+-------------------------+----------------+
+| Functions                                                                         | Modifiers               | Inherited From |
++-----------------------------------------------------------------------------------+-------------------------+----------------+
+| [1m[95mconstructor[0m(IPositionManager,IStateView,address,PoolKey[])                        |                         |                |
+| [1m[91maddPool[0m(PoolKey)                                                                  | [92monlyOwner, nonReentrant[0m |                |
+| [1m[91msetDepositsDisabled[0m(bytes32,bool)                                                 | [92monlyOwner, nonReentrant[0m |                |
+| [1m[91msetEjectEnabled[0m(bytes32,bool)                                                     | [92monlyOwner, nonReentrant[0m |                |
+| [1m[91mopenPosition[0m(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256) | [92mnonReentrant[0m            |                |
+| [1m[91msetFeeRecipient[0m(address)                                                          | [92monlyOwner, nonReentrant[0m |                |
+| [1m[91mwithdrawCommission[0m(address,address,uint256)                                       | [92mnonReentrant[0m            |                |
+| [1m[91mcollectFees[0m(uint256,uint256)                                                      | [92mnonReentrant[0m            |                |
+| [1m[91mcollectFeesTo[0m(uint256,address,uint256)                                            | [92mnonReentrant[0m            |                |
+| [1m[91mexitPosition[0m(uint256,uint128,uint128,uint256)                                     | [92mnonReentrant[0m            |                |
+| [1m[91mexitPositionTo[0m(uint256,address,uint128,uint128,uint256)                           | [92mnonReentrant[0m            |                |
+| [1m[91mejectPosition[0m(uint256,address)                                                    | [92mnonReentrant[0m            |                |
+| [1m[91mrenounceOwnership[0m()                                                               | [92monlyOwner[0m               | [95mOwnable[0m        |
+| [1m[91mtransferOwnership[0m(address)                                                        | [92monlyOwner[0m               | [95mOwnable2Step[0m   |
+| [1m[91macceptOwnership[0m()                                                                 |                         | [95mOwnable2Step[0m   |
++-----------------------------------------------------------------------------------+-------------------------+----------------+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

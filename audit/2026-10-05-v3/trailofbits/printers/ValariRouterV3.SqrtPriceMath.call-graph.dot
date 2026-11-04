@@ -1,0 +1,41 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_5069_SqrtPriceMath {
+label = "SqrtPriceMath"
+"5069_getAmount1Delta(uint160,uint160,int128)" [label="getAmount1Delta(uint160,uint160,int128)"]
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" [label="getAmount0Delta(uint160,uint160,uint128,bool)"]
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)"]
+"5069_absDiff(uint160,uint160)" [label="absDiff(uint160,uint160)"]
+"5069_getAmount0Delta(uint160,uint160,int128)" [label="getAmount0Delta(uint160,uint160,int128)"]
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"]
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" [label="getAmount1Delta(uint160,uint160,uint128,bool)"]
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)"]
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" [label="getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"]
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)"
+"5069_getAmount1Delta(uint160,uint160,int128)" -> "5069_getAmount1Delta(uint160,uint160,uint128,bool)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)"
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" -> "5069_absDiff(uint160,uint160)"
+"5069_getAmount0Delta(uint160,uint160,int128)" -> "5069_getAmount0Delta(uint160,uint160,uint128,bool)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"mstore(uint256,uint256)" 
+"revert(uint256,uint256)" 
+"mulmod(uint256,uint256,uint256)" 
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "revert(uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"5069_getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"5069_getAmount1Delta(uint160,uint160,uint128,bool)" -> "mulmod(uint256,uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+"5069_getNextSqrtPriceFromInput(uint160,uint128,uint256,bool)" -> "mstore(uint256,uint256)"
+"5069_getAmount0Delta(uint160,uint160,uint128,bool)" -> "mstore(uint256,uint256)"
+"5069_getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool)" -> "revert(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

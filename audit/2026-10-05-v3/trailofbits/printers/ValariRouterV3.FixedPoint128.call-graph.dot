@@ -1,0 +1,12 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4042_FixedPoint128 {
+label = "FixedPoint128"
+"4042_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

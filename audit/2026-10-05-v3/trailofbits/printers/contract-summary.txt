@@ -1,0 +1,557 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
++ Contract Ownable
+  - From Context
+    - _contextSuffixLength() (internal)
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From Ownable
+    - _checkOwner() (internal)
+    - _transferOwnership(address) (internal)
+    - constructor(address) (internal)
+    - owner() (public)
+    - renounceOwnership() (public)
+    - transferOwnership(address) (public)
+
++ Contract Ownable2Step
+  - From Ownable
+    - _checkOwner() (internal)
+    - constructor(address) (internal)
+    - owner() (public)
+    - renounceOwnership() (public)
+  - From Context
+    - _contextSuffixLength() (internal)
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From Ownable2Step
+    - _transferOwnership(address) (internal)
+    - acceptOwnership() (public)
+    - pendingOwner() (public)
+    - transferOwnership(address) (public)
+
++ Contract IERC20 (Most derived contract)
+  - From IERC20
+    - allowance(address,address) (external)
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - totalSupply() (external)
+    - transfer(address,uint256) (external)
+    - transferFrom(address,address,uint256) (external)
+
++ Contract IERC20Permit (Most derived contract)
+  - From IERC20Permit
+    - DOMAIN_SEPARATOR() (external)
+    - nonces(address) (external)
+    - permit(address,address,uint256,uint256,uint8,bytes32,bytes32) (external)
+
++ Contract SafeERC20 (Most derived contract)
+  - From SafeERC20
+    - _callOptionalReturn(IERC20,bytes) (private)
+    - _callOptionalReturnBool(IERC20,bytes) (private)
+    - forceApprove(IERC20,address,uint256) (internal)
+    - safeDecreaseAllowance(IERC20,address,uint256) (internal)
+    - safeIncreaseAllowance(IERC20,address,uint256) (internal)
+    - safeTransfer(IERC20,address,uint256) (internal)
+    - safeTransferFrom(IERC20,address,address,uint256) (internal)
+
++ Contract IERC721 (Most derived contract)
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+  - From IERC721
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - getApproved(uint256) (external)
+    - isApprovedForAll(address,address) (external)
+    - ownerOf(uint256) (external)
+    - safeTransferFrom(address,address,uint256) (external)
+    - safeTransferFrom(address,address,uint256,bytes) (external)
+    - setApprovalForAll(address,bool) (external)
+    - transferFrom(address,address,uint256) (external)
+
++ Contract Address (Most derived contract)
+  - From Address
+    - _revert(bytes) (private)
+    - functionCall(address,bytes) (internal)
+    - functionCallWithValue(address,bytes,uint256) (internal)
+    - functionDelegateCall(address,bytes) (internal)
+    - functionStaticCall(address,bytes) (internal)
+    - sendValue(address,uint256) (internal)
+    - verifyCallResult(bool,bytes) (internal)
+    - verifyCallResultFromTarget(address,bool,bytes) (internal)
+
++ Contract Context
+  - From Context
+    - _contextSuffixLength() (internal)
+    - _msgData() (internal)
+    - _msgSender() (internal)
+
++ Contract ReentrancyGuard
+  - From ReentrancyGuard
+    - _nonReentrantAfter() (private)
+    - _nonReentrantBefore() (private)
+    - _reentrancyGuardEntered() (internal)
+    - constructor() (internal)
+
++ Contract IERC165
+  - From IERC165
+    - supportsInterface(bytes4) (external)
+
++ Contract SafeCast (Most derived contract)
+  - From SafeCast
+    - toInt104(int256) (internal)
+    - toInt112(int256) (internal)
+    - toInt120(int256) (internal)
+    - toInt128(int256) (internal)
+    - toInt136(int256) (internal)
+    - toInt144(int256) (internal)
+    - toInt152(int256) (internal)
+    - toInt16(int256) (internal)
+    - toInt160(int256) (internal)
+    - toInt168(int256) (internal)
+    - toInt176(int256) (internal)
+    - toInt184(int256) (internal)
+    - toInt192(int256) (internal)
+    - toInt200(int256) (internal)
+    - toInt208(int256) (internal)
+    - toInt216(int256) (internal)
+    - toInt224(int256) (internal)
+    - toInt232(int256) (internal)
+    - toInt24(int256) (internal)
+    - toInt240(int256) (internal)
+    - toInt248(int256) (internal)
+    - toInt256(uint256) (internal)
+    - toInt32(int256) (internal)
+    - toInt40(int256) (internal)
+    - toInt48(int256) (internal)
+    - toInt56(int256) (internal)
+    - toInt64(int256) (internal)
+    - toInt72(int256) (internal)
+    - toInt8(int256) (internal)
+    - toInt80(int256) (internal)
+    - toInt88(int256) (internal)
+    - toInt96(int256) (internal)
+    - toUint104(uint256) (internal)
+    - toUint112(uint256) (internal)
+    - toUint120(uint256) (internal)
+    - toUint128(uint256) (internal)
+    - toUint136(uint256) (internal)
+    - toUint144(uint256) (internal)
+    - toUint152(uint256) (internal)
+    - toUint16(uint256) (internal)
+    - toUint160(uint256) (internal)
+    - toUint168(uint256) (internal)
+    - toUint176(uint256) (internal)
+    - toUint184(uint256) (internal)
+    - toUint192(uint256) (internal)
+    - toUint200(uint256) (internal)
+    - toUint208(uint256) (internal)
+    - toUint216(uint256) (internal)
+    - toUint224(uint256) (internal)
+    - toUint232(uint256) (internal)
+    - toUint24(uint256) (internal)
+    - toUint240(uint256) (internal)
+    - toUint248(uint256) (internal)
+    - toUint256(int256) (internal)
+    - toUint32(uint256) (internal)
+    - toUint40(uint256) (internal)
+    - toUint48(uint256) (internal)
+    - toUint56(uint256) (internal)
+    - toUint64(uint256) (internal)
+    - toUint72(uint256) (internal)
+    - toUint8(uint256) (internal)
+    - toUint80(uint256) (internal)
+    - toUint88(uint256) (internal)
+    - toUint96(uint256) (internal)
+
++ Contract IAllowanceTransfer (Most derived contract)
+  - From IEIP712
+    - DOMAIN_SEPARATOR() (external)
+  - From IAllowanceTransfer
+    - allowance(address,address,address) (external)
+    - approve(address,address,uint160,uint48) (external)
+    - invalidateNonces(address,address,uint48) (external)
+    - lockdown(IAllowanceTransfer.TokenSpenderPair[]) (external)
+    - permit(address,IAllowanceTransfer.PermitBatch,bytes) (external)
+    - permit(address,IAllowanceTransfer.PermitSingle,bytes) (external)
+    - transferFrom(IAllowanceTransfer.AllowanceTransferDetails[]) (external)
+    - transferFrom(address,address,uint160,address) (external)
+
++ Contract IEIP712
+  - From IEIP712
+    - DOMAIN_SEPARATOR() (external)
+
++ Contract IExtsload
+  - From IExtsload
+    - extsload(bytes32) (external)
+    - extsload(bytes32,uint256) (external)
+    - extsload(bytes32[]) (external)
+
++ Contract IExttload
+  - From IExttload
+    - exttload(bytes32) (external)
+    - exttload(bytes32[]) (external)
+
++ Contract IHooks (Most derived contract)
+  - From IHooks
+    - afterAddLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes) (external)
+    - afterDonate(address,PoolKey,uint256,uint256,bytes) (external)
+    - afterInitialize(address,PoolKey,uint160,int24) (external)
+    - afterRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,BalanceDelta,BalanceDelta,bytes) (external)
+    - afterSwap(address,PoolKey,SwapParams,BalanceDelta,bytes) (external)
+    - beforeAddLiquidity(address,PoolKey,ModifyLiquidityParams,bytes) (external)
+    - beforeDonate(address,PoolKey,uint256,uint256,bytes) (external)
+    - beforeInitialize(address,PoolKey,uint160) (external)
+    - beforeRemoveLiquidity(address,PoolKey,ModifyLiquidityParams,bytes) (external)
+    - beforeSwap(address,PoolKey,SwapParams,bytes) (external)
+
++ Contract IPoolManager (Most derived contract)
+  - From IExttload
+    - exttload(bytes32) (external)
+    - exttload(bytes32[]) (external)
+  - From IExtsload
+    - extsload(bytes32) (external)
+    - extsload(bytes32,uint256) (external)
+    - extsload(bytes32[]) (external)
+  - From IERC6909Claims
+    - allowance(address,address,uint256) (external)
+    - approve(address,uint256,uint256) (external)
+    - balanceOf(address,uint256) (external)
+    - isOperator(address,address) (external)
+    - setOperator(address,bool) (external)
+    - transfer(address,uint256,uint256) (external)
+    - transferFrom(address,address,uint256,uint256) (external)
+  - From IProtocolFees
+    - collectProtocolFees(address,Currency,uint256) (external)
+    - protocolFeeController() (external)
+    - protocolFeesAccrued(Currency) (external)
+    - setProtocolFee(PoolKey,uint24) (external)
+    - setProtocolFeeController(address) (external)
+  - From IPoolManager
+    - burn(address,uint256,uint256) (external)
+    - clear(Currency,uint256) (external)
+    - donate(PoolKey,uint256,uint256,bytes) (external)
+    - initialize(PoolKey,uint160) (external)
+    - mint(address,uint256,uint256) (external)
+    - modifyLiquidity(PoolKey,ModifyLiquidityParams,bytes) (external)
+    - settle() (external)
+    - settleFor(address) (external)
+    - swap(PoolKey,SwapParams,bytes) (external)
+    - sync(Currency) (external)
+    - take(Currency,address,uint256) (external)
+    - unlock(bytes) (external)
+    - updateDynamicLPFee(PoolKey,uint24) (external)
+
++ Contract IProtocolFees
+  - From IProtocolFees
+    - collectProtocolFees(address,Currency,uint256) (external)
+    - protocolFeeController() (external)
+    - protocolFeesAccrued(Currency) (external)
+    - setProtocolFee(PoolKey,uint24) (external)
+    - setProtocolFeeController(address) (external)
+
++ Contract IERC20Minimal (Most derived contract)
+  - From IERC20Minimal
+    - allowance(address,address) (external)
+    - approve(address,uint256) (external)
+    - balanceOf(address) (external)
+    - transfer(address,uint256) (external)
+    - transferFrom(address,address,uint256) (external)
+
++ Contract IERC6909Claims
+  - From IERC6909Claims
+    - allowance(address,address,uint256) (external)
+    - approve(address,uint256,uint256) (external)
+    - balanceOf(address,uint256) (external)
+    - isOperator(address,address) (external)
+    - setOperator(address,bool) (external)
+    - transfer(address,uint256,uint256) (external)
+    - transferFrom(address,address,uint256,uint256) (external)
+
++ Contract BitMath (Most derived contract)
+  - From BitMath
+    - leastSignificantBit(uint256) (internal)
+    - mostSignificantBit(uint256) (internal)
+
++ Contract CustomRevert (Most derived contract)
+  - From CustomRevert
+    - bubbleUpAndRevertWith(address,bytes4,bytes4) (internal)
+    - revertWith(bytes4) (internal)
+    - revertWith(bytes4,address) (internal)
+    - revertWith(bytes4,address,address) (internal)
+    - revertWith(bytes4,int24) (internal)
+    - revertWith(bytes4,int24,int24) (internal)
+    - revertWith(bytes4,uint160) (internal)
+    - revertWith(bytes4,uint160,uint160) (internal)
+
++ Contract FixedPoint128 (Most derived contract)
+
++ Contract FixedPoint96 (Most derived contract)
+
++ Contract FullMath (Most derived contract)
+  - From FullMath
+    - mulDiv(uint256,uint256,uint256) (internal)
+    - mulDivRoundingUp(uint256,uint256,uint256) (internal)
+
++ Contract LiquidityMath (Most derived contract)
+  - From LiquidityMath
+    - addDelta(uint128,int128) (internal)
+
++ Contract Position (Most derived contract)
+  - From Position
+    - calculatePositionKey(address,int24,int24,bytes32) (internal)
+    - get(mapping(bytes32 => Position.State),address,int24,int24,bytes32) (internal)
+    - update(Position.State,int128,uint256,uint256) (internal)
+
++ Contract SafeCast (Most derived contract)
+  - From SafeCast
+    - toInt128(int256) (internal)
+    - toInt128(uint256) (internal)
+    - toInt256(uint256) (internal)
+    - toUint128(int128) (internal)
+    - toUint128(uint256) (internal)
+    - toUint160(uint256) (internal)
+
++ Contract SqrtPriceMath (Most derived contract)
+  - From SqrtPriceMath
+    - absDiff(uint160,uint160) (internal)
+    - getAmount0Delta(uint160,uint160,int128) (internal)
+    - getAmount0Delta(uint160,uint160,uint128,bool) (internal)
+    - getAmount1Delta(uint160,uint160,int128) (internal)
+    - getAmount1Delta(uint160,uint160,uint128,bool) (internal)
+    - getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool) (internal)
+    - getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool) (internal)
+    - getNextSqrtPriceFromInput(uint160,uint128,uint256,bool) (internal)
+    - getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool) (internal)
+
++ Contract StateLibrary (Most derived contract)
+  - From StateLibrary
+    - _getPoolStateSlot(PoolId) (internal)
+    - _getPositionInfoSlot(PoolId,bytes32) (internal)
+    - _getTickInfoSlot(PoolId,int24) (internal)
+    - getFeeGrowthGlobals(IPoolManager,PoolId) (internal)
+    - getFeeGrowthInside(IPoolManager,PoolId,int24,int24) (internal)
+    - getLiquidity(IPoolManager,PoolId) (internal)
+    - getPositionInfo(IPoolManager,PoolId,address,int24,int24,bytes32) (internal)
+    - getPositionInfo(IPoolManager,PoolId,bytes32) (internal)
+    - getPositionLiquidity(IPoolManager,PoolId,bytes32) (internal)
+    - getSlot0(IPoolManager,PoolId) (internal)
+    - getTickBitmap(IPoolManager,PoolId,int16) (internal)
+    - getTickFeeGrowthOutside(IPoolManager,PoolId,int24) (internal)
+    - getTickInfo(IPoolManager,PoolId,int24) (internal)
+    - getTickLiquidity(IPoolManager,PoolId,int24) (internal)
+
++ Contract TickMath (Most derived contract)
+  - From TickMath
+    - getSqrtPriceAtTick(int24) (internal)
+    - getTickAtSqrtPrice(uint160) (internal)
+    - maxUsableTick(int24) (internal)
+    - minUsableTick(int24) (internal)
+
++ Contract UnsafeMath (Most derived contract)
+  - From UnsafeMath
+    - divRoundingUp(uint256,uint256) (internal)
+    - simpleMulDiv(uint256,uint256,uint256) (internal)
+
++ Contract BalanceDeltaLibrary (Most derived contract)
+  - From BalanceDeltaLibrary
+    - amount0(BalanceDelta) (internal)
+    - amount1(BalanceDelta) (internal)
+
++ Contract BeforeSwapDeltaLibrary (Most derived contract)
+  - From BeforeSwapDeltaLibrary
+    - getSpecifiedDelta(BeforeSwapDelta) (internal)
+    - getUnspecifiedDelta(BeforeSwapDelta) (internal)
+
++ Contract CurrencyLibrary (Most derived contract)
+  - From CurrencyLibrary
+    - balanceOf(Currency,address) (internal)
+    - balanceOfSelf(Currency) (internal)
+    - fromId(uint256) (internal)
+    - isAddressZero(Currency) (internal)
+    - toId(Currency) (internal)
+    - transfer(Currency,address,uint256) (internal)
+
++ Contract PoolIdLibrary (Most derived contract)
+  - From PoolIdLibrary
+    - toId(PoolKey) (internal)
+
++ Contract IEIP712_v4
+  - From IEIP712_v4
+    - DOMAIN_SEPARATOR() (external)
+
++ Contract IERC721Permit_v4
+  - From IERC721Permit_v4
+    - permit(address,uint256,uint256,uint256,bytes) (external)
+    - permitForAll(address,address,bool,uint256,uint256,bytes) (external)
+
++ Contract IImmutableState
+  - From IImmutableState
+    - poolManager() (external)
+
++ Contract IMulticall_v4
+  - From IMulticall_v4
+    - multicall(bytes[]) (external)
+
++ Contract INotifier
+  - From INotifier
+    - subscribe(uint256,address,bytes) (external)
+    - subscriber(uint256) (external)
+    - unsubscribe(uint256) (external)
+    - unsubscribeGasLimit() (external)
+
++ Contract IPermit2Forwarder
+  - From IPermit2Forwarder
+    - permit(address,IAllowanceTransfer.PermitSingle,bytes) (external)
+    - permitBatch(address,IAllowanceTransfer.PermitBatch,bytes) (external)
+
++ Contract IPoolInitializer_v4
+  - From IPoolInitializer_v4
+    - initializePool(PoolKey,uint160) (external)
+
++ Contract IPositionManager (Most derived contract)
+  - From IPermit2Forwarder
+    - permit(address,IAllowanceTransfer.PermitSingle,bytes) (external)
+    - permitBatch(address,IAllowanceTransfer.PermitBatch,bytes) (external)
+  - From IUnorderedNonce
+    - nonces(address,uint256) (external)
+    - revokeNonce(uint256) (external)
+  - From IPoolInitializer_v4
+    - initializePool(PoolKey,uint160) (external)
+  - From IMulticall_v4
+    - multicall(bytes[]) (external)
+  - From IEIP712_v4
+    - DOMAIN_SEPARATOR() (external)
+  - From IERC721Permit_v4
+    - permit(address,uint256,uint256,uint256,bytes) (external)
+    - permitForAll(address,address,bool,uint256,uint256,bytes) (external)
+  - From IImmutableState
+    - poolManager() (external)
+  - From INotifier
+    - subscribe(uint256,address,bytes) (external)
+    - subscriber(uint256) (external)
+    - unsubscribe(uint256) (external)
+    - unsubscribeGasLimit() (external)
+  - From IPositionManager
+    - getPoolAndPositionInfo(uint256) (external)
+    - getPositionLiquidity(uint256) (external)
+    - modifyLiquidities(bytes,uint256) (external)
+    - modifyLiquiditiesWithoutUnlock(bytes,bytes[]) (external)
+    - nextTokenId() (external)
+    - positionInfo(uint256) (external)
+
++ Contract IStateView (Most derived contract)
+  - From IImmutableState
+    - poolManager() (external)
+  - From IStateView
+    - getFeeGrowthGlobals(PoolId) (external)
+    - getFeeGrowthInside(PoolId,int24,int24) (external)
+    - getLiquidity(PoolId) (external)
+    - getPositionInfo(PoolId,address,int24,int24,bytes32) (external)
+    - getPositionInfo(PoolId,bytes32) (external)
+    - getPositionLiquidity(PoolId,bytes32) (external)
+    - getSlot0(PoolId) (external)
+    - getTickBitmap(PoolId,int16) (external)
+    - getTickFeeGrowthOutside(PoolId,int24) (external)
+    - getTickInfo(PoolId,int24) (external)
+    - getTickLiquidity(PoolId,int24) (external)
+
++ Contract ISubscriber (Most derived contract)
+  - From ISubscriber
+    - notifyBurn(uint256,address,PositionInfo,uint256,BalanceDelta) (external)
+    - notifyModifyLiquidity(uint256,int256,BalanceDelta) (external)
+    - notifySubscribe(uint256,bytes) (external)
+    - notifyUnsubscribe(uint256) (external)
+
++ Contract IUnorderedNonce
+  - From IUnorderedNonce
+    - nonces(address,uint256) (external)
+    - revokeNonce(uint256) (external)
+
++ Contract Actions (Most derived contract)
+
++ Contract LiquidityAmounts (Most derived contract)
+  - From LiquidityAmounts
+    - getLiquidityForAmount0(uint160,uint160,uint256) (internal)
+    - getLiquidityForAmount1(uint160,uint160,uint256) (internal)
+    - getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256) (internal)
+
++ Contract PositionInfoLibrary (Most derived contract)
+  - From PositionInfoLibrary
+    - hasSubscriber(PositionInfo) (internal)
+    - initialize(PoolKey,int24,int24) (internal)
+    - poolId(PositionInfo) (internal)
+    - setSubscribe(PositionInfo) (internal)
+    - setUnsubscribe(PositionInfo) (internal)
+    - tickLower(PositionInfo) (internal)
+    - tickUpper(PositionInfo) (internal)
+
++ Contract IPermit2Source (Most derived contract)
+  - From IPermit2Source
+    - permit2() (external)
+
++ Contract ValariRouterV3 (Most derived contract)
+  - From Ownable2Step
+    - _transferOwnership(address) (internal)
+    - acceptOwnership() (public)
+    - pendingOwner() (public)
+    - transferOwnership(address) (public)
+  - From Ownable
+    - _checkOwner() (internal)
+    - constructor(address) (internal)
+    - owner() (public)
+    - renounceOwnership() (public)
+  - From Context
+    - _contextSuffixLength() (internal)
+    - _msgData() (internal)
+    - _msgSender() (internal)
+  - From ReentrancyGuard
+    - _nonReentrantAfter() (private)
+    - _nonReentrantBefore() (private)
+    - _reentrancyGuardEntered() (internal)
+    - constructor() (internal)
+  - From ValariRouterV3
+    - _accrueCommission(address,address,uint256) (private)
+    - _addPool(PoolKey,IStateView,address) (private)
+    - _amounts(uint160,uint160,uint160,uint128,bool) (private)
+    - _approve(IERC20,uint128) (private)
+    - _checkRecipient(address) (private)
+    - _checkRetained(IERC20,uint256) (private)
+    - _collectFees(uint256,address,uint256) (private)
+    - _commission(uint256,uint16) (private)
+    - _distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256) (private)
+    - _exitPosition(uint256,address,uint128,uint128,uint256) (private)
+    - _ownedPosition(uint256) (private)
+    - _ownerOf(uint256) (private)
+    - _page(bytes32[],uint256,uint256) (private)
+    - _pageEnd(uint256,uint256,uint256) (private)
+    - _positionView(uint256,address) (private)
+    - _pull(IERC20,uint128) (private)
+    - _refund(IERC20,uint256,uint128) (private)
+    - _split(uint256,uint256) (private)
+    - addPool(PoolKey) (external)
+    - collectFees(uint256,uint256) (external)
+    - collectFeesTo(uint256,address,uint256) (external)
+    - constructor(IPositionManager,IStateView,address,PoolKey[]) (public)
+    - depositCount(address) (external)
+    - ejectPosition(uint256,address) (external)
+    - exitPosition(uint256,uint128,uint128,uint256) (external)
+    - exitPositionTo(uint256,address,uint128,uint128,uint256) (external)
+    - getDepositorPositionIds(address,uint256,uint256) (external)
+    - getPoolIds(uint256,uint256) (external)
+    - getPoolKey(bytes32) (public)
+    - getPosition(uint256) (public)
+    - getStockPoolIds(address,uint256,uint256) (external)
+    - getUserPositions(address,uint256,uint256) (external)
+    - openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256) (external)
+    - poolCount() (external)
+    - positionCount() (external)
+    - previewDeposit(bytes32,uint128,uint128,int24,int24) (public)
+    - setDepositsDisabled(bytes32,bool) (external)
+    - setEjectEnabled(bytes32,bool) (external)
+    - setFeeRecipient(address) (external)
+    - stockPoolCount(address) (external)
+    - withdrawCommission(address,address,uint256) (external)
+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

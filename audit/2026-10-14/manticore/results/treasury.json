@@ -1,0 +1,13 @@
+{
+ "scenario": "treasury",
+ "succeeded_paths": 0,
+ "reverted_or_failed_paths": 62,
+ "killed_paths": 0,
+ "timed_out": false,
+ "succeeded_by_function": {},
+ "violations": [],
+ "notes": {
+  "view_selectors_excluded": 29
+ },
+ "seconds": 379.0
+}

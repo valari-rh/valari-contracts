@@ -1,0 +1,28 @@
+[2026-10-05 09:48:21.72] Compiling `RouterEchidna.sol`... WARNING: Slither was explicitly disabled. Echidna uses Slither (https://github.com/crytic/slither) to perform source analysis, which makes fuzzing more effective. You should enable it.
+Done! (1.451480559s)
+Analyzing contract: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05/echidna/RouterEchidna.sol:RouterEchidna
+Loaded 0 transaction sequences from corpus/reproducers
+Loaded 0 transaction sequences from corpus/coverage
+[2026-10-05 09:48:25.13] [Worker 0] New coverage: 36205 instr, 8 contracts, 1 seqs in corpus
+[2026-10-05 09:48:25.13]  Saved reproducer to corpus/coverage/3723968978946920190.txt
+[2026-10-05 09:48:25.82] [Worker 0] New coverage: 36212 instr, 8 contracts, 2 seqs in corpus
+[2026-10-05 09:48:25.82] [Worker 0] Test limit reached. Stopping.
+[2026-10-05 09:48:25.82] [status] tests: 0/7, fuzzing: 130/100, values: [], cov: 36212, corpus: 2, gas/s: 52948954
+echidna_allowances_are_cleared: passing
+echidna_custody_and_cumulative_commission: passing
+echidna_deposit_budget_refund_and_quote: passing
+echidna_token_supply_is_conserved: passing
+echidna_payouts_match_actual_balance_changes: passing
+echidna_owner_and_outsiders_cannot_take_positions: passing
+echidna_commission_is_backed_and_dust_preserved: passing
+
+Unique instructions: 36212
+Unique codehashes: 8
+Corpus size: 2
+Seed: 20261005
+Total calls: 130
+
+[2026-10-05 09:48:25.82] Saving test reproducers... Done! (0.000000986s)
+[2026-10-05 09:48:25.82] Saving corpus... Done! (0.00011767s)
+[2026-10-05 09:48:25.82] Saving foundry reproducers... Done! (0.000084096s)
+[2026-10-05 09:48:25.82] Saving coverage... Done! (3.589019082s)

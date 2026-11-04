@@ -1,0 +1,49 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4035_CustomRevert {
+label = "CustomRevert"
+"4035_revertWith(bytes4,address)" [label="revertWith(bytes4,address)"]
+"4035_revertWith(bytes4,int24,int24)" [label="revertWith(bytes4,int24,int24)"]
+"4035_revertWith(bytes4,uint160,uint160)" [label="revertWith(bytes4,uint160,uint160)"]
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" [label="bubbleUpAndRevertWith(address,bytes4,bytes4)"]
+"4035_revertWith(bytes4)" [label="revertWith(bytes4)"]
+"4035_revertWith(bytes4,address,address)" [label="revertWith(bytes4,address,address)"]
+"4035_revertWith(bytes4,int24)" [label="revertWith(bytes4,int24)"]
+"4035_revertWith(bytes4,uint160)" [label="revertWith(bytes4,uint160)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"returndatacopy(uint256,uint256,uint256)" 
+"signextend(uint256,uint256)" 
+"mload(uint256)" 
+"mstore(uint256,uint256)" 
+"returndatasize()" 
+"revert(uint256,uint256)" 
+"4035_revertWith(bytes4,int24,int24)" -> "revert(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "returndatasize()"
+"4035_revertWith(bytes4,int24,int24)" -> "signextend(uint256,uint256)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,uint160)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,address,address)" -> "mstore(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "returndatacopy(uint256,uint256,uint256)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "mload(uint256)"
+"4035_revertWith(bytes4,int24)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,int24)" -> "signextend(uint256,uint256)"
+"4035_revertWith(bytes4,int24)" -> "revert(uint256,uint256)"
+"4035_revertWith(bytes4,address,address)" -> "mload(uint256)"
+"4035_revertWith(bytes4,address,address)" -> "revert(uint256,uint256)"
+"4035_revertWith(bytes4)" -> "mstore(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "mload(uint256)"
+"4035_revertWith(bytes4,uint160)" -> "revert(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "revert(uint256,uint256)"
+"4035_revertWith(bytes4,int24,int24)" -> "mload(uint256)"
+"4035_revertWith(bytes4,address)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,int24,int24)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4,address)" -> "revert(uint256,uint256)"
+"4035_revertWith(bytes4,uint160,uint160)" -> "revert(uint256,uint256)"
+"4035_bubbleUpAndRevertWith(address,bytes4,bytes4)" -> "mstore(uint256,uint256)"
+"4035_revertWith(bytes4)" -> "revert(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

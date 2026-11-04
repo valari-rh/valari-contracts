@@ -1,0 +1,23 @@
+# Check ValariRouterV3
+
+## Check functions
+[ ] balanceOf(address) is missing 
+[ ] ownerOf(uint256) is missing 
+[ ] safeTransferFrom(address,address,uint256,bytes) is missing 
+[ ] safeTransferFrom(address,address,uint256) is missing 
+[ ] transferFrom(address,address,uint256) is missing 
+[ ] approve(address,uint256) is missing 
+[ ] setApprovalForAll(address,bool) is missing 
+[ ] getApproved(uint256) is missing 
+[ ] isApprovedForAll(address,address) is missing 
+[ ] supportsInterface(bytes4) is missing 
+[ ] name() is missing (optional)
+[ ] symbol() is missing (optional)
+[ ] tokenURI(uint256) is missing (optional)
+
+## Check events
+[ ] Transfer(address,address,uint256) is missing
+[ ] Approval(address,address,uint256) is missing
+[ ] ApprovalForAll(address,address,bool) is missing
+
+

@@ -1,0 +1,17 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4578_SafeCast {
+label = "SafeCast"
+"4578_toInt256(uint256)" [label="toInt256(uint256)"]
+"4578_toInt128(int256)" [label="toInt128(int256)"]
+"4578_toUint160(uint256)" [label="toUint160(uint256)"]
+"4578_toUint128(int128)" [label="toUint128(int128)"]
+"4578_toInt128(uint256)" [label="toInt128(uint256)"]
+"4578_toUint128(uint256)" [label="toUint128(uint256)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

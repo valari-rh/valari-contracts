@@ -1,0 +1,19 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_3929_BitMath {
+label = "BitMath"
+"3929_mostSignificantBit(uint256)" [label="mostSignificantBit(uint256)"]
+"3929_leastSignificantBit(uint256)" [label="leastSignificantBit(uint256)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool)" 
+"byte(uint256,uint256)" 
+"3929_mostSignificantBit(uint256)" -> "require(bool)"
+"3929_leastSignificantBit(uint256)" -> "byte(uint256,uint256)"
+"3929_leastSignificantBit(uint256)" -> "require(bool)"
+"3929_mostSignificantBit(uint256)" -> "byte(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

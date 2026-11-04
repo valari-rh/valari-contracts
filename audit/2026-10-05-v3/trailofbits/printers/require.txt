@@ -1,0 +1,553 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
+Contract IERC20
++--------------+-------------------+
+| Function     | require or assert |
++--------------+-------------------+
+| totalSupply  |                   |
+| balanceOf    |                   |
+| transfer     |                   |
+| allowance    |                   |
+| approve      |                   |
+| transferFrom |                   |
++--------------+-------------------+
+INFO:Printers:
+Contract IERC20Permit
++------------------+-------------------+
+| Function         | require or assert |
++------------------+-------------------+
+| permit           |                   |
+| nonces           |                   |
+| DOMAIN_SEPARATOR |                   |
++------------------+-------------------+
+INFO:Printers:
+Contract SafeERC20
++-------------------------+-------------------+
+| Function                | require or assert |
++-------------------------+-------------------+
+| safeTransfer            |                   |
+| safeTransferFrom        |                   |
+| safeIncreaseAllowance   |                   |
+| safeDecreaseAllowance   |                   |
+| forceApprove            |                   |
+| _callOptionalReturn     |                   |
+| _callOptionalReturnBool |                   |
++-------------------------+-------------------+
+INFO:Printers:
+Contract IERC721
++-------------------+-------------------+
+| Function          | require or assert |
++-------------------+-------------------+
+| supportsInterface |                   |
+| balanceOf         |                   |
+| ownerOf           |                   |
+| safeTransferFrom  |                   |
+| safeTransferFrom  |                   |
+| transferFrom      |                   |
+| approve           |                   |
+| setApprovalForAll |                   |
+| getApproved       |                   |
+| isApprovedForAll  |                   |
++-------------------+-------------------+
+INFO:Printers:
+Contract Address
++----------------------------+-------------------+
+| Function                   | require or assert |
++----------------------------+-------------------+
+| sendValue                  |                   |
+| functionCall               |                   |
+| functionCallWithValue      |                   |
+| functionStaticCall         |                   |
+| functionDelegateCall       |                   |
+| verifyCallResultFromTarget |                   |
+| verifyCallResult           |                   |
+| _revert                    |                   |
++----------------------------+-------------------+
+INFO:Printers:
+Contract SafeCast
++-----------+-------------------+
+| Function  | require or assert |
++-----------+-------------------+
+| toUint248 |                   |
+| toUint240 |                   |
+| toUint232 |                   |
+| toUint224 |                   |
+| toUint216 |                   |
+| toUint208 |                   |
+| toUint200 |                   |
+| toUint192 |                   |
+| toUint184 |                   |
+| toUint176 |                   |
+| toUint168 |                   |
+| toUint160 |                   |
+| toUint152 |                   |
+| toUint144 |                   |
+| toUint136 |                   |
+| toUint128 |                   |
+| toUint120 |                   |
+| toUint112 |                   |
+| toUint104 |                   |
+| toUint96  |                   |
+| toUint88  |                   |
+| toUint80  |                   |
+| toUint72  |                   |
+| toUint64  |                   |
+| toUint56  |                   |
+| toUint48  |                   |
+| toUint40  |                   |
+| toUint32  |                   |
+| toUint24  |                   |
+| toUint16  |                   |
+| toUint8   |                   |
+| toUint256 |                   |
+| toInt248  |                   |
+| toInt240  |                   |
+| toInt232  |                   |
+| toInt224  |                   |
+| toInt216  |                   |
+| toInt208  |                   |
+| toInt200  |                   |
+| toInt192  |                   |
+| toInt184  |                   |
+| toInt176  |                   |
+| toInt168  |                   |
+| toInt160  |                   |
+| toInt152  |                   |
+| toInt144  |                   |
+| toInt136  |                   |
+| toInt128  |                   |
+| toInt120  |                   |
+| toInt112  |                   |
+| toInt104  |                   |
+| toInt96   |                   |
+| toInt88   |                   |
+| toInt80   |                   |
+| toInt72   |                   |
+| toInt64   |                   |
+| toInt56   |                   |
+| toInt48   |                   |
+| toInt40   |                   |
+| toInt32   |                   |
+| toInt24   |                   |
+| toInt16   |                   |
+| toInt8    |                   |
+| toInt256  |                   |
++-----------+-------------------+
+INFO:Printers:
+Contract IAllowanceTransfer
++------------------+-------------------+
+| Function         | require or assert |
++------------------+-------------------+
+| DOMAIN_SEPARATOR |                   |
+| allowance        |                   |
+| approve          |                   |
+| permit           |                   |
+| permit           |                   |
+| transferFrom     |                   |
+| transferFrom     |                   |
+| lockdown         |                   |
+| invalidateNonces |                   |
++------------------+-------------------+
+INFO:Printers:
+Contract IHooks
++-----------------------+-------------------+
+| Function              | require or assert |
++-----------------------+-------------------+
+| beforeInitialize      |                   |
+| afterInitialize       |                   |
+| beforeAddLiquidity    |                   |
+| afterAddLiquidity     |                   |
+| beforeRemoveLiquidity |                   |
+| afterRemoveLiquidity  |                   |
+| beforeSwap            |                   |
+| afterSwap             |                   |
+| beforeDonate          |                   |
+| afterDonate           |                   |
++-----------------------+-------------------+
+INFO:Printers:
+Contract IPoolManager
++--------------------------+-------------------+
+| Function                 | require or assert |
++--------------------------+-------------------+
+| exttload                 |                   |
+| exttload                 |                   |
+| extsload                 |                   |
+| extsload                 |                   |
+| extsload                 |                   |
+| balanceOf                |                   |
+| allowance                |                   |
+| isOperator               |                   |
+| transfer                 |                   |
+| transferFrom             |                   |
+| approve                  |                   |
+| setOperator              |                   |
+| protocolFeesAccrued      |                   |
+| setProtocolFee           |                   |
+| setProtocolFeeController |                   |
+| collectProtocolFees      |                   |
+| protocolFeeController    |                   |
+| unlock                   |                   |
+| initialize               |                   |
+| modifyLiquidity          |                   |
+| swap                     |                   |
+| donate                   |                   |
+| sync                     |                   |
+| take                     |                   |
+| settle                   |                   |
+| settleFor                |                   |
+| clear                    |                   |
+| mint                     |                   |
+| burn                     |                   |
+| updateDynamicLPFee       |                   |
++--------------------------+-------------------+
+INFO:Printers:
+Contract IERC20Minimal
++--------------+-------------------+
+| Function     | require or assert |
++--------------+-------------------+
+| balanceOf    |                   |
+| transfer     |                   |
+| allowance    |                   |
+| approve      |                   |
+| transferFrom |                   |
++--------------+-------------------+
+INFO:Printers:
+Contract BitMath
++---------------------+----------------------+
+| Function            | require or assert    |
++---------------------+----------------------+
+| mostSignificantBit  | require(bool)(x > 0) |
+| leastSignificantBit | require(bool)(x > 0) |
++---------------------+----------------------+
+INFO:Printers:
+Contract CustomRevert
++-----------------------+-------------------+
+| Function              | require or assert |
++-----------------------+-------------------+
+| revertWith            |                   |
+| revertWith            |                   |
+| revertWith            |                   |
+| revertWith            |                   |
+| revertWith            |                   |
+| revertWith            |                   |
+| revertWith            |                   |
+| bubbleUpAndRevertWith |                   |
++-----------------------+-------------------+
+INFO:Printers:
+Contract FixedPoint128
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract FixedPoint96
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract FullMath
++------------------+------------------------------------+
+| Function         | require or assert                  |
++------------------+------------------------------------+
+| mulDiv           | require(bool)(denominator > prod1) |
+| mulDivRoundingUp | require(bool)(++ result > 0)       |
+|                  | require(bool)(denominator > prod1) |
++------------------+------------------------------------+
+INFO:Printers:
+Contract LiquidityMath
++----------+-------------------+
+| Function | require or assert |
++----------+-------------------+
+| addDelta |                   |
++----------+-------------------+
+INFO:Printers:
+Contract Position
++----------------------+------------------------------------+
+| Function             | require or assert                  |
++----------------------+------------------------------------+
+| get                  |                                    |
+| calculatePositionKey |                                    |
+| update               | require(bool)(denominator > prod1) |
++----------------------+------------------------------------+
+INFO:Printers:
+Contract SafeCast
++-----------+-------------------+
+| Function  | require or assert |
++-----------+-------------------+
+| toUint160 |                   |
+| toUint128 |                   |
+| toUint128 |                   |
+| toInt128  |                   |
+| toInt256  |                   |
+| toInt128  |                   |
++-----------+-------------------+
+INFO:Printers:
+Contract SqrtPriceMath
++-----------------------------------------+------------------------------------+
+| Function                                | require or assert                  |
++-----------------------------------------+------------------------------------+
+| getNextSqrtPriceFromAmount0RoundingUp   | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| getNextSqrtPriceFromAmount1RoundingDown | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| getNextSqrtPriceFromInput               | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| getNextSqrtPriceFromOutput              | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| getAmount0Delta                         | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| absDiff                                 |                                    |
+| getAmount1Delta                         | require(bool)(denominator > prod1) |
+| getAmount0Delta                         | require(bool)(++ result > 0)       |
+|                                         | require(bool)(denominator > prod1) |
+| getAmount1Delta                         | require(bool)(denominator > prod1) |
++-----------------------------------------+------------------------------------+
+INFO:Printers:
+Contract StateLibrary
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| getSlot0                            |                   |
+| getTickInfo                         |                   |
+| getTickLiquidity                    |                   |
+| getTickFeeGrowthOutside             |                   |
+| getFeeGrowthGlobals                 |                   |
+| getLiquidity                        |                   |
+| getTickBitmap                       |                   |
+| getPositionInfo                     |                   |
+| getPositionInfo                     |                   |
+| getPositionLiquidity                |                   |
+| getFeeGrowthInside                  |                   |
+| _getPoolStateSlot                   |                   |
+| _getTickInfoSlot                    |                   |
+| _getPositionInfoSlot                |                   |
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract TickMath
++-------------------------------------+----------------------+
+| Function                            | require or assert    |
++-------------------------------------+----------------------+
+| maxUsableTick                       |                      |
+| minUsableTick                       |                      |
+| getSqrtPriceAtTick                  |                      |
+| getTickAtSqrtPrice                  | require(bool)(x > 0) |
+| slitherConstructorConstantVariables |                      |
++-------------------------------------+----------------------+
+INFO:Printers:
+Contract UnsafeMath
++---------------+-------------------+
+| Function      | require or assert |
++---------------+-------------------+
+| divRoundingUp |                   |
+| simpleMulDiv  |                   |
++---------------+-------------------+
+INFO:Printers:
+Contract BalanceDeltaLibrary
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| amount0                             |                   |
+| amount1                             |                   |
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract BeforeSwapDeltaLibrary
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| getSpecifiedDelta                   |                   |
+| getUnspecifiedDelta                 |                   |
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract CurrencyLibrary
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| transfer                            |                   |
+| balanceOfSelf                       |                   |
+| balanceOf                           |                   |
+| isAddressZero                       |                   |
+| toId                                |                   |
+| fromId                              |                   |
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract PoolIdLibrary
++----------+-------------------+
+| Function | require or assert |
++----------+-------------------+
+| toId     |                   |
++----------+-------------------+
+INFO:Printers:
+Contract IPositionManager
++--------------------------------+-------------------+
+| Function                       | require or assert |
++--------------------------------+-------------------+
+| permit                         |                   |
+| permitBatch                    |                   |
+| nonces                         |                   |
+| revokeNonce                    |                   |
+| initializePool                 |                   |
+| multicall                      |                   |
+| DOMAIN_SEPARATOR               |                   |
+| permit                         |                   |
+| permitForAll                   |                   |
+| poolManager                    |                   |
+| subscriber                     |                   |
+| subscribe                      |                   |
+| unsubscribe                    |                   |
+| unsubscribeGasLimit            |                   |
+| modifyLiquidities              |                   |
+| modifyLiquiditiesWithoutUnlock |                   |
+| nextTokenId                    |                   |
+| getPositionLiquidity           |                   |
+| getPoolAndPositionInfo         |                   |
+| positionInfo                   |                   |
++--------------------------------+-------------------+
+INFO:Printers:
+Contract IStateView
++-------------------------+-------------------+
+| Function                | require or assert |
++-------------------------+-------------------+
+| poolManager             |                   |
+| getSlot0                |                   |
+| getTickInfo             |                   |
+| getTickLiquidity        |                   |
+| getTickFeeGrowthOutside |                   |
+| getFeeGrowthGlobals     |                   |
+| getLiquidity            |                   |
+| getTickBitmap           |                   |
+| getPositionInfo         |                   |
+| getPositionInfo         |                   |
+| getPositionLiquidity    |                   |
+| getFeeGrowthInside      |                   |
++-------------------------+-------------------+
+INFO:Printers:
+Contract ISubscriber
++-----------------------+-------------------+
+| Function              | require or assert |
++-----------------------+-------------------+
+| notifySubscribe       |                   |
+| notifyUnsubscribe     |                   |
+| notifyBurn            |                   |
+| notifyModifyLiquidity |                   |
++-----------------------+-------------------+
+INFO:Printers:
+Contract Actions
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract LiquidityAmounts
++------------------------+------------------------------------+
+| Function               | require or assert                  |
++------------------------+------------------------------------+
+| getLiquidityForAmount0 | require(bool)(denominator > prod1) |
+| getLiquidityForAmount1 | require(bool)(denominator > prod1) |
+| getLiquidityForAmounts | require(bool)(denominator > prod1) |
++------------------------+------------------------------------+
+INFO:Printers:
+Contract PositionInfoLibrary
++-------------------------------------+-------------------+
+| Function                            | require or assert |
++-------------------------------------+-------------------+
+| poolId                              |                   |
+| tickLower                           |                   |
+| tickUpper                           |                   |
+| hasSubscriber                       |                   |
+| setSubscribe                        |                   |
+| setUnsubscribe                      |                   |
+| initialize                          |                   |
+| slitherConstructorConstantVariables |                   |
++-------------------------------------+-------------------+
+INFO:Printers:
+Contract IPermit2Source
++----------+-------------------+
+| Function | require or assert |
++----------+-------------------+
+| permit2  |                   |
++----------+-------------------+
+INFO:Printers:
+Contract ValariRouterV3
++-------------------------------------+------------------------------------+
+| Function                            | require or assert                  |
++-------------------------------------+------------------------------------+
+| pendingOwner                        |                                    |
+| transferOwnership                   |                                    |
+| _transferOwnership                  |                                    |
+| acceptOwnership                     |                                    |
+| constructor                         |                                    |
+| owner                               |                                    |
+| _checkOwner                         |                                    |
+| renounceOwnership                   |                                    |
+| transferOwnership                   |                                    |
+| _transferOwnership                  |                                    |
+| _msgSender                          |                                    |
+| _msgData                            |                                    |
+| _contextSuffixLength                |                                    |
+| constructor                         |                                    |
+| _nonReentrantBefore                 |                                    |
+| _nonReentrantAfter                  |                                    |
+| _reentrancyGuardEntered             |                                    |
+| constructor                         |                                    |
+| addPool                             |                                    |
+| setDepositsDisabled                 |                                    |
+| setEjectEnabled                     |                                    |
+| openPosition                        | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| setFeeRecipient                     |                                    |
+| withdrawCommission                  |                                    |
+| collectFees                         | require(bool)(denominator > prod1) |
+| collectFeesTo                       | require(bool)(denominator > prod1) |
+| exitPosition                        | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| exitPositionTo                      | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| ejectPosition                       |                                    |
+| _collectFees                        | require(bool)(denominator > prod1) |
+| _exitPosition                       | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| previewDeposit                      | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| getPoolKey                          |                                    |
+| poolCount                           |                                    |
+| positionCount                       |                                    |
+| depositCount                        |                                    |
+| stockPoolCount                      |                                    |
+| getPoolIds                          |                                    |
+| getStockPoolIds                     |                                    |
+| getDepositorPositionIds             |                                    |
+| getPosition                         | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| getUserPositions                    | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| _positionView                       | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| _ownedPosition                      |                                    |
+| _commission                         | require(bool)(denominator > prod1) |
+| _distribute                         | require(bool)(denominator > prod1) |
+| _split                              |                                    |
+| _checkRecipient                     |                                    |
+| _checkRetained                      |                                    |
+| _addPool                            |                                    |
+| _accrueCommission                   |                                    |
+| _ownerOf                            |                                    |
+| _page                               |                                    |
+| _pageEnd                            |                                    |
+| _pull                               |                                    |
+| _approve                            |                                    |
+| _refund                             |                                    |
+| _amounts                            | require(bool)(++ result > 0)       |
+|                                     | require(bool)(denominator > prod1) |
+| slitherConstructorConstantVariables |                                    |
++-------------------------------------+------------------------------------+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

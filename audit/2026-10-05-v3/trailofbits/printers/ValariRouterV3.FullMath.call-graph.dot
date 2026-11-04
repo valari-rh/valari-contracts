@@ -1,0 +1,20 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4220_FullMath {
+label = "FullMath"
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" [label="mulDivRoundingUp(uint256,uint256,uint256)"]
+"4220_mulDiv(uint256,uint256,uint256)" [label="mulDiv(uint256,uint256,uint256)"]
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "4220_mulDiv(uint256,uint256,uint256)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"require(bool)" 
+"mulmod(uint256,uint256,uint256)" 
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "require(bool)"
+"4220_mulDiv(uint256,uint256,uint256)" -> "require(bool)"
+"4220_mulDiv(uint256,uint256,uint256)" -> "mulmod(uint256,uint256,uint256)"
+"4220_mulDivRoundingUp(uint256,uint256,uint256)" -> "mulmod(uint256,uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

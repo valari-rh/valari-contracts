@@ -1,0 +1,12 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_7930_IPermit2Source {
+label = "IPermit2Source"
+"7930_permit2()" [label="permit2()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

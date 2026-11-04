@@ -1,0 +1,42 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_1007_Address {
+label = "Address"
+"1007_functionCall(address,bytes)" [label="functionCall(address,bytes)"]
+"1007_verifyCallResultFromTarget(address,bool,bytes)" [label="verifyCallResultFromTarget(address,bool,bytes)"]
+"1007_verifyCallResult(bool,bytes)" [label="verifyCallResult(bool,bytes)"]
+"1007_functionDelegateCall(address,bytes)" [label="functionDelegateCall(address,bytes)"]
+"1007_functionStaticCall(address,bytes)" [label="functionStaticCall(address,bytes)"]
+"1007_sendValue(address,uint256)" [label="sendValue(address,uint256)"]
+"1007__revert(bytes)" [label="_revert(bytes)"]
+"1007_functionCallWithValue(address,bytes,uint256)" [label="functionCallWithValue(address,bytes,uint256)"]
+"1007_functionCallWithValue(address,bytes,uint256)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_functionDelegateCall(address,bytes)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_functionCall(address,bytes)" -> "1007_functionCallWithValue(address,bytes,uint256)"
+"1007_functionStaticCall(address,bytes)" -> "1007_verifyCallResultFromTarget(address,bool,bytes)"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "1007__revert(bytes)"
+"1007_verifyCallResult(bool,bytes)" -> "1007__revert(bytes)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"balance(address)" 
+"revert AddressEmptyCode(address)" 
+"code(address)" 
+"revert AddressInsufficientBalance(address)" 
+"mload(uint256)" 
+"revert FailedInnerCall()" 
+"revert(uint256,uint256)" 
+"1007_functionCallWithValue(address,bytes,uint256)" -> "revert AddressInsufficientBalance(address)"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "code(address)"
+"1007_functionCallWithValue(address,bytes,uint256)" -> "balance(address)"
+"1007__revert(bytes)" -> "revert(uint256,uint256)"
+"1007_sendValue(address,uint256)" -> "revert AddressInsufficientBalance(address)"
+"1007_sendValue(address,uint256)" -> "revert FailedInnerCall()"
+"1007_verifyCallResultFromTarget(address,bool,bytes)" -> "revert AddressEmptyCode(address)"
+"1007__revert(bytes)" -> "mload(uint256)"
+"1007__revert(bytes)" -> "revert FailedInnerCall()"
+"1007_sendValue(address,uint256)" -> "balance(address)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

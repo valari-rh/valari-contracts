@@ -1,0 +1,44 @@
+Compiling 54 files with Solc 0.8.26
+Solc 0.8.26 finished in 6.05s
+Compiler run successful!
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  --> src/ValariRouterV3.sol:55:39
+   |
+55 |     IPositionManager public immutable positionManager;
+   |                                       ^^^^^^^^^^^^^^^ help: consider using: `POSITION_MANAGER`
+   |
+   = help: https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  --> src/ValariRouterV3.sol:56:33
+   |
+56 |     IStateView public immutable stateView;
+   |                                 ^^^^^^^^^ help: consider using: `STATE_VIEW`
+   |
+   = help: https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  --> src/ValariRouterV3.sol:57:35
+   |
+57 |     IPoolManager public immutable poolManager;
+   |                                   ^^^^^^^^^^^ help: consider using: `POOL_MANAGER`
+   |
+   = help: https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  --> src/ValariRouterV3.sol:58:41
+   |
+58 |     IAllowanceTransfer public immutable permit2;
+   |                                         ^^^^^^^ help: consider using: `PERMIT2`
+   |
+   = help: https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable
+
+note[screaming-snake-case-immutable]: immutables should use SCREAMING_SNAKE_CASE
+  --> src/ValariRouterV3.sol:59:30
+   |
+59 |     address public immutable usdg;
+   |                              ^^^^ help: consider using: `USDG`
+   |
+   = help: https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable
+
+66c3b1b111e2e1706dfa65f74bdcef01a0f7dcff763cf23e102eb6ccfcecf573  src/ValariRouterV3.sol

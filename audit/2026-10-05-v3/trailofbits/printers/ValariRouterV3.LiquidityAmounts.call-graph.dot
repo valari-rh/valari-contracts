@@ -1,0 +1,16 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_7748_LiquidityAmounts {
+label = "LiquidityAmounts"
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" [label="getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)"]
+"7748_getLiquidityForAmount0(uint160,uint160,uint256)" [label="getLiquidityForAmount0(uint160,uint160,uint256)"]
+"7748_getLiquidityForAmount1(uint160,uint160,uint256)" [label="getLiquidityForAmount1(uint160,uint160,uint256)"]
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" -> "7748_getLiquidityForAmount1(uint160,uint160,uint256)"
+"7748_getLiquidityForAmounts(uint160,uint160,uint160,uint256,uint256)" -> "7748_getLiquidityForAmount0(uint160,uint160,uint256)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

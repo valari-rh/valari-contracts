@@ -1,0 +1,16 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6522_BeforeSwapDeltaLibrary {
+label = "BeforeSwapDeltaLibrary"
+"6522_getSpecifiedDelta(BeforeSwapDelta)" [label="getSpecifiedDelta(BeforeSwapDelta)"]
+"6522_getUnspecifiedDelta(BeforeSwapDelta)" [label="getUnspecifiedDelta(BeforeSwapDelta)"]
+"6522_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"signextend(uint256,uint256)" 
+"6522_getUnspecifiedDelta(BeforeSwapDelta)" -> "signextend(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

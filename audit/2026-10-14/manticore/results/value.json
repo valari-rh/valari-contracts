@@ -1,0 +1,11 @@
+{
+ "scenario": "value",
+ "succeeded_paths": 0,
+ "reverted_or_failed_paths": 45,
+ "killed_paths": 0,
+ "timed_out": false,
+ "succeeded_by_function": {},
+ "violations": [],
+ "notes": {},
+ "seconds": 168.2
+}

@@ -1,0 +1,17 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_311_IERC20 {
+label = "IERC20"
+"311_approve(address,uint256)" [label="approve(address,uint256)"]
+"311_balanceOf(address)" [label="balanceOf(address)"]
+"311_totalSupply()" [label="totalSupply()"]
+"311_transfer(address,uint256)" [label="transfer(address,uint256)"]
+"311_allowance(address,address)" [label="allowance(address,address)"]
+"311_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

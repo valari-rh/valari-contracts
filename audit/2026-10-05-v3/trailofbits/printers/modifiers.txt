@@ -1,0 +1,537 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:
+Contract IERC20
++--------------+-----------+
+| Function     | Modifiers |
++--------------+-----------+
+| totalSupply  | []        |
+| balanceOf    | []        |
+| transfer     | []        |
+| allowance    | []        |
+| approve      | []        |
+| transferFrom | []        |
++--------------+-----------+
+INFO:Printers:
+Contract IERC20Permit
++------------------+-----------+
+| Function         | Modifiers |
++------------------+-----------+
+| permit           | []        |
+| nonces           | []        |
+| DOMAIN_SEPARATOR | []        |
++------------------+-----------+
+INFO:Printers:
+Contract SafeERC20
++-------------------------+-----------+
+| Function                | Modifiers |
++-------------------------+-----------+
+| safeTransfer            | []        |
+| safeTransferFrom        | []        |
+| safeIncreaseAllowance   | []        |
+| safeDecreaseAllowance   | []        |
+| forceApprove            | []        |
+| _callOptionalReturn     | []        |
+| _callOptionalReturnBool | []        |
++-------------------------+-----------+
+INFO:Printers:
+Contract IERC721
++-------------------+-----------+
+| Function          | Modifiers |
++-------------------+-----------+
+| supportsInterface | []        |
+| balanceOf         | []        |
+| ownerOf           | []        |
+| safeTransferFrom  | []        |
+| safeTransferFrom  | []        |
+| transferFrom      | []        |
+| approve           | []        |
+| setApprovalForAll | []        |
+| getApproved       | []        |
+| isApprovedForAll  | []        |
++-------------------+-----------+
+INFO:Printers:
+Contract Address
++----------------------------+-----------+
+| Function                   | Modifiers |
++----------------------------+-----------+
+| sendValue                  | []        |
+| functionCall               | []        |
+| functionCallWithValue      | []        |
+| functionStaticCall         | []        |
+| functionDelegateCall       | []        |
+| verifyCallResultFromTarget | []        |
+| verifyCallResult           | []        |
+| _revert                    | []        |
++----------------------------+-----------+
+INFO:Printers:
+Contract SafeCast
++-----------+-----------+
+| Function  | Modifiers |
++-----------+-----------+
+| toUint248 | []        |
+| toUint240 | []        |
+| toUint232 | []        |
+| toUint224 | []        |
+| toUint216 | []        |
+| toUint208 | []        |
+| toUint200 | []        |
+| toUint192 | []        |
+| toUint184 | []        |
+| toUint176 | []        |
+| toUint168 | []        |
+| toUint160 | []        |
+| toUint152 | []        |
+| toUint144 | []        |
+| toUint136 | []        |
+| toUint128 | []        |
+| toUint120 | []        |
+| toUint112 | []        |
+| toUint104 | []        |
+| toUint96  | []        |
+| toUint88  | []        |
+| toUint80  | []        |
+| toUint72  | []        |
+| toUint64  | []        |
+| toUint56  | []        |
+| toUint48  | []        |
+| toUint40  | []        |
+| toUint32  | []        |
+| toUint24  | []        |
+| toUint16  | []        |
+| toUint8   | []        |
+| toUint256 | []        |
+| toInt248  | []        |
+| toInt240  | []        |
+| toInt232  | []        |
+| toInt224  | []        |
+| toInt216  | []        |
+| toInt208  | []        |
+| toInt200  | []        |
+| toInt192  | []        |
+| toInt184  | []        |
+| toInt176  | []        |
+| toInt168  | []        |
+| toInt160  | []        |
+| toInt152  | []        |
+| toInt144  | []        |
+| toInt136  | []        |
+| toInt128  | []        |
+| toInt120  | []        |
+| toInt112  | []        |
+| toInt104  | []        |
+| toInt96   | []        |
+| toInt88   | []        |
+| toInt80   | []        |
+| toInt72   | []        |
+| toInt64   | []        |
+| toInt56   | []        |
+| toInt48   | []        |
+| toInt40   | []        |
+| toInt32   | []        |
+| toInt24   | []        |
+| toInt16   | []        |
+| toInt8    | []        |
+| toInt256  | []        |
++-----------+-----------+
+INFO:Printers:
+Contract IAllowanceTransfer
++------------------+-----------+
+| Function         | Modifiers |
++------------------+-----------+
+| DOMAIN_SEPARATOR | []        |
+| allowance        | []        |
+| approve          | []        |
+| permit           | []        |
+| permit           | []        |
+| transferFrom     | []        |
+| transferFrom     | []        |
+| lockdown         | []        |
+| invalidateNonces | []        |
++------------------+-----------+
+INFO:Printers:
+Contract IHooks
++-----------------------+-----------+
+| Function              | Modifiers |
++-----------------------+-----------+
+| beforeInitialize      | []        |
+| afterInitialize       | []        |
+| beforeAddLiquidity    | []        |
+| afterAddLiquidity     | []        |
+| beforeRemoveLiquidity | []        |
+| afterRemoveLiquidity  | []        |
+| beforeSwap            | []        |
+| afterSwap             | []        |
+| beforeDonate          | []        |
+| afterDonate           | []        |
++-----------------------+-----------+
+INFO:Printers:
+Contract IPoolManager
++--------------------------+-----------+
+| Function                 | Modifiers |
++--------------------------+-----------+
+| exttload                 | []        |
+| exttload                 | []        |
+| extsload                 | []        |
+| extsload                 | []        |
+| extsload                 | []        |
+| balanceOf                | []        |
+| allowance                | []        |
+| isOperator               | []        |
+| transfer                 | []        |
+| transferFrom             | []        |
+| approve                  | []        |
+| setOperator              | []        |
+| protocolFeesAccrued      | []        |
+| setProtocolFee           | []        |
+| setProtocolFeeController | []        |
+| collectProtocolFees      | []        |
+| protocolFeeController    | []        |
+| unlock                   | []        |
+| initialize               | []        |
+| modifyLiquidity          | []        |
+| swap                     | []        |
+| donate                   | []        |
+| sync                     | []        |
+| take                     | []        |
+| settle                   | []        |
+| settleFor                | []        |
+| clear                    | []        |
+| mint                     | []        |
+| burn                     | []        |
+| updateDynamicLPFee       | []        |
++--------------------------+-----------+
+INFO:Printers:
+Contract IERC20Minimal
++--------------+-----------+
+| Function     | Modifiers |
++--------------+-----------+
+| balanceOf    | []        |
+| transfer     | []        |
+| allowance    | []        |
+| approve      | []        |
+| transferFrom | []        |
++--------------+-----------+
+INFO:Printers:
+Contract BitMath
++---------------------+-----------+
+| Function            | Modifiers |
++---------------------+-----------+
+| mostSignificantBit  | []        |
+| leastSignificantBit | []        |
++---------------------+-----------+
+INFO:Printers:
+Contract CustomRevert
++-----------------------+-----------+
+| Function              | Modifiers |
++-----------------------+-----------+
+| revertWith            | []        |
+| revertWith            | []        |
+| revertWith            | []        |
+| revertWith            | []        |
+| revertWith            | []        |
+| revertWith            | []        |
+| revertWith            | []        |
+| bubbleUpAndRevertWith | []        |
++-----------------------+-----------+
+INFO:Printers:
+Contract FixedPoint128
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract FixedPoint96
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract FullMath
++------------------+-----------+
+| Function         | Modifiers |
++------------------+-----------+
+| mulDiv           | []        |
+| mulDivRoundingUp | []        |
++------------------+-----------+
+INFO:Printers:
+Contract LiquidityMath
++----------+-----------+
+| Function | Modifiers |
++----------+-----------+
+| addDelta | []        |
++----------+-----------+
+INFO:Printers:
+Contract Position
++----------------------+-----------+
+| Function             | Modifiers |
++----------------------+-----------+
+| get                  | []        |
+| calculatePositionKey | []        |
+| update               | []        |
++----------------------+-----------+
+INFO:Printers:
+Contract SafeCast
++-----------+-----------+
+| Function  | Modifiers |
++-----------+-----------+
+| toUint160 | []        |
+| toUint128 | []        |
+| toUint128 | []        |
+| toInt128  | []        |
+| toInt256  | []        |
+| toInt128  | []        |
++-----------+-----------+
+INFO:Printers:
+Contract SqrtPriceMath
++-----------------------------------------+-----------+
+| Function                                | Modifiers |
++-----------------------------------------+-----------+
+| getNextSqrtPriceFromAmount0RoundingUp   | []        |
+| getNextSqrtPriceFromAmount1RoundingDown | []        |
+| getNextSqrtPriceFromInput               | []        |
+| getNextSqrtPriceFromOutput              | []        |
+| getAmount0Delta                         | []        |
+| absDiff                                 | []        |
+| getAmount1Delta                         | []        |
+| getAmount0Delta                         | []        |
+| getAmount1Delta                         | []        |
++-----------------------------------------+-----------+
+INFO:Printers:
+Contract StateLibrary
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| getSlot0                            | []        |
+| getTickInfo                         | []        |
+| getTickLiquidity                    | []        |
+| getTickFeeGrowthOutside             | []        |
+| getFeeGrowthGlobals                 | []        |
+| getLiquidity                        | []        |
+| getTickBitmap                       | []        |
+| getPositionInfo                     | []        |
+| getPositionInfo                     | []        |
+| getPositionLiquidity                | []        |
+| getFeeGrowthInside                  | []        |
+| _getPoolStateSlot                   | []        |
+| _getTickInfoSlot                    | []        |
+| _getPositionInfoSlot                | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract TickMath
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| maxUsableTick                       | []        |
+| minUsableTick                       | []        |
+| getSqrtPriceAtTick                  | []        |
+| getTickAtSqrtPrice                  | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract UnsafeMath
++---------------+-----------+
+| Function      | Modifiers |
++---------------+-----------+
+| divRoundingUp | []        |
+| simpleMulDiv  | []        |
++---------------+-----------+
+INFO:Printers:
+Contract BalanceDeltaLibrary
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| amount0                             | []        |
+| amount1                             | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract BeforeSwapDeltaLibrary
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| getSpecifiedDelta                   | []        |
+| getUnspecifiedDelta                 | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract CurrencyLibrary
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| transfer                            | []        |
+| balanceOfSelf                       | []        |
+| balanceOf                           | []        |
+| isAddressZero                       | []        |
+| toId                                | []        |
+| fromId                              | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract PoolIdLibrary
++----------+-----------+
+| Function | Modifiers |
++----------+-----------+
+| toId     | []        |
++----------+-----------+
+INFO:Printers:
+Contract IPositionManager
++--------------------------------+-----------+
+| Function                       | Modifiers |
++--------------------------------+-----------+
+| permit                         | []        |
+| permitBatch                    | []        |
+| nonces                         | []        |
+| revokeNonce                    | []        |
+| initializePool                 | []        |
+| multicall                      | []        |
+| DOMAIN_SEPARATOR               | []        |
+| permit                         | []        |
+| permitForAll                   | []        |
+| poolManager                    | []        |
+| subscriber                     | []        |
+| subscribe                      | []        |
+| unsubscribe                    | []        |
+| unsubscribeGasLimit            | []        |
+| modifyLiquidities              | []        |
+| modifyLiquiditiesWithoutUnlock | []        |
+| nextTokenId                    | []        |
+| getPositionLiquidity           | []        |
+| getPoolAndPositionInfo         | []        |
+| positionInfo                   | []        |
++--------------------------------+-----------+
+INFO:Printers:
+Contract IStateView
++-------------------------+-----------+
+| Function                | Modifiers |
++-------------------------+-----------+
+| poolManager             | []        |
+| getSlot0                | []        |
+| getTickInfo             | []        |
+| getTickLiquidity        | []        |
+| getTickFeeGrowthOutside | []        |
+| getFeeGrowthGlobals     | []        |
+| getLiquidity            | []        |
+| getTickBitmap           | []        |
+| getPositionInfo         | []        |
+| getPositionInfo         | []        |
+| getPositionLiquidity    | []        |
+| getFeeGrowthInside      | []        |
++-------------------------+-----------+
+INFO:Printers:
+Contract ISubscriber
++-----------------------+-----------+
+| Function              | Modifiers |
++-----------------------+-----------+
+| notifySubscribe       | []        |
+| notifyUnsubscribe     | []        |
+| notifyBurn            | []        |
+| notifyModifyLiquidity | []        |
++-----------------------+-----------+
+INFO:Printers:
+Contract Actions
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract LiquidityAmounts
++------------------------+-----------+
+| Function               | Modifiers |
++------------------------+-----------+
+| getLiquidityForAmount0 | []        |
+| getLiquidityForAmount1 | []        |
+| getLiquidityForAmounts | []        |
++------------------------+-----------+
+INFO:Printers:
+Contract PositionInfoLibrary
++-------------------------------------+-----------+
+| Function                            | Modifiers |
++-------------------------------------+-----------+
+| poolId                              | []        |
+| tickLower                           | []        |
+| tickUpper                           | []        |
+| hasSubscriber                       | []        |
+| setSubscribe                        | []        |
+| setUnsubscribe                      | []        |
+| initialize                          | []        |
+| slitherConstructorConstantVariables | []        |
++-------------------------------------+-----------+
+INFO:Printers:
+Contract IPermit2Source
++----------+-----------+
+| Function | Modifiers |
++----------+-----------+
+| permit2  | []        |
++----------+-----------+
+INFO:Printers:
+Contract ValariRouterV3
++-------------------------------------+-------------------------------+
+| Function                            | Modifiers                     |
++-------------------------------------+-------------------------------+
+| pendingOwner                        | []                            |
+| transferOwnership                   | ['onlyOwner']                 |
+| _transferOwnership                  | []                            |
+| acceptOwnership                     | []                            |
+| constructor                         | []                            |
+| owner                               | []                            |
+| _checkOwner                         | []                            |
+| renounceOwnership                   | ['onlyOwner']                 |
+| transferOwnership                   | ['onlyOwner']                 |
+| _transferOwnership                  | []                            |
+| _msgSender                          | []                            |
+| _msgData                            | []                            |
+| _contextSuffixLength                | []                            |
+| constructor                         | []                            |
+| _nonReentrantBefore                 | []                            |
+| _nonReentrantAfter                  | []                            |
+| _reentrancyGuardEntered             | []                            |
+| constructor                         | []                            |
+| addPool                             | ['nonReentrant', 'onlyOwner'] |
+| setDepositsDisabled                 | ['nonReentrant', 'onlyOwner'] |
+| setEjectEnabled                     | ['nonReentrant', 'onlyOwner'] |
+| openPosition                        | ['nonReentrant']              |
+| setFeeRecipient                     | ['nonReentrant', 'onlyOwner'] |
+| withdrawCommission                  | ['nonReentrant']              |
+| collectFees                         | ['nonReentrant']              |
+| collectFeesTo                       | ['nonReentrant']              |
+| exitPosition                        | ['nonReentrant']              |
+| exitPositionTo                      | ['nonReentrant']              |
+| ejectPosition                       | ['nonReentrant']              |
+| _collectFees                        | []                            |
+| _exitPosition                       | []                            |
+| previewDeposit                      | []                            |
+| getPoolKey                          | []                            |
+| poolCount                           | []                            |
+| positionCount                       | []                            |
+| depositCount                        | []                            |
+| stockPoolCount                      | []                            |
+| getPoolIds                          | []                            |
+| getStockPoolIds                     | []                            |
+| getDepositorPositionIds             | []                            |
+| getPosition                         | []                            |
+| getUserPositions                    | []                            |
+| _positionView                       | []                            |
+| _ownedPosition                      | []                            |
+| _commission                         | []                            |
+| _distribute                         | []                            |
+| _split                              | []                            |
+| _checkRecipient                     | []                            |
+| _checkRetained                      | []                            |
+| _addPool                            | []                            |
+| _accrueCommission                   | []                            |
+| _ownerOf                            | []                            |
+| _page                               | []                            |
+| _pageEnd                            | []                            |
+| _pull                               | []                            |
+| _approve                            | []                            |
+| _refund                             | []                            |
+| _amounts                            | []                            |
+| slitherConstructorConstantVariables | []                            |
++-------------------------------------+-------------------------------+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

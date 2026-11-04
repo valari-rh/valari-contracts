@@ -1,0 +1,37 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_637_SafeERC20 {
+label = "SafeERC20"
+"637_safeTransfer(IERC20,address,uint256)" [label="safeTransfer(IERC20,address,uint256)"]
+"637_safeIncreaseAllowance(IERC20,address,uint256)" [label="safeIncreaseAllowance(IERC20,address,uint256)"]
+"637_forceApprove(IERC20,address,uint256)" [label="forceApprove(IERC20,address,uint256)"]
+"637__callOptionalReturnBool(IERC20,bytes)" [label="_callOptionalReturnBool(IERC20,bytes)"]
+"637__callOptionalReturn(IERC20,bytes)" [label="_callOptionalReturn(IERC20,bytes)"]
+"637_safeTransferFrom(IERC20,address,address,uint256)" [label="safeTransferFrom(IERC20,address,address,uint256)"]
+"637_safeDecreaseAllowance(IERC20,address,uint256)" [label="safeDecreaseAllowance(IERC20,address,uint256)"]
+"637_safeIncreaseAllowance(IERC20,address,uint256)" -> "637_forceApprove(IERC20,address,uint256)"
+"637_safeTransfer(IERC20,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+"637_forceApprove(IERC20,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+"637_forceApprove(IERC20,address,uint256)" -> "637__callOptionalReturnBool(IERC20,bytes)"
+"637_safeDecreaseAllowance(IERC20,address,uint256)" -> "637_forceApprove(IERC20,address,uint256)"
+"637_safeTransferFrom(IERC20,address,address,uint256)" -> "637__callOptionalReturn(IERC20,bytes)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"code(address)" 
+"abi.encodeCall()" 
+"abi.decode()" 
+"revert SafeERC20FailedOperation(address)" 
+"revert SafeERC20FailedDecreaseAllowance(address,uint256,uint256)" 
+"637__callOptionalReturnBool(IERC20,bytes)" -> "code(address)"
+"637_safeTransferFrom(IERC20,address,address,uint256)" -> "abi.encodeCall()"
+"637__callOptionalReturnBool(IERC20,bytes)" -> "abi.decode()"
+"637_forceApprove(IERC20,address,uint256)" -> "abi.encodeCall()"
+"637_safeDecreaseAllowance(IERC20,address,uint256)" -> "revert SafeERC20FailedDecreaseAllowance(address,uint256,uint256)"
+"637__callOptionalReturn(IERC20,bytes)" -> "abi.decode()"
+"637__callOptionalReturn(IERC20,bytes)" -> "revert SafeERC20FailedOperation(address)"
+"637_safeTransfer(IERC20,address,uint256)" -> "abi.encodeCall()"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

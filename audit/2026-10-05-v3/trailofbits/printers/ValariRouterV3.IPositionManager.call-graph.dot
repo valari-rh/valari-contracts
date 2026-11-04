@@ -1,0 +1,47 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6913_IEIP712_v4 {
+label = "IEIP712_v4"
+"6913_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_6980_IMulticall_v4 {
+label = "IMulticall_v4"
+"6980_multicall(bytes[])" [label="multicall(bytes[])"]
+}subgraph cluster_7240_IPositionManager {
+label = "IPositionManager"
+"7240_getPositionLiquidity(uint256)" [label="getPositionLiquidity(uint256)"]
+"7240_modifyLiquidities(bytes,uint256)" [label="modifyLiquidities(bytes,uint256)"]
+"7240_getPoolAndPositionInfo(uint256)" [label="getPoolAndPositionInfo(uint256)"]
+"7240_modifyLiquiditiesWithoutUnlock(bytes,bytes[])" [label="modifyLiquiditiesWithoutUnlock(bytes,bytes[])"]
+"7240_nextTokenId()" [label="nextTokenId()"]
+"7240_positionInfo(uint256)" [label="positionInfo(uint256)"]
+}subgraph cluster_6953_IERC721Permit_v4 {
+label = "IERC721Permit_v4"
+"6953_permitForAll(address,address,bool,uint256,uint256,bytes)" [label="permitForAll(address,address,bool,uint256,uint256,bytes)"]
+"6953_permit(address,uint256,uint256,uint256,bytes)" [label="permit(address,uint256,uint256,uint256,bytes)"]
+}subgraph cluster_7068_INotifier {
+label = "INotifier"
+"7068_unsubscribe(uint256)" [label="unsubscribe(uint256)"]
+"7068_unsubscribeGasLimit()" [label="unsubscribeGasLimit()"]
+"7068_subscriber(uint256)" [label="subscriber(uint256)"]
+"7068_subscribe(uint256,address,bytes)" [label="subscribe(uint256,address,bytes)"]
+}subgraph cluster_7117_IPoolInitializer_v4 {
+label = "IPoolInitializer_v4"
+"7117_initializePool(PoolKey,uint160)" [label="initializePool(PoolKey,uint160)"]
+}subgraph cluster_7478_IUnorderedNonce {
+label = "IUnorderedNonce"
+"7478_nonces(address,uint256)" [label="nonces(address,uint256)"]
+"7478_revokeNonce(uint256)" [label="revokeNonce(uint256)"]
+}subgraph cluster_6966_IImmutableState {
+label = "IImmutableState"
+"6966_poolManager()" [label="poolManager()"]
+}subgraph cluster_7100_IPermit2Forwarder {
+label = "IPermit2Forwarder"
+"7100_permitBatch(address,IAllowanceTransfer.PermitBatch,bytes)" [label="permitBatch(address,IAllowanceTransfer.PermitBatch,bytes)"]
+"7100_permit(address,IAllowanceTransfer.PermitSingle,bytes)" [label="permit(address,IAllowanceTransfer.PermitSingle,bytes)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

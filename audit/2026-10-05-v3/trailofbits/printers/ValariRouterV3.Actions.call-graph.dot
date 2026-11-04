@@ -1,0 +1,12 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_7568_Actions {
+label = "Actions"
+"7568_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

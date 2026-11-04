@@ -1,0 +1,25 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6966_IImmutableState {
+label = "IImmutableState"
+"6966_poolManager()" [label="poolManager()"]
+}subgraph cluster_7407_IStateView {
+label = "IStateView"
+"7407_getTickInfo(PoolId,int24)" [label="getTickInfo(PoolId,int24)"]
+"7407_getLiquidity(PoolId)" [label="getLiquidity(PoolId)"]
+"7407_getTickLiquidity(PoolId,int24)" [label="getTickLiquidity(PoolId,int24)"]
+"7407_getFeeGrowthInside(PoolId,int24,int24)" [label="getFeeGrowthInside(PoolId,int24,int24)"]
+"7407_getPositionLiquidity(PoolId,bytes32)" [label="getPositionLiquidity(PoolId,bytes32)"]
+"7407_getPositionInfo(PoolId,address,int24,int24,bytes32)" [label="getPositionInfo(PoolId,address,int24,int24,bytes32)"]
+"7407_getSlot0(PoolId)" [label="getSlot0(PoolId)"]
+"7407_getTickBitmap(PoolId,int16)" [label="getTickBitmap(PoolId,int16)"]
+"7407_getTickFeeGrowthOutside(PoolId,int24)" [label="getTickFeeGrowthOutside(PoolId,int24)"]
+"7407_getPositionInfo(PoolId,bytes32)" [label="getPositionInfo(PoolId,bytes32)"]
+"7407_getFeeGrowthGlobals(PoolId)" [label="getFeeGrowthGlobals(PoolId)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

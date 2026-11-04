@@ -1,0 +1,41 @@
+[PASS] testOwnerAppendsPoolAndUsersCompleteLifecycleOnIt() (gas: 1532866)
+[PASS] testOwnerAppendsSecondFeeTierAndBothTiersRunIndependently() (gas: 1795870)
+[PASS] testOwnerStopsAndResumesDepositsForOnePool() (gas: 3064475)
+[PASS] testOwnershipCannotBeRenounced() (gas: 43008)
+[PASS] testOwnershipTransferRequiresAcceptanceAndDoesNotChangeFeeRecipient() (gas: 56328)
+[PASS] testPayoutRecipientCannotBeAProtocolContract() (gas: 876433)
+[PASS] testPayoutStillCannotDrawOnEarlierBalances() (gas: 1387859)
+[PASS] testPoolAndDepositorPagination() (gas: 1498284)
+[PASS] testPriceBoundsAreInclusiveAndRejectOneUnitOutside() (gas: 788960)
+[PASS] testPriceBoundsStopSandwichThatPassesMinimumLiquidity() (gas: 879884)
+[PASS] testProtocolContractsAreNeverListableAsStock() (gas: 605368)
+[PASS] testRecipientChangeRoutesFutureCommissionAndPreservesBeneficiaryPayout() (gas: 1217822)
+[PASS] testRecipientRolloverLeavesOldCreditsWithdrawableOnlyByOriginalRecipient() (gas: 1317999)
+[PASS] testRejectedBeneficiaryPayoutRollsBackNewAccrualAndPreservesEarlierCredit() (gas: 1323214)
+[PASS] testRejectedCommissionTransferPreservesCreditBackingAndPosition() (gas: 1245474)
+[PASS] testRejectsExpiredDeadlineWithoutMovingFunds() (gas: 40640)
+[PASS] testRejectsInvalidTickRanges() (gas: 69566)
+[PASS] testRejectsUnknownPool() (gas: 34847)
+[PASS] testRejectsZeroAndInvertedPriceBounds() (gas: 40898)
+[PASS] testRejectsZeroFundingAndFundingWrongSide() (gas: 76009)
+[PASS] testRejectsZeroMinimumLiquidity() (gas: 20270)
+[PASS] testRepeatedCollectionDoesNotDoubleChargeOrPayFees() (gas: 1332935)
+[PASS] testStaleQuoteMinimumLiquidityRevertsAfterRealPriceMove() (gas: 881115)
+[PASS] testSurplusToleranceStopsAtMaxPayoutDust() (gas: 2417227)
+[PASS] testTickLowerInclusiveAndTickUpperExclusiveAtExactBoundary() (gas: 1156107)
+[PASS] testTinyBudgetsAndMaximumUsableTickRange() (gas: 1263896)
+[PASS] testTinyRepeatedClaimsCarryCommissionRoundingThroughExit() (gas: 2481194)
+[PASS] testTokenCallbackCannotMovePriceBetweenBoundsCheckAndMint() (gas: 1147973)
+[PASS] testTokenReportingTransfersItDidNotMakeCannotCollectOrCloseAPosition() (gas: 2452315)
+Suite result: ok. 82 passed; 0 failed; 0 skipped; finished in 7.62s (7.75s CPU time)
+
+Ran 13 test suites in 7.62s (37.56s CPU time): 421 tests passed, 1 failed, 15 skipped (437 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/ValariRouterScratchAudit.t.sol:ValariRouterScratchAuditTest
+[FAIL: assertion failed: 34867952798114284185 <= 34867952798114284185] testScratchUpwardLiquidityManipulation() (gas: 943817)
+
+Encountered a total of 1 failing tests, 421 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 1 failed test
+forge exit 0

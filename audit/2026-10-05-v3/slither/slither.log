@@ -1,0 +1,458 @@
+Impossible to generate IR for ValariRouterV3.openPosition (src/ValariRouterV3.sol#303-392):
+ 'NoneType' object has no attribute 'parameters'
+Impossible to generate IR for ValariRouterV3._commission (src/ValariRouterV3.sol#784-793):
+ 'NoneType' object has no attribute 'parameters'
+
+Detector: arbitrary-send-erc20
+ValariRouterV3.ejectPosition(uint256,address) (src/ValariRouterV3.sol#480-489) uses arbitrary from in transferFrom: IERC721(address(positionManager)).transferFrom(address(this),to,tokenId) (src/ValariRouterV3.sol#486)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+
+Detector: incorrect-exp
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) has bitwise-xor operator ^ instead of the exponentiation operator **: 
+	 - inv = (3 * denominator) ^ 2 (lib/v4-core/src/libraries/FullMath.sol#82)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-exponentiation
+
+Detector: incorrect-shift
+BitMath.mostSignificantBit(uint256) (lib/v4-core/src/libraries/BitMath.sol#12-25) contains an incorrect shift operation: r = r | byte(uint256,uint256)(0x1f & 0x8421084210842108cc6318c6db6d54be >> x >> r,0x0706060506020500060203020504000106050205030304010505030400000000) (lib/v4-core/src/libraries/BitMath.sol#22-23)
+BitMath.leastSignificantBit(uint256) (lib/v4-core/src/libraries/BitMath.sol#31-48) contains an incorrect shift operation: r = 0x8040405543005266443200005020610674053026020000107506200176117077 << x * 0xb6db6db6ddddddddd34d34d349249249210842108c6318c639ce739cffffffff >> 250 << 2 >> 252 << 5 (lib/v4-core/src/libraries/BitMath.sol#40-42)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-shift-in-assembly
+
+Detector: uninitialized-state
+ValariRouterV3._positionIds (src/ValariRouterV3.sol#145) is never initialized. It is used in:
+	- ValariRouterV3.positionCount() (src/ValariRouterV3.sol#641-643)
+ValariRouterV3._depositorPositionIds (src/ValariRouterV3.sol#146) is never initialized. It is used in:
+	- ValariRouterV3.depositCount(address) (src/ValariRouterV3.sol#646-648)
+	- ValariRouterV3.getDepositorPositionIds(address,uint256,uint256) (src/ValariRouterV3.sol#669-681)
+	- ValariRouterV3.getUserPositions(address,uint256,uint256) (src/ValariRouterV3.sol#694-713)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+
+Detector: divide-before-multiply
+CustomRevert.bubbleUpAndRevertWith(address,bytes4,bytes4) (lib/v4-core/src/libraries/CustomRevert.sol#83-119) performs a multiplication on the result of a division:
+	- encodedDataSize_bubbleUpAndRevertWith_asm_0 = returndatasize()() + 31 / 32 * 32 (lib/v4-core/src/libraries/CustomRevert.sol#91)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv = (3 * denominator) ^ 2 (lib/v4-core/src/libraries/FullMath.sol#82)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#86)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#87)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#88)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#89)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#90)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (lib/v4-core/src/libraries/FullMath.sol#62)
+	- inv *= 2 - denominator * inv (lib/v4-core/src/libraries/FullMath.sol#91)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) performs a multiplication on the result of a division:
+	- prod0 = prod0 / twos (lib/v4-core/src/libraries/FullMath.sol#67)
+	- result = prod0 * inv (lib/v4-core/src/libraries/FullMath.sol#99)
+TickMath.maxUsableTick(int24) (lib/v4-core/src/libraries/TickMath.sol#39-43) performs a multiplication on the result of a division:
+	- (MAX_TICK / tickSpacing) * tickSpacing (lib/v4-core/src/libraries/TickMath.sol#41)
+TickMath.minUsableTick(int24) (lib/v4-core/src/libraries/TickMath.sol#46-50) performs a multiplication on the result of a division:
+	- (MIN_TICK / tickSpacing) * tickSpacing (lib/v4-core/src/libraries/TickMath.sol#48)
+TickMath.getSqrtPriceAtTick(int24) (lib/v4-core/src/libraries/TickMath.sol#57-114) performs a multiplication on the result of a division:
+	- price = (price * 0x48a170391f7dc42444e8fa2) >> 128 (lib/v4-core/src/libraries/TickMath.sol#100)
+	- price = ~ 0 / price (lib/v4-core/src/libraries/TickMath.sol#104)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+
+Detector: uninitialized-local
+ValariRouterV3.getUserPositions(address,uint256,uint256).count (src/ValariRouterV3.sol#704) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+
+Detector: unused-return
+ValariRouterV3.openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256) (src/ValariRouterV3.sol#303-392) ignores return value by (mintPrice,None,None,None) = stateView.getSlot0(PoolId.wrap(poolId)) (src/ValariRouterV3.sol#355)
+ValariRouterV3.ejectPosition(uint256,address) (src/ValariRouterV3.sol#480-489) ignores return value by this.collectForEject{gas: EJECT_COLLECT_GAS}(tokenId,to) (src/ValariRouterV3.sol#484)
+ValariRouterV3._exitPosition(uint256,address,uint128,uint128,uint256) (src/ValariRouterV3.sol#547-600) ignores return value by (price,None,None,None) = stateView.getSlot0(PoolId.wrap(record.poolId)) (src/ValariRouterV3.sol#561)
+ValariRouterV3.previewDeposit(bytes32,uint128,uint128,int24,int24) (src/ValariRouterV3.sol#606-630) ignores return value by (quote.sqrtPriceX96,None,None,None) = stateView.getSlot0(PoolId.wrap(poolId)) (src/ValariRouterV3.sol#618)
+ValariRouterV3._positionView(uint256,address) (src/ValariRouterV3.sol#715-772) ignores return value by (p.sqrtPriceX96,tick,None,None) = stateView.getSlot0(id) (src/ValariRouterV3.sol#748)
+ValariRouterV3._addPool(PoolKey,IStateView,address) (src/ValariRouterV3.sol#871-898) ignores return value by (sqrtPriceX96,None,None,None) = stateView_.getSlot0(PoolId.wrap(id)) (src/ValariRouterV3.sol#892)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-return
+
+Detector: shadowing-local
+INotifier.subscriber(uint256).subscriber (lib/v4-periphery/src/interfaces/INotifier.sol#32) shadows:
+	- INotifier.subscriber(uint256) (lib/v4-periphery/src/interfaces/INotifier.sol#32) (function)
+ValariRouterV3._ownerOf(uint256).owner (src/ValariRouterV3.sol#908) shadows:
+	- Ownable.owner() (lib/openzeppelin-contracts/contracts/access/Ownable.sol#56-58) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+
+Detector: missing-zero-check
+Ownable2Step.transferOwnership(address).newOwner (lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol#35) lacks a zero-check on :
+		- _pendingOwner = newOwner (lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol#36)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+
+Detector: calls-loop
+ValariRouterV3._addPool(PoolKey,IStateView,address) (src/ValariRouterV3.sol#871-898) has external calls inside a loop: (sqrtPriceX96,None,None,None) = stateView_.getSlot0(PoolId.wrap(id)) (src/ValariRouterV3.sol#892)
+	Calls stack containing the loop:
+		ValariRouterV3.constructor(IPositionManager,IStateView,address,PoolKey[])
+ValariRouterV3._ownerOf(uint256) (src/ValariRouterV3.sol#907-913) has external calls inside a loop: owner = IERC721(address(positionManager)).ownerOf(tokenId) (src/ValariRouterV3.sol#908-912)
+	Calls stack containing the loop:
+		ValariRouterV3.getUserPositions(address,uint256,uint256)
+ValariRouterV3._positionView(uint256,address) (src/ValariRouterV3.sol#715-772) has external calls inside a loop: (p.liquidity,last0,last1) = stateView.getPositionInfo(id,address(positionManager),p.tickLower,p.tickUpper,bytes32(tokenId)) (src/ValariRouterV3.sol#744-746)
+	Calls stack containing the loop:
+		ValariRouterV3.getUserPositions(address,uint256,uint256)
+ValariRouterV3._positionView(uint256,address) (src/ValariRouterV3.sol#715-772) has external calls inside a loop: (p.sqrtPriceX96,tick,None,None) = stateView.getSlot0(id) (src/ValariRouterV3.sol#748)
+	Calls stack containing the loop:
+		ValariRouterV3.getUserPositions(address,uint256,uint256)
+ValariRouterV3._positionView(uint256,address) (src/ValariRouterV3.sol#715-772) has external calls inside a loop: (growth0,growth1) = stateView.getFeeGrowthInside(id,p.tickLower,p.tickUpper) (src/ValariRouterV3.sol#759-760)
+	Calls stack containing the loop:
+		ValariRouterV3.getUserPositions(address,uint256,uint256)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+
+Detector: reentrancy-events
+Reentrancy in ValariRouterV3._collect(ValariRouterV3.DepositRecord,uint256,address) (src/ValariRouterV3.sol#508-545):
+	External calls:
+	- positionManager.modifyLiquidities(abi.encode(abi.encodePacked(uint8(Actions.DECREASE_LIQUIDITY),uint8(Actions.TAKE_PAIR)),params),block.timestamp) (src/ValariRouterV3.sol#521-527)
+	- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#534)
+		- returndata = address(token).functionCall(data) (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#96)
+		- (success,returndata) = target.call{value: value}(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#87)
+		- token0.safeTransfer(to,payout.amount0) (src/ValariRouterV3.sol#829)
+		- token1.safeTransfer(to,payout.amount1) (src/ValariRouterV3.sol#830)
+	External calls sending eth:
+	- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#534)
+		- (success,returndata) = target.call{value: value}(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#87)
+	Event emitted after the call(s):
+	- CommissionAccrued(recipient,token,amount) (src/ValariRouterV3.sol#904)
+		- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#534)
+	- FeesCollected(record.depositor,tokenId,feeRecipient,payout.fees0,payout.fees1,payout.commission0,payout.commission1,to) (src/ValariRouterV3.sol#535-544)
+Reentrancy in ValariRouterV3._exitPosition(uint256,address,uint128,uint128,uint256) (src/ValariRouterV3.sol#547-600):
+	External calls:
+	- positionManager.modifyLiquidities(abi.encode(abi.encodePacked(uint8(Actions.BURN_POSITION),uint8(Actions.TAKE_PAIR)),params),deadline) (src/ValariRouterV3.sol#580-585)
+	- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#587)
+		- returndata = address(token).functionCall(data) (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#96)
+		- (success,returndata) = target.call{value: value}(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#87)
+		- token0.safeTransfer(to,payout.amount0) (src/ValariRouterV3.sol#829)
+		- token1.safeTransfer(to,payout.amount1) (src/ValariRouterV3.sol#830)
+	External calls sending eth:
+	- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#587)
+		- (success,returndata) = target.call{value: value}(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#87)
+	Event emitted after the call(s):
+	- CommissionAccrued(recipient,token,amount) (src/ValariRouterV3.sol#904)
+		- _distribute(record,payout,to,token0,token1,before0,before1) (src/ValariRouterV3.sol#587)
+	- PositionExited(record.depositor,tokenId,feeRecipient,payout.principal0,payout.principal1,payout.fees0,payout.fees1,payout.commission0,payout.commission1,to) (src/ValariRouterV3.sol#588-599)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-4
+
+Detector: timestamp
+ValariRouterV3.openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256) (src/ValariRouterV3.sol#303-392) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > deadline (src/ValariRouterV3.sol#318)
+ValariRouterV3._collectFees(uint256,address,uint256) (src/ValariRouterV3.sol#498-506) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > deadline (src/ValariRouterV3.sol#503)
+ValariRouterV3._exitPosition(uint256,address,uint128,uint128,uint256) (src/ValariRouterV3.sol#547-600) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > deadline (src/ValariRouterV3.sol#555)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+
+Detector: assembly
+Address._revert(bytes) (lib/openzeppelin-contracts/contracts/utils/Address.sol#146-158) uses assembly
+	- INLINE ASM (lib/openzeppelin-contracts/contracts/utils/Address.sol#151-154)
+BitMath.mostSignificantBit(uint256) (lib/v4-core/src/libraries/BitMath.sol#12-25) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/BitMath.sol#15-24)
+BitMath.leastSignificantBit(uint256) (lib/v4-core/src/libraries/BitMath.sol#31-48) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/BitMath.sol#34-47)
+CustomRevert.revertWith(bytes4) (lib/v4-core/src/libraries/CustomRevert.sol#14-19) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#15-18)
+CustomRevert.revertWith(bytes4,address) (lib/v4-core/src/libraries/CustomRevert.sol#22-28) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#23-27)
+CustomRevert.revertWith(bytes4,int24) (lib/v4-core/src/libraries/CustomRevert.sol#31-37) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#32-36)
+CustomRevert.revertWith(bytes4,uint160) (lib/v4-core/src/libraries/CustomRevert.sol#40-46) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#41-45)
+CustomRevert.revertWith(bytes4,int24,int24) (lib/v4-core/src/libraries/CustomRevert.sol#49-57) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#50-56)
+CustomRevert.revertWith(bytes4,uint160,uint160) (lib/v4-core/src/libraries/CustomRevert.sol#60-68) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#61-67)
+CustomRevert.revertWith(bytes4,address,address) (lib/v4-core/src/libraries/CustomRevert.sol#71-79) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#72-78)
+CustomRevert.bubbleUpAndRevertWith(address,bytes4,bytes4) (lib/v4-core/src/libraries/CustomRevert.sol#83-119) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/CustomRevert.sol#89-118)
+FullMath.mulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/FullMath.sol#14-102) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#23-26)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#34-36)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#47-49)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#51-54)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#61-63)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#66-68)
+	- INLINE ASM (lib/v4-core/src/libraries/FullMath.sol#72-74)
+LiquidityMath.addDelta(uint128,int128) (lib/v4-core/src/libraries/LiquidityMath.sol#10-19) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/LiquidityMath.sol#11-18)
+Position.calculatePositionKey(address,int24,int24,bytes32) (lib/v4-core/src/libraries/Position.sol#48-67) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/Position.sol#54-66)
+SqrtPriceMath.getNextSqrtPriceFromAmount0RoundingUp(uint160,uint128,uint256,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#31-74) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#59-69)
+SqrtPriceMath.getNextSqrtPriceFromAmount1RoundingDown(uint160,uint128,uint256,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#86-120) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#109-114)
+SqrtPriceMath.getNextSqrtPriceFromInput(uint160,uint128,uint256,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#129-149) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#135-143)
+SqrtPriceMath.getNextSqrtPriceFromOutput(uint160,uint128,uint256,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#158-178) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#164-172)
+SqrtPriceMath.getAmount0Delta(uint160,uint160,uint128,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#188-211) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#197-202)
+SqrtPriceMath.absDiff(uint160,uint160) (lib/v4-core/src/libraries/SqrtPriceMath.sol#214-225) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#215-224)
+SqrtPriceMath.getAmount1Delta(uint160,uint160,uint128,bool) (lib/v4-core/src/libraries/SqrtPriceMath.sol#234-254) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/SqrtPriceMath.sol#251-253)
+StateLibrary.getSlot0(IPoolManager,PoolId) (lib/v4-core/src/libraries/StateLibrary.sol#40-63) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#53-62)
+StateLibrary.getTickInfo(IPoolManager,PoolId,int24) (lib/v4-core/src/libraries/StateLibrary.sol#76-97) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#90-96)
+StateLibrary.getTickLiquidity(IPoolManager,PoolId,int24) (lib/v4-core/src/libraries/StateLibrary.sol#108-120) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#116-119)
+StateLibrary.getTickFeeGrowthOutside(IPoolManager,PoolId,int24) (lib/v4-core/src/libraries/StateLibrary.sol#131-144) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#140-143)
+StateLibrary.getFeeGrowthGlobals(IPoolManager,PoolId) (lib/v4-core/src/libraries/StateLibrary.sol#157-174) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#170-173)
+StateLibrary.getPositionInfo(IPoolManager,PoolId,bytes32) (lib/v4-core/src/libraries/StateLibrary.sol#254-269) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/StateLibrary.sol#264-268)
+TickMath.getSqrtPriceAtTick(int24) (lib/v4-core/src/libraries/TickMath.sol#57-114) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#60-68)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#79-81)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#102-112)
+TickMath.getTickAtSqrtPrice(uint160) (lib/v4-core/src/libraries/TickMath.sol#121-237) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#141-146)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#147-152)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#153-158)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#159-164)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#165-170)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#171-176)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#177-182)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#183-188)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#189-194)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#195-200)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#201-206)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#207-212)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#213-218)
+	- INLINE ASM (lib/v4-core/src/libraries/TickMath.sol#219-223)
+UnsafeMath.divRoundingUp(uint256,uint256) (lib/v4-core/src/libraries/UnsafeMath.sol#12-16) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/UnsafeMath.sol#13-15)
+UnsafeMath.simpleMulDiv(uint256,uint256,uint256) (lib/v4-core/src/libraries/UnsafeMath.sol#24-28) uses assembly
+	- INLINE ASM (lib/v4-core/src/libraries/UnsafeMath.sol#25-27)
+BalanceDeltaLibrary.amount0(BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#61-65) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/BalanceDelta.sol#62-64)
+BalanceDeltaLibrary.amount1(BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#67-71) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/BalanceDelta.sol#68-70)
+BeforeSwapDeltaLibrary.getSpecifiedDelta(BeforeSwapDelta) (lib/v4-core/src/types/BeforeSwapDelta.sol#25-29) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/BeforeSwapDelta.sol#26-28)
+BeforeSwapDeltaLibrary.getUnspecifiedDelta(BeforeSwapDelta) (lib/v4-core/src/types/BeforeSwapDelta.sol#33-37) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/BeforeSwapDelta.sol#34-36)
+CurrencyLibrary.transfer(Currency,address,uint256) (lib/v4-core/src/types/Currency.sol#40-88) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/Currency.sol#46-49)
+	- INLINE ASM (lib/v4-core/src/types/Currency.sol#55-80)
+PoolIdLibrary.toId(PoolKey) (lib/v4-core/src/types/PoolId.sol#11-16) uses assembly
+	- INLINE ASM (lib/v4-core/src/types/PoolId.sol#12-15)
+PositionInfoLibrary.poolId(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#47-51) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#48-50)
+PositionInfoLibrary.tickLower(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#53-57) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#54-56)
+PositionInfoLibrary.tickUpper(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#59-63) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#60-62)
+PositionInfoLibrary.hasSubscriber(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#65-69) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#66-68)
+PositionInfoLibrary.setSubscribe(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#72-76) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#73-75)
+PositionInfoLibrary.setUnsubscribe(PositionInfo) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#79-83) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#80-82)
+PositionInfoLibrary.initialize(PoolKey,int24,int24) (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#91-103) uses assembly
+	- INLINE ASM (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#97-102)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+
+Detector: pragma
+4 different versions of Solidity are used:
+	- Version constraint ^0.8.20 is used by:
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/access/Ownable.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Address.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Context.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol#4)
+		-^0.8.20 (lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#5)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (lib/permit2/src/interfaces/IAllowanceTransfer.sol#2)
+		-^0.8.0 (lib/permit2/src/interfaces/IEIP712.sol#2)
+		-^0.8.0 (lib/v4-core/src/interfaces/IExtsload.sol#2)
+		-^0.8.0 (lib/v4-core/src/interfaces/IHooks.sol#2)
+		-^0.8.0 (lib/v4-core/src/interfaces/IProtocolFees.sol#2)
+		-^0.8.0 (lib/v4-core/src/interfaces/external/IERC20Minimal.sol#2)
+		-^0.8.0 (lib/v4-core/src/interfaces/external/IERC6909Claims.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/BitMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/CustomRevert.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/FixedPoint128.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/FixedPoint96.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/FullMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/LiquidityMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/Position.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/SafeCast.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/SqrtPriceMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/StateLibrary.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/TickMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/libraries/UnsafeMath.sol#2)
+		-^0.8.0 (lib/v4-core/src/types/BalanceDelta.sol#2)
+		-^0.8.0 (lib/v4-core/src/types/BeforeSwapDelta.sol#2)
+		-^0.8.0 (lib/v4-core/src/types/Currency.sol#2)
+		-^0.8.0 (lib/v4-core/src/types/PoolId.sol#2)
+		-^0.8.0 (lib/v4-core/src/types/PoolKey.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IEIP712_v4.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IERC721Permit_v4.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IImmutableState.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IMulticall_v4.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/INotifier.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IPermit2Forwarder.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IPoolInitializer_v4.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IPositionManager.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IStateView.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/ISubscriber.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/interfaces/IUnorderedNonce.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/libraries/Actions.sol#2)
+		-^0.8.0 (lib/v4-periphery/src/libraries/LiquidityAmounts.sol#2)
+	- Version constraint ^0.8.24 is used by:
+		-^0.8.24 (lib/v4-core/src/interfaces/IExttload.sol#2)
+		-^0.8.24 (lib/v4-core/src/interfaces/IPoolManager.sol#2)
+		-^0.8.24 (lib/v4-core/src/types/PoolOperation.sol#2)
+		-^0.8.24 (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#2)
+	- Version constraint 0.8.26 is used by:
+		-0.8.26 (src/ValariRouterV3.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+
+Detector: cyclomatic-complexity
+TickMath.getSqrtPriceAtTick(int24) (lib/v4-core/src/libraries/TickMath.sol#57-114) has a high cyclomatic complexity (22).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+
+Detector: dead-code
+ValariRouterV3._approve(IERC20,uint128) (src/ValariRouterV3.sol#946-951) is never used and should be removed
+ValariRouterV3._pull(IERC20,uint128) (src/ValariRouterV3.sol#938-944) is never used and should be removed
+ValariRouterV3._refund(IERC20,uint256,uint128) (src/ValariRouterV3.sol#953-967) is never used and should be removed
+add(BalanceDelta,BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#20-32) is never used and should be removed
+eq(BalanceDelta,BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#48-50) is never used and should be removed
+equals(Currency,Currency) (lib/v4-core/src/types/Currency.sol#12-14) is never used and should be removed
+greaterThan(Currency,Currency) (lib/v4-core/src/types/Currency.sol#16-18) is never used and should be removed
+greaterThanOrEqualTo(Currency,Currency) (lib/v4-core/src/types/Currency.sol#24-26) is never used and should be removed
+lessThan(Currency,Currency) (lib/v4-core/src/types/Currency.sol#20-22) is never used and should be removed
+neq(BalanceDelta,BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#52-54) is never used and should be removed
+sub(BalanceDelta,BalanceDelta) (lib/v4-core/src/types/BalanceDelta.sol#34-46) is never used and should be removed
+toBalanceDelta(int128,int128) (lib/v4-core/src/types/BalanceDelta.sol#14-18) is never used and should be removed
+toBeforeSwapDelta(int128,int128) (lib/v4-core/src/types/BeforeSwapDelta.sol#9-16) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+
+Detector: solc-version
+Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/access/Ownable.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/access/Ownable2Step.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Address.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/utils/Context.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol#4)
+	- ^0.8.20 (lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#5)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (lib/permit2/src/interfaces/IAllowanceTransfer.sol#2)
+	- ^0.8.0 (lib/permit2/src/interfaces/IEIP712.sol#2)
+	- ^0.8.0 (lib/v4-core/src/interfaces/IExtsload.sol#2)
+	- ^0.8.0 (lib/v4-core/src/interfaces/IHooks.sol#2)
+	- ^0.8.0 (lib/v4-core/src/interfaces/IProtocolFees.sol#2)
+	- ^0.8.0 (lib/v4-core/src/interfaces/external/IERC20Minimal.sol#2)
+	- ^0.8.0 (lib/v4-core/src/interfaces/external/IERC6909Claims.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/BitMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/CustomRevert.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/FixedPoint128.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/FixedPoint96.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/FullMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/LiquidityMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/Position.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/SafeCast.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/SqrtPriceMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/StateLibrary.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/TickMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/libraries/UnsafeMath.sol#2)
+	- ^0.8.0 (lib/v4-core/src/types/BalanceDelta.sol#2)
+	- ^0.8.0 (lib/v4-core/src/types/BeforeSwapDelta.sol#2)
+	- ^0.8.0 (lib/v4-core/src/types/Currency.sol#2)
+	- ^0.8.0 (lib/v4-core/src/types/PoolId.sol#2)
+	- ^0.8.0 (lib/v4-core/src/types/PoolKey.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IEIP712_v4.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IERC721Permit_v4.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IImmutableState.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IMulticall_v4.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/INotifier.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IPermit2Forwarder.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IPoolInitializer_v4.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IPositionManager.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IStateView.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/ISubscriber.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/interfaces/IUnorderedNonce.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/libraries/Actions.sol#2)
+	- ^0.8.0 (lib/v4-periphery/src/libraries/LiquidityAmounts.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+
+Detector: low-level-calls
+Low level call in SafeERC20._callOptionalReturnBool(IERC20,bytes) (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#110-117):
+	- (success,returndata) = address(token).call(data) (lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol#115)
+Low level call in Address.sendValue(address,uint256) (lib/openzeppelin-contracts/contracts/utils/Address.sol#41-50):
+	- (success,None) = recipient.call{value: amount}() (lib/openzeppelin-contracts/contracts/utils/Address.sol#46)
+Low level call in Address.functionCallWithValue(address,bytes,uint256) (lib/openzeppelin-contracts/contracts/utils/Address.sol#83-89):
+	- (success,returndata) = target.call{value: value}(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#87)
+Low level call in Address.functionStaticCall(address,bytes) (lib/openzeppelin-contracts/contracts/utils/Address.sol#95-98):
+	- (success,returndata) = target.staticcall(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#96)
+Low level call in Address.functionDelegateCall(address,bytes) (lib/openzeppelin-contracts/contracts/utils/Address.sol#104-107):
+	- (success,returndata) = target.delegatecall(data) (lib/openzeppelin-contracts/contracts/utils/Address.sol#105)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+
+Detector: naming-convention
+Function IERC20Permit.DOMAIN_SEPARATOR() (lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol#89) is not in mixedCase
+Function IEIP712.DOMAIN_SEPARATOR() (lib/permit2/src/interfaces/IEIP712.sol#5) is not in mixedCase
+Contract IEIP712_v4 (lib/v4-periphery/src/interfaces/IEIP712_v4.sol#6-10) is not in CapWords
+Function IEIP712_v4.DOMAIN_SEPARATOR() (lib/v4-periphery/src/interfaces/IEIP712_v4.sol#9) is not in mixedCase
+Contract IERC721Permit_v4 (lib/v4-periphery/src/interfaces/IERC721Permit_v4.sol#6-38) is not in CapWords
+Contract IMulticall_v4 (lib/v4-periphery/src/interfaces/IMulticall_v4.sol#6-13) is not in CapWords
+Contract IPoolInitializer_v4 (lib/v4-periphery/src/interfaces/IPoolInitializer_v4.sol#8-15) is not in CapWords
+Parameter PositionInfoLibrary.initialize(PoolKey,int24,int24)._poolKey (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#91) is not in mixedCase
+Parameter PositionInfoLibrary.initialize(PoolKey,int24,int24)._tickLower (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#91) is not in mixedCase
+Parameter PositionInfoLibrary.initialize(PoolKey,int24,int24)._tickUpper (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#91) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+
+Detector: too-many-digits
+BitMath.mostSignificantBit(uint256) (lib/v4-core/src/libraries/BitMath.sol#12-25) uses literals with too many digits:
+	- r = r | byte(uint256,uint256)(0x1f & 0x8421084210842108cc6318c6db6d54be >> x >> r,0x0706060506020500060203020504000106050205030304010505030400000000) (lib/v4-core/src/libraries/BitMath.sol#22-23)
+CustomRevert.bubbleUpAndRevertWith(address,bytes4,bytes4) (lib/v4-core/src/libraries/CustomRevert.sol#83-119) uses literals with too many digits:
+	- mstore(uint256,uint256)(fmp_bubbleUpAndRevertWith_asm_0 + 0x24,revertingFunctionSelector & 0xffffffff00000000000000000000000000000000000000000000000000000000) (lib/v4-core/src/libraries/CustomRevert.sol#98-101)
+CustomRevert.bubbleUpAndRevertWith(address,bytes4,bytes4) (lib/v4-core/src/libraries/CustomRevert.sol#83-119) uses literals with too many digits:
+	- mstore(uint256,uint256)(fmp_bubbleUpAndRevertWith_asm_0 + 0xc4 + encodedDataSize_bubbleUpAndRevertWith_asm_0,additionalContext & 0xffffffff00000000000000000000000000000000000000000000000000000000) (lib/v4-core/src/libraries/CustomRevert.sol#113-116)
+FixedPoint128.slitherConstructorConstantVariables() (lib/v4-core/src/libraries/FixedPoint128.sol#6-8) uses literals with too many digits:
+	- Q128 = 0x100000000000000000000000000000000 (lib/v4-core/src/libraries/FixedPoint128.sol#7)
+FixedPoint96.slitherConstructorConstantVariables() (lib/v4-core/src/libraries/FixedPoint96.sol#7-10) uses literals with too many digits:
+	- Q96 = 0x1000000000000000000000000 (lib/v4-core/src/libraries/FixedPoint96.sol#9)
+CurrencyLibrary.transfer(Currency,address,uint256) (lib/v4-core/src/types/Currency.sol#40-88) uses literals with too many digits:
+	- mstore(uint256,uint256)(fmp_transfer_asm_1,0xa9059cbb00000000000000000000000000000000000000000000000000000000) (lib/v4-core/src/types/Currency.sol#60)
+PositionInfoLibrary.slitherConstructorConstantVariables() (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#35-104) uses literals with too many digits:
+	- MASK_UPPER_200_BITS = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000 (lib/v4-periphery/src/libraries/PositionInfoLibrary.sol#38)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#too-many-digits
+src/ValariRouterV3.sol analyzed (52 contracts with 102 detectors), 121 result(s) found
+'forge config --json' running
+'forge build --build-info --deny never src/ValariRouterV3.sol' running (wd: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts)

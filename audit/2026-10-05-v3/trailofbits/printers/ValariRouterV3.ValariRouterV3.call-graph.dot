@@ -1,0 +1,232 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_233_Ownable2Step {
+label = "Ownable2Step"
+"233_acceptOwnership()" [label="acceptOwnership()"]
+"233_transferOwnership(address)" [label="transferOwnership(address)"]
+"233_pendingOwner()" [label="pendingOwner()"]
+"233__transferOwnership(address)" [label="_transferOwnership(address)"]
+"233_transferOwnership(address)" -> "233_owner()"
+"233_acceptOwnership()" -> "233__transferOwnership(address)"
+"233_acceptOwnership()" -> "233_pendingOwner()"
+"233__transferOwnership(address)" -> "233__transferOwnership(address)"
+"233_acceptOwnership()" -> "233__msgSender()"
+"233_transferOwnership(address)" -> "233_onlyOwner()"
+}subgraph cluster_11660_ValariRouterV3 {
+label = "ValariRouterV3"
+"11660__split(uint256,uint256)" [label="_split(uint256,uint256)"]
+"11660_getDepositorPositionIds(address,uint256,uint256)" [label="getDepositorPositionIds(address,uint256,uint256)"]
+"11660__ownedPosition(uint256)" [label="_ownedPosition(uint256)"]
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" [label="exitPositionTo(uint256,address,uint128,uint128,uint256)"]
+"11660_stockPoolCount(address)" [label="stockPoolCount(address)"]
+"11660_setFeeRecipient(address)" [label="setFeeRecipient(address)"]
+"11660__positionView(uint256,address)" [label="_positionView(uint256,address)"]
+"11660__ownerOf(uint256)" [label="_ownerOf(uint256)"]
+"11660__page(bytes32[],uint256,uint256)" [label="_page(bytes32[],uint256,uint256)"]
+"11660__amounts(uint160,uint160,uint160,uint128,bool)" [label="_amounts(uint160,uint160,uint160,uint128,bool)"]
+"11660_collectFees(uint256,uint256)" [label="collectFees(uint256,uint256)"]
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" [label="_distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"]
+"11660__refund(IERC20,uint256,uint128)" [label="_refund(IERC20,uint256,uint128)"]
+"11660_positionCount()" [label="positionCount()"]
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" [label="_exitPosition(uint256,address,uint128,uint128,uint256)"]
+"11660_getPosition(uint256)" [label="getPosition(uint256)"]
+"11660__pull(IERC20,uint128)" [label="_pull(IERC20,uint128)"]
+"11660_setDepositsDisabled(bytes32,bool)" [label="setDepositsDisabled(bytes32,bool)"]
+"11660_depositCount(address)" [label="depositCount(address)"]
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" [label="openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)"]
+"11660_getStockPoolIds(address,uint256,uint256)" [label="getStockPoolIds(address,uint256,uint256)"]
+"11660_ejectPosition(uint256,address)" [label="ejectPosition(uint256,address)"]
+"11660_getPoolKey(bytes32)" [label="getPoolKey(bytes32)"]
+"11660_withdrawCommission(address,address,uint256)" [label="withdrawCommission(address,address,uint256)"]
+"11660_getUserPositions(address,uint256,uint256)" [label="getUserPositions(address,uint256,uint256)"]
+"11660_exitPosition(uint256,uint128,uint128,uint256)" [label="exitPosition(uint256,uint128,uint128,uint256)"]
+"11660_collectFeesTo(uint256,address,uint256)" [label="collectFeesTo(uint256,address,uint256)"]
+"11660__collectFees(uint256,address,uint256)" [label="_collectFees(uint256,address,uint256)"]
+"11660__accrueCommission(address,address,uint256)" [label="_accrueCommission(address,address,uint256)"]
+"11660_setEjectEnabled(bytes32,bool)" [label="setEjectEnabled(bytes32,bool)"]
+"11660__approve(IERC20,uint128)" [label="_approve(IERC20,uint128)"]
+"11660_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+"11660_poolCount()" [label="poolCount()"]
+"11660__checkRetained(IERC20,uint256)" [label="_checkRetained(IERC20,uint256)"]
+"11660__addPool(PoolKey,IStateView,address)" [label="_addPool(PoolKey,IStateView,address)"]
+"11660__commission(uint256,uint16)" [label="_commission(uint256,uint16)"]
+"11660__pageEnd(uint256,uint256,uint256)" [label="_pageEnd(uint256,uint256,uint256)"]
+"11660_addPool(PoolKey)" [label="addPool(PoolKey)"]
+"11660__checkRecipient(address)" [label="_checkRecipient(address)"]
+"11660_getPoolIds(uint256,uint256)" [label="getPoolIds(uint256,uint256)"]
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" [label="previewDeposit(bytes32,uint128,uint128,int24,int24)"]
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" [label="constructor(IPositionManager,IStateView,address,PoolKey[])"]
+"11660_collectFeesTo(uint256,address,uint256)" -> "11660__collectFees(uint256,address,uint256)"
+"11660_collectFeesTo(uint256,address,uint256)" -> "11660_nonReentrant()"
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" -> "11660_nonReentrant()"
+"11660_getPosition(uint256)" -> "11660__positionView(uint256,address)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__commission(uint256,uint16)"
+"11660_addPool(PoolKey)" -> "11660__addPool(PoolKey,IStateView,address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__refund(IERC20,uint256,uint128)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_previewDeposit(bytes32,uint128,uint128,int24,int24)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_withdrawCommission(address,address,uint256)" -> "11660_nonReentrant()"
+"11660_getPoolIds(uint256,uint256)" -> "11660__page(bytes32[],uint256,uint256)"
+"11660__ownedPosition(uint256)" -> "11660__ownerOf(uint256)"
+"11660_collectFees(uint256,uint256)" -> "11660_nonReentrant()"
+"11660__positionView(uint256,address)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_getPoolKey(bytes32)"
+"11660_withdrawCommission(address,address,uint256)" -> "11660__checkRetained(IERC20,uint256)"
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_getPoolKey(bytes32)"
+"11660_ejectPosition(uint256,address)" -> "11660__checkRecipient(address)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__ownerOf(uint256)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__split(uint256,uint256)"
+"11660_exitPositionTo(uint256,address,uint128,uint128,uint256)" -> "11660__exitPosition(uint256,address,uint128,uint128,uint256)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__ownerOf(uint256)"
+"11660_ejectPosition(uint256,address)" -> "11660_nonReentrant()"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_onlyOwner()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__approve(IERC20,uint128)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "11660__amounts(uint160,uint160,uint160,uint128,bool)"
+"11660_exitPosition(uint256,uint128,uint128,uint256)" -> "11660_nonReentrant()"
+"11660_setEjectEnabled(bytes32,bool)" -> "11660_nonReentrant()"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__positionView(uint256,address)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"
+"11660_getStockPoolIds(address,uint256,uint256)" -> "11660__page(bytes32[],uint256,uint256)"
+"11660_collectFees(uint256,uint256)" -> "11660__collectFees(uint256,address,uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "11660__addPool(PoolKey,IStateView,address)"
+"11660_exitPosition(uint256,uint128,uint128,uint256)" -> "11660__exitPosition(uint256,address,uint128,uint128,uint256)"
+"11660_addPool(PoolKey)" -> "11660_nonReentrant()"
+"11660_ejectPosition(uint256,address)" -> "11660__ownedPosition(uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__checkRecipient(address)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__checkRecipient(address)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "11660_getPoolKey(bytes32)"
+"11660_ejectPosition(uint256,address)" -> "11660__ownerOf(uint256)"
+"11660_getPosition(uint256)" -> "11660__ownerOf(uint256)"
+"11660__collectFees(uint256,address,uint256)" -> "11660__ownedPosition(uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660__pull(IERC20,uint128)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "11660__ownedPosition(uint256)"
+"11660__page(bytes32[],uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_setFeeRecipient(address)" -> "11660_onlyOwner()"
+"11660_getDepositorPositionIds(address,uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_setFeeRecipient(address)" -> "11660_nonReentrant()"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__pageEnd(uint256,uint256,uint256)"
+"11660_getUserPositions(address,uint256,uint256)" -> "11660__ownerOf(uint256)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "11660_constructor(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_nonReentrant()"
+"11660__positionView(uint256,address)" -> "11660__commission(uint256,uint16)"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__accrueCommission(address,address,uint256)"
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_onlyOwner()"
+"11660__collectFees(uint256,address,uint256)" -> "11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)"
+"11660_setDepositsDisabled(bytes32,bool)" -> "11660_nonReentrant()"
+"11660_addPool(PoolKey)" -> "11660_onlyOwner()"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "11660__checkRetained(IERC20,uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "11660_getPoolKey(bytes32)"
+}subgraph cluster_1037_Context {
+label = "Context"
+"1037__msgSender()" [label="_msgSender()"]
+"1037__msgData()" [label="_msgData()"]
+"1037__contextSuffixLength()" [label="_contextSuffixLength()"]
+}subgraph cluster_1106_ReentrancyGuard {
+label = "ReentrancyGuard"
+"1106__reentrancyGuardEntered()" [label="_reentrancyGuardEntered()"]
+"1106_constructor()" [label="constructor()"]
+"1106__nonReentrantBefore()" [label="_nonReentrantBefore()"]
+"1106__nonReentrantAfter()" [label="_nonReentrantAfter()"]
+}subgraph cluster_147_Ownable {
+label = "Ownable"
+"147_transferOwnership(address)" [label="transferOwnership(address)"]
+"147_constructor(address)" [label="constructor(address)"]
+"147_renounceOwnership()" [label="renounceOwnership()"]
+"147__transferOwnership(address)" [label="_transferOwnership(address)"]
+"147_owner()" [label="owner()"]
+"147__checkOwner()" [label="_checkOwner()"]
+"147_constructor(address)" -> "147__transferOwnership(address)"
+"147__checkOwner()" -> "147_owner()"
+"147_transferOwnership(address)" -> "147_onlyOwner()"
+"147_transferOwnership(address)" -> "147__transferOwnership(address)"
+"147_renounceOwnership()" -> "147__transferOwnership(address)"
+"147_renounceOwnership()" -> "147_onlyOwner()"
+"147__checkOwner()" -> "147__msgSender()"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"revert LiquidityBelowMinimum(uint128,uint128)" 
+"revert InvalidRange()" 
+"revert InvalidFeeRecipient()" 
+"revert DeadlineExpired()" 
+"revert InsufficientCommission()" 
+"revert UnsupportedToken(address)" 
+"revert InvalidConfiguration()" 
+"revert InvalidPool(bytes32)" 
+"revert ReentrancyGuardReentrantCall()" 
+"revert InsufficientProceeds()" 
+"revert PositionClosed()" 
+"revert OwnableInvalidOwner(address)" 
+"abi.encode()" 
+"revert DuplicatePool(bytes32)" 
+"revert DepositsDisabled(bytes32)" 
+"revert InvalidPriceBounds()" 
+"revert EjectDisabled(bytes32)" 
+"revert UnexpectedPosition()" 
+"revert InvalidCommissionWithdrawal()" 
+"revert PriceOutOfBounds(uint160,uint160,uint160)" 
+"abi.encodePacked()" 
+"mulmod(uint256,uint256,uint256)" 
+"code(address)" 
+"revert UnknownPosition(uint256)" 
+"revert InvalidLiquidity()" 
+"revert NotPositionOwner()" 
+"revert OwnableUnauthorizedAccount(address)" 
+"revert InvalidRecipient()" 
+"revert InvalidPageSize()" 
+"revert InvalidOwner()" 
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "revert InvalidLiquidity()"
+"11660__split(uint256,uint256)" -> "revert InsufficientProceeds()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert InvalidLiquidity()"
+"11660__collectFees(uint256,address,uint256)" -> "revert UnexpectedPosition()"
+"11660__collectFees(uint256,address,uint256)" -> "revert DeadlineExpired()"
+"11660__commission(uint256,uint16)" -> "mulmod(uint256,uint256,uint256)"
+"1106__nonReentrantBefore()" -> "revert ReentrancyGuardReentrantCall()"
+"147__checkOwner()" -> "revert OwnableUnauthorizedAccount(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert InvalidPriceBounds()"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InvalidCommissionWithdrawal()"
+"11660_ejectPosition(uint256,address)" -> "revert UnexpectedPosition()"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert DeadlineExpired()"
+"11660__checkRecipient(address)" -> "revert InvalidRecipient()"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "revert InvalidConfiguration()"
+"11660__addPool(PoolKey,IStateView,address)" -> "revert InvalidPool(bytes32)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "abi.encode()"
+"11660_getPosition(uint256)" -> "revert UnknownPosition(uint256)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert LiquidityBelowMinimum(uint128,uint128)"
+"147_constructor(address)" -> "revert OwnableInvalidOwner(address)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "abi.encodePacked()"
+"233_acceptOwnership()" -> "revert OwnableUnauthorizedAccount(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert PriceOutOfBounds(uint160,uint160,uint160)"
+"11660_previewDeposit(bytes32,uint128,uint128,int24,int24)" -> "revert InvalidRange()"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InsufficientCommission()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "abi.encode()"
+"11660__collectFees(uint256,address,uint256)" -> "abi.encodePacked()"
+"11660__distribute(ValariRouterV3.DepositRecord,ValariRouterV3.Payout,address,IERC20,IERC20,uint256,uint256)" -> "revert InsufficientProceeds()"
+"11660_setFeeRecipient(address)" -> "revert InvalidFeeRecipient()"
+"11660__addPool(PoolKey,IStateView,address)" -> "code(address)"
+"11660__collectFees(uint256,address,uint256)" -> "abi.encode()"
+"11660__pull(IERC20,uint128)" -> "revert UnsupportedToken(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert DepositsDisabled(bytes32)"
+"11660_getPoolKey(bytes32)" -> "revert InvalidPool(bytes32)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert InsufficientProceeds()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert UnexpectedPosition()"
+"11660__ownedPosition(uint256)" -> "revert PositionClosed()"
+"147_transferOwnership(address)" -> "revert OwnableInvalidOwner(address)"
+"11660__ownedPosition(uint256)" -> "revert UnknownPosition(uint256)"
+"11660_withdrawCommission(address,address,uint256)" -> "revert InsufficientProceeds()"
+"11660_getUserPositions(address,uint256,uint256)" -> "revert InvalidOwner()"
+"11660__pageEnd(uint256,uint256,uint256)" -> "revert InvalidPageSize()"
+"11660__ownedPosition(uint256)" -> "revert UnexpectedPosition()"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "abi.encodePacked()"
+"11660__addPool(PoolKey,IStateView,address)" -> "revert DuplicatePool(bytes32)"
+"11660_constructor(IPositionManager,IStateView,address,PoolKey[])" -> "code(address)"
+"11660__checkRetained(IERC20,uint256)" -> "revert UnsupportedToken(address)"
+"11660_openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256)" -> "revert DeadlineExpired()"
+"11660__refund(IERC20,uint256,uint128)" -> "revert UnsupportedToken(address)"
+"11660__exitPosition(uint256,address,uint128,uint128,uint256)" -> "revert UnexpectedPosition()"
+"11660_ejectPosition(uint256,address)" -> "revert EjectDisabled(bytes32)"
+"11660__ownedPosition(uint256)" -> "revert NotPositionOwner()"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

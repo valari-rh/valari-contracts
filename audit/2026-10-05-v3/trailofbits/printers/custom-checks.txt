@@ -1,0 +1,23 @@
+ENTRY POINT | modifiers | state written (transitive) | reads msg.sender (transitive) | external call targets
+ValariRouterV3.addPool(PoolKey) L255 | ['nonReentrant', 'onlyOwner'] | ['_poolIds', '_pools', '_status', '_stockPoolIds'] | True | ['PoolIdLibrary', 'stateView_']
+ValariRouterV3.setDepositsDisabled(bytes32,bool) L262 | ['nonReentrant', 'onlyOwner'] | ['_status', 'depositsDisabled'] | True | []
+ValariRouterV3.setEjectEnabled(bytes32,bool) L272 | ['nonReentrant', 'onlyOwner'] | ['_status', 'ejectEnabled'] | True | []
+ValariRouterV3.openPosition(bytes32,uint128,uint128,int24,int24,uint128,uint160,uint160,uint256) L292 | ['nonReentrant'] | ['_depositorPositionIds', '_deposits', '_positionIds', '_status'] | True | ['Address', 'CustomRevert', 'FullMath', 'LiquidityAmounts', 'SafeCast', 'SafeERC20', 'SqrtPriceMath', 'TMP_1241', 'TickMath', 'UnsafeMath', 'permit2', 'positionManager', 'stateView', 'token']
+ValariRouterV3.setFeeRecipient(address) L384 | ['nonReentrant', 'onlyOwner'] | ['_status', 'feeRecipient'] | True | []
+ValariRouterV3.withdrawCommission(address,address,uint256) L396 | ['nonReentrant'] | ['_status', 'claimableCommission', 'totalClaimableCommission'] | True | ['Address', 'SafeERC20', 'currency', 'token']
+ValariRouterV3.collectFees(uint256,uint256) L417 | ['nonReentrant'] | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission'] | True | ['Address', 'FullMath', 'SafeCast', 'SafeERC20', 'TMP_1591', 'positionManager', 'token', 'token0', 'token1']
+ValariRouterV3.collectFeesTo(uint256,address,uint256) L427 | ['nonReentrant'] | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission'] | True | ['Address', 'FullMath', 'SafeCast', 'SafeERC20', 'TMP_1591', 'positionManager', 'token', 'token0', 'token1']
+ValariRouterV3.exitPosition(uint256,uint128,uint128,uint256) L438 | ['nonReentrant'] | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission'] | True | ['Address', 'CustomRevert', 'FullMath', 'SafeCast', 'SafeERC20', 'SqrtPriceMath', 'TMP_1591', 'TickMath', 'UnsafeMath', 'positionManager', 'stateView', 'token', 'token0', 'token1']
+ValariRouterV3.exitPositionTo(uint256,address,uint128,uint128,uint256) L448 | ['nonReentrant'] | ['_deposits', '_status', 'claimableCommission', 'totalClaimableCommission'] | True | ['Address', 'CustomRevert', 'FullMath', 'SafeCast', 'SafeERC20', 'SqrtPriceMath', 'TMP_1591', 'TickMath', 'UnsafeMath', 'positionManager', 'stateView', 'token', 'token0', 'token1']
+ValariRouterV3.ejectPosition(uint256,address) L462 | ['nonReentrant'] | ['_deposits', '_status'] | True | ['TMP_1315', 'TMP_1591']
+Ownable2Step.transferOwnership(address) L35 | ['onlyOwner'] | ['_pendingOwner'] | True | []
+Ownable2Step.acceptOwnership() L52 | [] | ['_owner', '_pendingOwner'] | True | []
+Ownable.renounceOwnership() L76 | ['onlyOwner'] | ['_owner', '_pendingOwner'] | True | []
+direct writers of _pools: ['_addPool']
+direct writers of _poolIds: ['_addPool']
+direct writers of _stockPoolIds: ['_addPool']
+readers of depositsDisabled: ['openPosition']
+readers of ejectEnabled: ['ejectPosition']
+ejectPosition writes ['_deposits', '_status'], calls ['IERC721.ownerOf', 'IERC721.transferFrom']
+
+RESULT: all custom checks hold

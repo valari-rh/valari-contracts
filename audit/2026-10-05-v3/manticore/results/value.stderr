@@ -1,0 +1,2 @@
+/home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/manticore/run.py:116: ManticoreDeprecationWarning: `ManticoreBase.verbosity` is deprecated. Use utils.log.set_verbosity instead.
+  m.verbosity(0)

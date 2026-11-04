@@ -1,0 +1,40 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.all_contracts.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IERC20.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IERC20Permit.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.SafeERC20.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IERC721.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.Address.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.SafeCast.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IAllowanceTransfer.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IHooks.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IPoolManager.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IERC20Minimal.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.BitMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.CustomRevert.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.FixedPoint128.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.FixedPoint96.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.FullMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.LiquidityMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.Position.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.SafeCast.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.SqrtPriceMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.StateLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.TickMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.UnsafeMath.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.BalanceDeltaLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.BeforeSwapDeltaLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.CurrencyLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.PoolIdLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IPositionManager.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IStateView.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.ISubscriber.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.Actions.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.LiquidityAmounts.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.PositionInfoLibrary.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.IPermit2Source.call-graph.dot
+Call Graph: /home/redkidd/SoloTime/HedgeyFund/valari/valari-contracts/audit/2026-10-05-v3/trailofbits/printers/ValariRouterV3.ValariRouterV3.call-graph.dot
+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

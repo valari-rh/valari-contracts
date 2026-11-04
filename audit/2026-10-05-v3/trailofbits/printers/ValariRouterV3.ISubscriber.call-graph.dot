@@ -1,0 +1,15 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_7456_ISubscriber {
+label = "ISubscriber"
+"7456_notifyModifyLiquidity(uint256,int256,BalanceDelta)" [label="notifyModifyLiquidity(uint256,int256,BalanceDelta)"]
+"7456_notifySubscribe(uint256,bytes)" [label="notifySubscribe(uint256,bytes)"]
+"7456_notifyBurn(uint256,address,PositionInfo,uint256,BalanceDelta)" [label="notifyBurn(uint256,address,PositionInfo,uint256,BalanceDelta)"]
+"7456_notifyUnsubscribe(uint256)" [label="notifyUnsubscribe(uint256)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

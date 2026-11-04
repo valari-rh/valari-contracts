@@ -1,0 +1,113 @@
+--ignore-compile used, if something goes wrong, consider removing the ignore compile flag
+'forge config --json' running
+SLITHER LIBRARY-SCOPE FIX: SafeCast -> lib/openzeppelin-contracts/contracts/utils/math/SafeCast.sol#19-1153; solc referencedDeclaration=2873; upstream selected lib/v4-core/src/libraries/SafeCast.sol#8-60
+INFO:Printers:Inheritance
+Child_Contract -> Immediate_Base_Contracts [Not_Immediate_Base_Contracts]
++ Ownable -> Context
++ Ownable2Step -> Ownable, [Context]
++ IERC20
++ IERC20Permit
++ SafeERC20
++ IERC721 -> IERC165
++ Address
++ Context
++ ReentrancyGuard
++ IERC165
++ SafeCast
++ IAllowanceTransfer -> IEIP712
++ IEIP712
++ IExtsload
++ IExttload
++ IHooks
++ IPoolManager -> IProtocolFees, IERC6909Claims, IExtsload, IExttload
++ IProtocolFees
++ IERC20Minimal
++ IERC6909Claims
++ BitMath
++ CustomRevert
++ FixedPoint128
++ FixedPoint96
++ FullMath
++ LiquidityMath
++ Position
++ SafeCast
++ SqrtPriceMath
++ StateLibrary
++ TickMath
++ UnsafeMath
++ BalanceDeltaLibrary
++ BeforeSwapDeltaLibrary
++ CurrencyLibrary
++ PoolIdLibrary
++ IEIP712_v4
++ IERC721Permit_v4
++ IImmutableState
++ IMulticall_v4
++ INotifier
++ IPermit2Forwarder
++ IPoolInitializer_v4
++ IPositionManager -> INotifier, IImmutableState, IERC721Permit_v4, IEIP712_v4, IMulticall_v4, IPoolInitializer_v4, IUnorderedNonce, IPermit2Forwarder
++ IStateView -> IImmutableState
++ ISubscriber
++ IUnorderedNonce
++ Actions
++ LiquidityAmounts
++ PositionInfoLibrary
++ IPermit2Source
++ ValariRouterV3 -> ReentrancyGuard, Ownable2Step, [Ownable, Context]
+
+Base_Contract -> Immediate_Child_Contracts [Not_Immediate_Child_Contracts]
++ Ownable -> Ownable2Step, [ValariRouterV3]
++ Ownable2Step -> ValariRouterV3
++ IERC20
++ IERC20Permit
++ SafeERC20
++ IERC721
++ Address
++ Context -> Ownable, [Ownable2Step, ValariRouterV3]
++ ReentrancyGuard -> ValariRouterV3
++ IERC165 -> IERC721
++ SafeCast
++ IAllowanceTransfer
++ IEIP712 -> IAllowanceTransfer
++ IExtsload -> IPoolManager
++ IExttload -> IPoolManager
++ IHooks
++ IPoolManager
++ IProtocolFees -> IPoolManager
++ IERC20Minimal
++ IERC6909Claims -> IPoolManager
++ BitMath
++ CustomRevert
++ FixedPoint128
++ FixedPoint96
++ FullMath
++ LiquidityMath
++ Position
++ SafeCast
++ SqrtPriceMath
++ StateLibrary
++ TickMath
++ UnsafeMath
++ BalanceDeltaLibrary
++ BeforeSwapDeltaLibrary
++ CurrencyLibrary
++ PoolIdLibrary
++ IEIP712_v4 -> IPositionManager
++ IERC721Permit_v4 -> IPositionManager
++ IImmutableState -> IPositionManager, IStateView
++ IMulticall_v4 -> IPositionManager
++ INotifier -> IPositionManager
++ IPermit2Forwarder -> IPositionManager
++ IPoolInitializer_v4 -> IPositionManager
++ IPositionManager
++ IStateView
++ ISubscriber
++ IUnorderedNonce -> IPositionManager
++ Actions
++ LiquidityAmounts
++ PositionInfoLibrary
++ IPermit2Source
++ ValariRouterV3
+
+INFO:Slither:src/ValariRouterV3.sol analyzed (52 contracts)

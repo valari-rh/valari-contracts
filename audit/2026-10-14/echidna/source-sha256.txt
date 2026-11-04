@@ -1,0 +1,2 @@
+66c3b1b111e2e1706dfa65f74bdcef01a0f7dcff763cf23e102eb6ccfcecf573  src/ValariRouterV3.sol
+1fea03f24d45a59bbc3f6f6114f07fe0e5a6a510140d081decd962553ab96217  audit/2026-10-14/echidna/harness/RouterEchidnaV3.sol

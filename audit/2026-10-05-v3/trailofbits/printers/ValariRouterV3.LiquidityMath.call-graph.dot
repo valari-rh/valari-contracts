@@ -1,0 +1,18 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_4236_LiquidityMath {
+label = "LiquidityMath"
+"4236_addDelta(uint128,int128)" [label="addDelta(uint128,int128)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"signextend(uint256,uint256)" 
+"revert(uint256,uint256)" 
+"mstore(uint256,uint256)" 
+"4236_addDelta(uint128,int128)" -> "revert(uint256,uint256)"
+"4236_addDelta(uint128,int128)" -> "mstore(uint256,uint256)"
+"4236_addDelta(uint128,int128)" -> "signextend(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

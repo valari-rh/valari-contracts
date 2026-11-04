@@ -1,0 +1,1 @@
+Strict compatibility-run exit code: 0

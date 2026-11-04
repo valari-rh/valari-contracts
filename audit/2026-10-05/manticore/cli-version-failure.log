@@ -1,0 +1,28 @@
+/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/__main__.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Traceback (most recent call last):
+  File "/tmp/valari-manticore.L3Hm1e/venv310/bin/manticore", line 4, in <module>
+    from manticore.__main__ import main
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/__main__.py", line 13, in <module>
+    from .wasm.cli import wasm_main
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/wasm/__init__.py", line 1, in <module>
+    from .manticore import ManticoreWASM
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/wasm/manticore.py", line 9, in <module>
+    from .types import I32, I64, F32, F64
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/wasm/types.py", line 5, in <module>
+    import wasm
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/__init__.py", line 5, in <module>
+    from .decode import (
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/decode.py", line 5, in <module>
+    from .modtypes import ModuleHeader, Section, SEC_UNK, SEC_NAME, NameSubSection
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/modtypes.py", line 4, in <module>
+    from .wasmtypes import *
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/wasmtypes.py", line 4, in <module>
+    from .types import UIntNField, UnsignedLeb128Field, SignedLeb128Field
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/types.py", line 296, in <module>
+    class Structure(WasmField):
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/compat.py", line 26, in wrapper
+    return metaclass(cls.__name__, cls.__bases__, orig_vars)
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/wasm/types.py", line 264, in __new__
+    isinstance(cur_field, collections.Callable) or
+AttributeError: module 'collections' has no attribute 'Callable'

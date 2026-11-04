@@ -1,0 +1,49 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_3148_IExttload {
+label = "IExttload"
+"3148_exttload(bytes32[])" [label="exttload(bytes32[])"]
+"3148_exttload(bytes32)" [label="exttload(bytes32)"]
+}subgraph cluster_3630_IPoolManager {
+label = "IPoolManager"
+"3630_sync(Currency)" [label="sync(Currency)"]
+"3630_unlock(bytes)" [label="unlock(bytes)"]
+"3630_settle()" [label="settle()"]
+"3630_mint(address,uint256,uint256)" [label="mint(address,uint256,uint256)"]
+"3630_modifyLiquidity(PoolKey,ModifyLiquidityParams,bytes)" [label="modifyLiquidity(PoolKey,ModifyLiquidityParams,bytes)"]
+"3630_take(Currency,address,uint256)" [label="take(Currency,address,uint256)"]
+"3630_updateDynamicLPFee(PoolKey,uint24)" [label="updateDynamicLPFee(PoolKey,uint24)"]
+"3630_initialize(PoolKey,uint160)" [label="initialize(PoolKey,uint160)"]
+"3630_settleFor(address)" [label="settleFor(address)"]
+"3630_clear(Currency,uint256)" [label="clear(Currency,uint256)"]
+"3630_donate(PoolKey,uint256,uint256,bytes)" [label="donate(PoolKey,uint256,uint256,bytes)"]
+"3630_swap(PoolKey,SwapParams,bytes)" [label="swap(PoolKey,SwapParams,bytes)"]
+"3630_burn(address,uint256,uint256)" [label="burn(address,uint256,uint256)"]
+}subgraph cluster_3893_IERC6909Claims {
+label = "IERC6909Claims"
+"3893_approve(address,uint256,uint256)" [label="approve(address,uint256,uint256)"]
+"3893_transfer(address,uint256,uint256)" [label="transfer(address,uint256,uint256)"]
+"3893_setOperator(address,bool)" [label="setOperator(address,bool)"]
+"3893_isOperator(address,address)" [label="isOperator(address,address)"]
+"3893_balanceOf(address,uint256)" [label="balanceOf(address,uint256)"]
+"3893_transferFrom(address,address,uint256,uint256)" [label="transferFrom(address,address,uint256,uint256)"]
+"3893_allowance(address,address,uint256)" [label="allowance(address,address,uint256)"]
+}subgraph cluster_3126_IExtsload {
+label = "IExtsload"
+"3126_extsload(bytes32)" [label="extsload(bytes32)"]
+"3126_extsload(bytes32,uint256)" [label="extsload(bytes32,uint256)"]
+"3126_extsload(bytes32[])" [label="extsload(bytes32[])"]
+}subgraph cluster_3707_IProtocolFees {
+label = "IProtocolFees"
+"3707_protocolFeesAccrued(Currency)" [label="protocolFeesAccrued(Currency)"]
+"3707_collectProtocolFees(address,Currency,uint256)" [label="collectProtocolFees(address,Currency,uint256)"]
+"3707_setProtocolFee(PoolKey,uint24)" [label="setProtocolFee(PoolKey,uint24)"]
+"3707_protocolFeeController()" [label="protocolFeeController()"]
+"3707_setProtocolFeeController(address)" [label="setProtocolFeeController(address)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

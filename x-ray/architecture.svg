@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1428" height="645" viewBox="0 0 571 258" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 8 6" refX="8" refY="3"
+      markerWidth="4" markerHeight="3" orient="auto">
+      <path d="M0.5,0.5 L7,3 L0.5,5.5" fill="none" stroke="#94A3B8"
+        stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/>
+    </marker>
+    <filter id="shadow" x="-6%" y="-8%" width="112%" height="128%">
+      <feDropShadow dx="0" dy="0.5" stdDeviation="0.8"
+        flood-color="#000" flood-opacity="0.05"/>
+    </filter>
+  </defs>
+  <rect width="571" height="258" fill="#F8F9FB" rx="3"/>
+  <text x="286" y="11" text-anchor="middle" font-size="6" font-weight="700" fill="#1E293B">ValariRouterV3 Architecture</text>
+  <rect x="211" y="16" width="150" height="10" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.4"/>
+  <rect x="216" y="18.5" width="5" height="5" rx="2.5" fill="#fff" stroke="#E2E5EA" stroke-width="0.4"/>
+  <text x="224" y="22.5" font-size="3.5" fill="#1E293B">Actor</text>
+  <rect x="256" y="18.5" width="5" height="5" rx="1.5" fill="#fff" stroke="#E2E5EA" stroke-width="0.4"/>
+  <rect x="257" y="19.5" width="0.8" height="3" rx="0.4" fill="#3B82F6"/>
+  <text x="264" y="22.5" font-size="3.5" fill="#1E293B">Protocol</text>
+  <rect x="304" y="18.5" width="5" height="5" rx="1.5" fill="#fff" stroke="#E2E5EA" stroke-width="0.4"/>
+  <rect x="305" y="19.5" width="0.8" height="3" rx="0.4" fill="#F59E0B"/>
+  <text x="312" y="22.5" font-size="3.5" fill="#1E293B">External</text>
+  <rect x="20.0" y="84.0" width="270.3" height="40.0" rx="5" fill="#EDEEF2"/>
+  <text x="287.3" y="89.0" text-anchor="end" font-size="3.5" fill="#94A3B8" font-weight="500">Valari (in scope)</text>
+  <path d="M206.1,46.0 C206.1,70.0 236.7,70.0 236.7,94.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M113.7,46.0 C113.7,70.0 236.7,70.0 236.7,94.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M113.7,46.0 C113.7,70.0 74.2,70.0 74.2,94.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M302.1,46.0 C302.1,70.0 236.7,70.0 236.7,94.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M118.4,112.0 C140.8,130.0 170.7,130.0 193.1,114.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M236.7,114.0 C236.7,135.0 189.2,135.0 189.2,156.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M236.7,114.0 C236.7,135.0 502.4,135.0 502.4,156.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M236.7,114.0 C236.7,135.0 310.4,135.0 310.4,156.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M236.7,114.0 C236.7,135.0 410.0,135.0 410.0,156.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M463.6,174.0 C397.3,188.0 308.8,188.0 242.4,176.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M356.4,174.0 C388.6,192.0 431.5,192.0 463.6,176.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M310.4,176.0 C310.4,197.0 340.8,197.0 340.8,218.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <path d="M410.0,176.0 C410.0,197.0 340.8,197.0 340.8,218.0" fill="none" stroke="#94A3B8" stroke-width="0.5" marker-end="url(#ah)"/>
+  <g filter="url(#shadow)">
+    <rect x="174.5" y="32.0" width="63.2" height="14" rx="7" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <text x="206.1" y="40.8" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">Depositor</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="74.9" y="32.0" width="77.6" height="14" rx="7" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <text x="113.7" y="40.8" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">Owner</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="259.7" y="32.0" width="84.8" height="14" rx="7" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <text x="302.1" y="40.8" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">Fee Recipient</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="30.0" y="94.0" width="88.4" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="33.0" y="97.0" width="1.4" height="14" rx="0.6" fill="#3B82F6"/>
+    <text x="74.2" y="103.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">Deploy Scripts</text>
+    <text x="74.2" y="108.5" text-anchor="middle" font-size="3.5" fill="#64748B">DeployV3 / AddPools</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="193.1" y="94.0" width="87.2" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="196.1" y="97.0" width="1.4" height="14" rx="0.6" fill="#3B82F6"/>
+    <text x="236.7" y="103.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">ValariRouterV3</text>
+    <text x="236.7" y="108.5" text-anchor="middle" font-size="3.5" fill="#64748B">LP NFT custodian</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="136.0" y="156.0" width="106.4" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="139.0" y="159.0" width="1.4" height="14" rx="0.6" fill="#F59E0B"/>
+    <text x="189.2" y="165.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">USDG / Stock ERC20</text>
+    <text x="189.2" y="170.5" text-anchor="middle" font-size="3.5" fill="#64748B">Issuer proxies</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="463.6" y="156.0" width="77.6" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="466.6" y="159.0" width="1.4" height="14" rx="0.6" fill="#F59E0B"/>
+    <text x="502.4" y="165.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">Permit2</text>
+    <text x="502.4" y="170.5" text-anchor="middle" font-size="3.5" fill="#64748B">Scoped allowance</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="264.4" y="156.0" width="92.0" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="267.4" y="159.0" width="1.4" height="14" rx="0.6" fill="#F59E0B"/>
+    <text x="310.4" y="165.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">PositionManager</text>
+    <text x="310.4" y="170.5" text-anchor="middle" font-size="3.5" fill="#64748B">v4 periphery</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="378.4" y="156.0" width="63.2" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="381.4" y="159.0" width="1.4" height="14" rx="0.6" fill="#F59E0B"/>
+    <text x="410.0" y="165.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">StateView</text>
+    <text x="410.0" y="170.5" text-anchor="middle" font-size="3.5" fill="#64748B">Pool reads</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="304.4" y="218.0" width="72.8" height="20" rx="3" fill="#fff" stroke="#E2E5EA" stroke-width="0.5"/>
+    <rect x="307.4" y="221.0" width="1.4" height="14" rx="0.6" fill="#F59E0B"/>
+    <text x="340.8" y="227.5" text-anchor="middle" font-size="4.8" font-weight="600" fill="#1E293B">PoolManager</text>
+    <text x="340.8" y="232.5" text-anchor="middle" font-size="3.5" fill="#64748B">v4 core</text>
+  </g>
+  <rect x="194.2" y="65.0" width="54.4" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="221.4" y="70.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">open / collect / exit</text>
+  <rect x="144.8" y="63.0" width="44.8" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="167.2" y="68.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">addPool, switches</text>
+  <rect x="87.2" y="65.0" width="13.6" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="94.0" y="70.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">runs</text>
+  <rect x="253.8" y="63.0" width="47.2" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="277.4" y="68.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">withdrawCommission</text>
+  <rect x="133.4" y="129.0" width="44.8" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="155.8" y="134.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">deploys / appends</text>
+  <rect x="195.4" y="130.0" width="35.2" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="213.0" y="135.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">pull, pay out</text>
+  <rect x="346.0" y="130.0" width="47.2" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="369.6" y="135.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">same-block approve</text>
+  <rect x="251.2" y="130.0" width="44.8" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="273.6" y="135.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">modifyLiquidities</text>
+  <rect x="303.4" y="130.0" width="40.0" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="323.4" y="135.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">getSlot0 quotes</text>
+  <rect x="336.6" y="187.0" width="32.8" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="353.0" y="192.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">transferFrom</text>
+  <rect x="392.4" y="191.0" width="35.2" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="410.0" y="196.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">pulls funding</text>
+  <rect x="310.4" y="196.0" width="30.4" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="325.6" y="201.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">mint / burn</text>
+  <rect x="363.8" y="196.0" width="23.2" height="6.0" rx="1" fill="#F8F9FB"/>
+  <text x="375.4" y="201.0" font-size="4" fill="#1E293B" font-weight="500" text-anchor="middle">extsload</text>
+</svg>

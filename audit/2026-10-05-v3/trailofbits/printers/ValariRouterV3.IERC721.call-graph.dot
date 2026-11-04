@@ -1,0 +1,23 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_754_IERC721 {
+label = "IERC721"
+"754_safeTransferFrom(address,address,uint256,bytes)" [label="safeTransferFrom(address,address,uint256,bytes)"]
+"754_approve(address,uint256)" [label="approve(address,uint256)"]
+"754_getApproved(uint256)" [label="getApproved(uint256)"]
+"754_isApprovedForAll(address,address)" [label="isApprovedForAll(address,address)"]
+"754_balanceOf(address)" [label="balanceOf(address)"]
+"754_setApprovalForAll(address,bool)" [label="setApprovalForAll(address,bool)"]
+"754_safeTransferFrom(address,address,uint256)" [label="safeTransferFrom(address,address,uint256)"]
+"754_ownerOf(uint256)" [label="ownerOf(uint256)"]
+"754_transferFrom(address,address,uint256)" [label="transferFrom(address,address,uint256)"]
+}subgraph cluster_1118_IERC165 {
+label = "IERC165"
+"1118_supportsInterface(bytes4)" [label="supportsInterface(bytes4)"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

@@ -1,0 +1,13 @@
+{
+ "scenario": "recipient",
+ "succeeded_paths": 1,
+ "reverted_or_failed_paths": 3,
+ "killed_paths": 0,
+ "timed_out": false,
+ "succeeded_by_function": {
+  "setFeeRecipient(address)": 1
+ },
+ "violations": [],
+ "notes": {},
+ "seconds": 129.6
+}

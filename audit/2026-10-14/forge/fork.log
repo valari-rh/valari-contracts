@@ -1,0 +1,59 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/ValariRouterIntegrationAudit.t.sol:ValariRouterIntegrationAuditTest
+[PASS] testForkAuditBlockedTreasuryCannotPreventCollectionOrExit() (gas: 2284671)
+Logs:
+  Blocked recipient audit fork block: 88597367
+  Stock commission separately withdrawn: 16969556813251749
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 57.26s (9.43s CPU time)
+
+Ran 4 tests for test/ValariRouterFork.t.sol:ValariRouterForkTest
+[PASS] testForkCustodyCollectAndExitGoogleStock0() (gas: 2479927)
+Logs:
+  Robinhood fork block: 88597367
+  Minted token ID: 3804786
+  Minted liquidity: 3087558957805856
+  Exit currency0 fees: 80918172570282129
+  Exit currency0 commission: 8091817257028213
+  Exit currency1 fees: 80918172
+  Exit currency1 commission: 8091817
+
+[PASS] testForkCustodyCollectAndExitNvidiaStock1() (gas: 2479661)
+Logs:
+  Robinhood fork block: 88597367
+  Minted token ID: 3804786
+  Minted liquidity: 2481578775049826
+  Exit currency0 fees: 58050080
+  Exit currency0 commission: 5805008
+  Exit currency1 fees: 58050080093613312
+  Exit currency1 commission: 5805008009361331
+
+[PASS] testForkGoogleActualSwapFeesAndMovedPrincipal() (gas: 2427049)
+Logs:
+  Swap input currency: 0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3
+  Swap input spent: 75605357172964703970
+  Swap reached tick: -217861
+  Swap input currency: 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168
+  Swap input spent: 43157259313
+  Swap reached tick: -217740
+  Swap input currency: 0x2e0847E8910a9732eB3fb1bb4b70a580ADAD4FE3
+  Swap input spent: 185846431571110807781
+  Swap reached tick: -217921
+  Robinhood swap lifecycle fork block: 88597367
+  Trading currency0 fees collected: 6612450615745318
+  Trading currency1 fees collected: 1090888
+
+[PASS] testForkNvidiaOutOfRangeFeesAndStaleExit() (gas: 3018256)
+Logs:
+  Swap input currency: 0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168
+  Swap input spent: 73091291094
+  Swap reached tick: 222119
+  Robinhood range crossing fork block: 88597367
+  Out-of-range USDG principal: 3424872881
+  Out-of-range USDG fees: 6705684
+
+Suite result: ok. 4 passed; 0 failed; 0 skipped; finished in 60.74s (44.05s CPU time)
+
+Ran 2 test suites in 60.75s (118.00s CPU time): 5 tests passed, 0 failed, 0 skipped (5 total tests)
+fork exit 0

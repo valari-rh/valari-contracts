@@ -1,0 +1,14 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_347_IERC20Permit {
+label = "IERC20Permit"
+"347_permit(address,address,uint256,uint256,uint8,bytes32,bytes32)" [label="permit(address,address,uint256,uint256,uint8,bytes32,bytes32)"]
+"347_nonces(address)" [label="nonces(address)"]
+"347_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

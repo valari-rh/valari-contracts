@@ -1,0 +1,47 @@
+{
+  "status": "verified",
+  "chainId": 4663,
+  "network": "robinhood",
+  "rpcUrl": "https://rpc.mainnet.chain.robinhood.com",
+  "routerAddress": "0x7DD01E8Da0cE263368f06BE8c7114731cA0DB04d",
+  "deployer": "0x09D08d66dF2ebE0DB3D589Ac528Fd589E064C5A2",
+  "owner": "0x09D08d66dF2ebE0DB3D589Ac528Fd589E064C5A2",
+  "feeRecipient": "0x09D08d66dF2ebE0DB3D589Ac528Fd589E064C5A2",
+  "commissionBps": 1000,
+  "poolCount": 100,
+  "nonce": 0,
+  "transactionHash": "0xa8da7c1437e34157593ec8f3e65aa162279ae6ad354bb16a756098fdc6518ff5",
+  "estimatedGas": "14116582",
+  "gasLimit": "14822412",
+  "sourceSha256": "7195877547776d89f84b4dab60396962074898fef1d8706cb5131b4f434be4f5",
+  "configSha256": "656374d51d8f0e673ead195fd85f06714dfa7e7c716e383861384774c69df84e",
+  "abiSha256": "e9d72d362cdc85f07ed289fe287a069192b49c033b455141cf1ef3bb380cf2a7",
+  "initcodeHash": "0x295a338571b57aeb79cbeec686f04eb41bb56624190a28b909b091a80c637ce1",
+  "createdAt": "2026-09-14T22:08:27.724Z",
+  "rejectedAttempts": [
+    {
+      "transactionHash": "0x75c53c8bd0f3d7c737fd346d8d195a8edfbb95fcdf9665292518b120ac942fe3",
+      "reason": "RPC rejected fee below base fee; not mined"
+    }
+  ],
+  "type": 2,
+  "maxFeePerGasWei": "80252704",
+  "maxPriorityFeePerGasWei": "0",
+  "deploymentBlock": 63151100,
+  "blockHash": "0x85d6b7d25d21c3f093148dc899a4f392edb98a06c732b494c3484825e69e0c4d",
+  "gasUsed": "14004270",
+  "effectiveGasPriceWei": "77248000",
+  "feeEth": "0.00108180184896",
+  "runtimeBytecodeHash": "0xe71648d44b8da120b4dd814711df4551634daaa1028cd522d08237ca6e264c8b",
+  "runtimeBytes": 17302,
+  "verification": {
+    "runtimeBytecode": true,
+    "owner": true,
+    "feeRecipient": true,
+    "commissionBps": 1000,
+    "managerAddresses": true,
+    "poolIds": 100,
+    "poolKeys": 100
+  },
+  "verifiedAt": "2026-09-14T22:11:03.033Z"
+}

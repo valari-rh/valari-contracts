@@ -1,0 +1,43 @@
+2026-10-06 18:55:51,338: [244338] m.c.worker:[31mERROR:[0m Exception in state 0: ManticoreError('Forking on unfeasible constraint set')
+Traceback (most recent call last):
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/platforms/evm.py", line 1326, in execute
+    result = self._handler(*arguments)
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/platforms/evm.py", line 1190, in _handler
+    return implementation(*arguments)
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/platforms/evm.py", line 632, in wrapper
+    raise ConcretizeArgument(index, policy=policy)
+manticore.platforms.evm.ConcretizeArgument: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/core/worker.py", line 137, in run
+    current_state.execute()
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/ethereum/state.py", line 8, in execute
+    return self._platform.execute()
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/platforms/evm.py", line 3106, in execute
+    self.current_vm.execute()
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/platforms/evm.py", line 1391, in execute
+    raise Concretize(
+manticore.core.state.Concretize
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/core/worker.py", line 158, in run
+    m._fork(current_state, exc.expression, exc.policy, exc.setstate, exc.values)
+  File "/tmp/valari-manticore.L3Hm1e/venv310/lib/python3.10/site-packages/manticore/core/manticore.py", line 518, in _fork
+    raise ManticoreError("Forking on unfeasible constraint set")
+manticore.exceptions.ManticoreError: Forking on unfeasible constraint set
+ 
+{
+ "scenario": "addpool",
+ "succeeded_paths": 0,
+ "reverted_or_failed_paths": 26,
+ "killed_paths": 1,
+ "timed_out": false,
+ "succeeded_by_function": {},
+ "violations": [],
+ "notes": {},
+ "seconds": 370.7
+}

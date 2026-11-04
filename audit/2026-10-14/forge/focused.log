@@ -1,0 +1,30 @@
+[PASS] testRepeatedCollectionDoesNotDoubleChargeOrPayFees() (gas: 1321991)
+[PASS] testStaleQuoteMinimumLiquidityRevertsAfterRealPriceMove() (gas: 872831)
+[PASS] testTickLowerInclusiveAndTickUpperExclusiveAtExactBoundary() (gas: 1146020)
+[PASS] testTinyBudgetsAndMaximumUsableTickRange() (gas: 1253785)
+[PASS] testTinyRepeatedClaimsCarryCommissionRoundingThroughExit() (gas: 2448540)
+Suite result: ok. 50 passed; 0 failed; 0 skipped; finished in 389.24ms (526.78ms CPU time)
+
+Ran 1 test suite in 390.64ms (389.24ms CPU time): 50 tests passed, 0 failed, 0 skipped (50 total tests)
+[PASS] testAuditRejectedTreasuryCannotBlockCollectionOrPrincipalExit() (gas: 1286047)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 13.21ms (5.83ms CPU time)
+
+Ran 1 test for test/ValariRouterAccountingAudit.t.sol:ValariRouterAccountingAuditTest
+[PASS] testFuzzAuditAccountingConservationAcrossOverlappingRanges(uint256) (runs: 256, μ: 5836070, ~: 5844457)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 10.94s (10.94s CPU time)
+
+Ran 1 test for test/ValariRouterV3AccountingAudit.t.sol:ValariRouterV3AccountingAuditTest
+[PASS] testFuzzAuditAccountingConservationAcrossOverlappingRanges(uint256) (runs: 256, μ: 5963218, ~: 5997979)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 13.87s (13.86s CPU time)
+
+Ran 3 test suites in 13.87s (24.83s CPU time): 3 tests passed, 0 failed, 0 skipped (3 total tests)
+No files changed, compilation skipped
+
+Ran 2 tests for test/fizz/FoundryTester.sol:FoundryTester
+[PASS] test_repro_SP36_withdrawFull_harnessFalsePositive_fixed() (gas: 4975723)
+[PASS] test_sequence() (gas: 309)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 91.84ms (64.53ms CPU time)
+
+Ran 1 test suite in 94.22ms (91.84ms CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)
+| ValariRouter                                                            | 17,302           | 19,319            | 7,274              | 29,833              |
+| ValariRouterV3                                                          | 20,044           | 22,349            | 4,532              | 26,803              |

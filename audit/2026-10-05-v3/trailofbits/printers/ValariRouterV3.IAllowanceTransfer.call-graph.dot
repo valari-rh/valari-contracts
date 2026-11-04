@@ -1,0 +1,22 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_3085_IAllowanceTransfer {
+label = "IAllowanceTransfer"
+"3085_transferFrom(IAllowanceTransfer.AllowanceTransferDetails[])" [label="transferFrom(IAllowanceTransfer.AllowanceTransferDetails[])"]
+"3085_permit(address,IAllowanceTransfer.PermitSingle,bytes)" [label="permit(address,IAllowanceTransfer.PermitSingle,bytes)"]
+"3085_permit(address,IAllowanceTransfer.PermitBatch,bytes)" [label="permit(address,IAllowanceTransfer.PermitBatch,bytes)"]
+"3085_lockdown(IAllowanceTransfer.TokenSpenderPair[])" [label="lockdown(IAllowanceTransfer.TokenSpenderPair[])"]
+"3085_transferFrom(address,address,uint160,address)" [label="transferFrom(address,address,uint160,address)"]
+"3085_invalidateNonces(address,address,uint48)" [label="invalidateNonces(address,address,uint48)"]
+"3085_approve(address,address,uint160,uint48)" [label="approve(address,address,uint160,uint48)"]
+"3085_allowance(address,address,address)" [label="allowance(address,address,address)"]
+}subgraph cluster_3093_IEIP712 {
+label = "IEIP712"
+"3093_DOMAIN_SEPARATOR()" [label="DOMAIN_SEPARATOR()"]
+}subgraph cluster_solidity {
+label = "[Solidity]"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}

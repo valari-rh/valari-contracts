@@ -1,0 +1,19 @@
+strict digraph {
+rankdir="LR"
+node [shape=box]
+subgraph cluster_6280_TickMath {
+label = "TickMath"
+"6280_getTickAtSqrtPrice(uint160)" [label="getTickAtSqrtPrice(uint160)"]
+"6280_getSqrtPriceAtTick(int24)" [label="getSqrtPriceAtTick(int24)"]
+"6280_slitherConstructorConstantVariables()" [label="slitherConstructorConstantVariables()"]
+"6280_minUsableTick(int24)" [label="minUsableTick(int24)"]
+"6280_maxUsableTick(int24)" [label="maxUsableTick(int24)"]
+"6280_getTickAtSqrtPrice(uint160)" -> "6280_getSqrtPriceAtTick(int24)"
+}subgraph cluster_solidity {
+label = "[Solidity]"
+"signextend(uint256,uint256)" 
+"6280_getSqrtPriceAtTick(int24)" -> "signextend(uint256,uint256)"
+}subgraph cluster_toplevel {
+label = "[Top Level]"
+}
+}
