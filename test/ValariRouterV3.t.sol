@@ -20,8 +20,7 @@ import {IPositionDescriptor} from "@uniswap/v4-periphery/src/interfaces/IPositio
 import {IWETH9} from "@uniswap/v4-periphery/src/interfaces/external/IWETH9.sol";
 import {Actions} from "@uniswap/v4-periphery/src/libraries/Actions.sol";
 import {ValariRouterV3} from "../src/ValariRouterV3.sol";
-import {ValariRouter as DeployedRouter} from "../src/ValariRouter.sol";
-import {RouterTestToken} from "./ValariRouter.t.sol";
+import {RouterTestToken} from "./utils/RouterTestToken.sol";
 
 /// @dev ERC20 with three opt-in faults for one chosen sender. Sticky: it is debited
 /// `stickyUnits` less than it sends (rounding in the router's favour). Greedy: it is debited
@@ -1800,21 +1799,12 @@ contract ValariRouterV3Test is Test, DeployPermit2, IUnlockCallback {
         StickySenderToken stock = new StickySenderToken();
         PoolKey memory added = _newStockPool(address(stock));
         bytes32 addedId = router.addPool(added);
-        PoolKey[] memory pools = new PoolKey[](1);
-        pools[0] = added;
-        DeployedRouter deployed =
-            new DeployedRouter(positionManager, stateView, address(token0), pools);
 
-        stock.mint(alice, 2 * BUDGET);
+        stock.mint(alice, BUDGET);
         vm.startPrank(alice);
         stock.approve(address(router), BUDGET);
-        stock.approve(address(deployed), BUDGET);
-        token0.approve(address(deployed), BUDGET);
         ValariRouterV3.DepositQuote memory quote =
             router.previewDeposit(addedId, BUDGET, BUDGET, -2000, 2000);
-        (uint256 oldId,,,) = deployed.openPosition(
-            addedId, BUDGET, BUDGET, -2000, 2000, quote.liquidity, block.timestamp
-        );
         (uint256 newId,, uint256 spent0, uint256 spent1) = router.openPosition(
             addedId,
             BUDGET,
@@ -1828,14 +1818,7 @@ contract ValariRouterV3Test is Test, DeployPermit2, IUnlockCallback {
         );
         vm.stopPrank();
 
-        // The token starts leaving one unit behind in each router on every payout.
-        stock.setStickySender(address(deployed));
-        vm.expectRevert(
-            abi.encodeWithSelector(DeployedRouter.UnsupportedToken.selector, address(stock))
-        );
-        vm.prank(alice);
-        deployed.exitPosition(oldId, 0, 0, block.timestamp);
-
+        // The token starts leaving one unit behind in the router on every payout.
         stock.setStickySender(address(router));
         uint256 stockBefore = stock.balanceOf(alice);
         uint256 usdgBefore = token0.balanceOf(alice);

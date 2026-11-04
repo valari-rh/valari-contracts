@@ -1,6 +1,0 @@
-{"tool": "Manticore SMT API (Z3 backend)", "manticore_version": "0.3.7", "z3_version": "5.1.0.0", "domain": "Two fee amounts independently in [0,65535], starting remainder 0, uint32 intermediates.", "scope": "Re-expressed arithmetic model only; neither EVM execution nor production FullMath implementation verified."}
-{"property": "first_commission_does_not_exceed_fees", "result": "PASS_UNSAT_COUNTEREXAMPLE", "seconds": 0.041}
-{"property": "second_commission_does_not_exceed_fees", "result": "PASS_UNSAT_COUNTEREXAMPLE", "seconds": 0.102}
-{"property": "remainder_is_below_denominator", "result": "PASS_UNSAT_COUNTEREXAMPLE", "seconds": 0.058}
-{"property": "two_claims_equal_floor_of_total_divided_by_ten", "result": "INCONCLUSIVE", "error": "SolverUnknown('unsat')", "seconds": 30.042}
-{"property": "remainder_tracks_cumulative_fraction", "result": "INCONCLUSIVE", "error": "SolverUnknown('unsat')", "seconds": 30.039}
